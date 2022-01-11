@@ -22,10 +22,10 @@ class MapController: UIViewController {
     @IBAction func switchButton(_ sender: UIButton) {
         if(x == 0){
             x = 1
-            map.image = UIImage(named: "First Floor")
+            map.image = UIImage(named: "Improved Second Floor")
         } else if (x == 1){
             x = 0
-            map.image = UIImage(named: "Second Floor")
+            map.image = UIImage(named: "Improved First Floor")
         }
     }
     
