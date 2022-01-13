@@ -31,4 +31,12 @@ class MapController: UIViewController {
         }
     }
     
+    @IBAction func onTap(_ sender: Any)
+    {
+        if mapView.bounds.contains(tapRecognizer.location(in: mapView))
+        {
+            print("\(tapRecognizer.location(in: mapView))")
+        }
+    }
+    
 }
