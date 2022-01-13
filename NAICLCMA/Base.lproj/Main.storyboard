@@ -67,10 +67,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
-                                <rect key="frame" x="-28" y="58" width="417" height="555"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-Vh-8R3">
                                 <rect key="frame" x="0.0" y="613" width="375" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -83,17 +79,40 @@
                                     <action selector="switchButton:" destination="aGF-5P-6vx" eventType="touchUpInside" id="2Vp-WK-5CS"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7j-IU-5ME">
+                                <rect key="frame" x="0.0" y="44" width="375" height="571"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
+                                        <rect key="frame" x="-21" y="98" width="349" height="465"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fsq-lP-TM1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fsq-lP-TM1" firstAttribute="bottom" secondItem="j7j-IU-5ME" secondAttribute="bottom" constant="52" id="IES-6V-qX8"/>
+                            <constraint firstItem="j7j-IU-5ME" firstAttribute="trailing" secondItem="Fsq-lP-TM1" secondAttribute="trailing" id="QYa-ps-olX"/>
+                            <constraint firstItem="j7j-IU-5ME" firstAttribute="leading" secondItem="Fsq-lP-TM1" secondAttribute="leading" id="UEA-UN-3VO"/>
+                            <constraint firstItem="j7j-IU-5ME" firstAttribute="top" secondItem="Fsq-lP-TM1" secondAttribute="top" id="VVe-gr-Nec"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="9gH-fj-Npo"/>
                     <connections>
                         <outlet property="map" destination="fnb-Ju-Q82" id="faA-jA-Hnn"/>
+                        <outlet property="mapView" destination="j7j-IU-5ME" id="NH6-gD-tZR"/>
+                        <outlet property="tapRecognizer" destination="wCM-Cz-r1G" id="xdp-mv-i2B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEz-MW-Crt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="wCM-Cz-r1G"/>
+                <tapGestureRecognizer id="wCM-Cz-r1G">
+                    <connections>
+                        <action selector="onTap:" destination="aGF-5P-6vx" id="gjD-ol-i7w"/>
+                        <outlet property="delegate" destination="j7j-IU-5ME" id="gfm-el-Ie1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1621.5999999999999" y="64.31784107946028"/>
         </scene>
@@ -137,6 +156,9 @@
         <image name="clc_tiger" width="200" height="200"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
