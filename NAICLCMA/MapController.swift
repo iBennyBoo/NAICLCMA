@@ -17,7 +17,6 @@ class MapController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
@@ -33,7 +32,7 @@ class MapController: UIViewController {
     
     @IBAction func onTap(_ sender: Any)
     {
-        if  tapRecognizer.location(in: mapView).x < mapView.frame.width && tapRecognizer.location(in: mapView).y < mapView.frame.height && tapRecognizer.location(in: mapView).x > 0 && tapRecognizer.location(in: mapView).y > 0
+        if mapView.bounds.contains(tapRecognizer.location(in: mapView))
         {
             print("\(tapRecognizer.location(in: mapView))")
         }

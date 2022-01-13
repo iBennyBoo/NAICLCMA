@@ -83,11 +83,15 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="571"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
-                                        <rect key="frame" x="-21" y="98" width="349" height="465"/>
+                                        <rect key="frame" x="-18" y="0.0" width="410" height="558"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wCM-Cz-r1G" appends="YES" id="cOf-Ll-bM3"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fsq-lP-TM1"/>
@@ -103,13 +107,13 @@
                     <connections>
                         <outlet property="map" destination="fnb-Ju-Q82" id="faA-jA-Hnn"/>
                         <outlet property="mapView" destination="j7j-IU-5ME" id="NH6-gD-tZR"/>
-                        <outlet property="tapRecognizer" destination="wCM-Cz-r1G" id="xdp-mv-i2B"/>
+                        <outlet property="tapRecognizer" destination="wCM-Cz-r1G" id="KCx-jD-9s3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEz-MW-Crt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="wCM-Cz-r1G">
                     <connections>
-                        <action selector="onTap:" destination="aGF-5P-6vx" id="gjD-ol-i7w"/>
+                        <action selector="onTap:" destination="aGF-5P-6vx" id="JBV-QS-u7M"/>
                         <outlet property="delegate" destination="j7j-IU-5ME" id="gfm-el-Ie1"/>
                     </connections>
                 </tapGestureRecognizer>
