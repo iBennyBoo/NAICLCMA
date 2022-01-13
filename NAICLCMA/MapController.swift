@@ -1,16 +1,11 @@
-//
-//  MapController.swift
-//  NAICLCMA
-//
-//  Created by Ben Berman on 1/11/22.
-//
-
 import UIKit
 
 class MapController: UIViewController {
 
     @IBOutlet weak var map: UIImageView!
     @IBOutlet weak var switchButton: UIButton!
+    @IBOutlet weak var mapView: UIView!
+    @IBOutlet var tapRecognizer: UITapGestureRecognizer!
     
     var x = 0
     
