@@ -154,7 +154,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Schedule" id="G1C-Ob-oSC"/>
                     <connections>
-                        <outlet property="tableView" destination="lhQ-7R-603" id="dWB-j7-hc9"/>
+                        <outlet property="tableView" destination="lhQ-7R-603" id="Lf2-DX-M4k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2R-2n-089" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

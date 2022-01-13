@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 
 
 }
-class tapLocationRecogniser
+class tapLocationRecognizer
 {
     var x, y, z: Int
     init (X: Int, Y: Int)

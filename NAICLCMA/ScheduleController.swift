@@ -21,6 +21,9 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         x.colors = [UIColor.systemOrange.cgColor, UIColor.black.cgColor]
         self.view.layer.insertSublayer(x, at: 0)
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
