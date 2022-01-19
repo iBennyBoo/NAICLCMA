@@ -77,14 +77,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
                                 <rect key="frame" x="-28" y="58" width="417" height="555"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-Vh-8R3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-Vh-8R3">
                                 <rect key="frame" x="0.0" y="613" width="375" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="8Ae-7I-wPo"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Switch to Second Floor">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -96,15 +97,34 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fsq-lP-TM1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fnb-Ju-Q82" firstAttribute="leading" secondItem="A6K-4B-umL" secondAttribute="leadingMargin" constant="-44" id="6n5-bp-LM0"/>
+                            <constraint firstItem="uaN-Vh-8R3" firstAttribute="leading" secondItem="Fsq-lP-TM1" secondAttribute="leading" id="KXv-gk-11t"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fnb-Ju-Q82" secondAttribute="trailing" constant="-30" id="RJP-iI-1PO"/>
+                            <constraint firstItem="uaN-Vh-8R3" firstAttribute="bottom" secondItem="Fsq-lP-TM1" secondAttribute="bottom" id="SPl-hF-iVv"/>
+                            <constraint firstItem="uaN-Vh-8R3" firstAttribute="top" secondItem="fnb-Ju-Q82" secondAttribute="bottom" id="dJc-x0-0KQ"/>
+                            <constraint firstItem="uaN-Vh-8R3" firstAttribute="centerX" secondItem="A6K-4B-umL" secondAttribute="centerX" id="iOS-dh-Qwm"/>
+                            <constraint firstItem="fnb-Ju-Q82" firstAttribute="top" secondItem="Fsq-lP-TM1" secondAttribute="top" constant="14" id="qNM-OX-uLF"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="wCM-Cz-r1G" appends="YES" id="J72-Mn-JVa"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Map" id="9gH-fj-Npo"/>
                     <connections>
                         <outlet property="map" destination="fnb-Ju-Q82" id="faA-jA-Hnn"/>
                         <outlet property="switchButton" destination="uaN-Vh-8R3" id="kGg-OL-jPI"/>
+                        <outlet property="tapRecognizer" destination="wCM-Cz-r1G" id="eNo-12-Aw5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nEz-MW-Crt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="wCM-Cz-r1G"/>
+                <tapGestureRecognizer id="wCM-Cz-r1G">
+                    <connections>
+                        <action selector="onTap:" destination="aGF-5P-6vx" id="S95-AX-PVI"/>
+                        <outlet property="delegate" destination="A6K-4B-umL" id="Bj1-M3-S7D"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1621.5999999999999" y="64.31784107946028"/>
         </scene>
