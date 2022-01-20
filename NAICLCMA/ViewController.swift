@@ -12,14 +12,11 @@ class ViewController: UIViewController, CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         playVideo()
+        
         //let x = CAGradientLayer()
         //x.frame = self.view.bounds
         //x.colors = [UIColor.black.cgColor, UIColor.systemOrange.cgColor]
         //self.view.layer.insertSublayer(x, at: 0)
-        videoLayer.bringSubviewToFront(image)
-        videoLayer.bringSubviewToFront(label)
-        videoLayer.bringSubviewToFront(scheduleButton)
-        videoLayer.bringSubviewToFront(mapButton)
         
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
@@ -27,7 +24,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
     }
 
     func playVideo(){
-        guard let path = Bundle.main.path(forResource: "animation", ofType: "mp4") else{
+        guard let path = Bundle.main.path(forResource: "moon", ofType: "mp4") else{
             return
         }
         let player = AVPlayer(url: URL(fileURLWithPath: path))
