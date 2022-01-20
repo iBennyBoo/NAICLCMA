@@ -1,31 +1,49 @@
-//
-//  ViewController.swift
-//  NAICLCMA
-//
-//  Created by Ben Berman on 1/10/22.
-//
-
 import UIKit
-
-class ViewController: UIViewController {
+import AVFoundation
+class ViewController: UIViewController, CAAnimationDelegate {
 
     @IBOutlet weak var mapButton: UIButton!
     @IBOutlet weak var scheduleButton: UIButton!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var videoLayer: UIView!
+    @IBOutlet weak var image: UIImageView!
     
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        let x = CAGradientLayer()
-        x.frame = self.view.bounds
-        x.colors = [UIColor.black.cgColor, UIColor.systemOrange.cgColor]
-        self.view.layer.insertSublayer(x, at: 0)
+        playVideo()
+        //let x = CAGradientLayer()
+        //x.frame = self.view.bounds
+        //x.colors = [UIColor.black.cgColor, UIColor.systemOrange.cgColor]
+        //self.view.layer.insertSublayer(x, at: 0)
+        videoLayer.bringSubviewToFront(image)
+        videoLayer.bringSubviewToFront(label)
+        videoLayer.bringSubviewToFront(scheduleButton)
+        videoLayer.bringSubviewToFront(mapButton)
         
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
         label.layer.borderWidth = 1
     }
 
-
+    func playVideo(){
+        guard let path = Bundle.main.path(forResource: "animation", ofType: "mp4") else{
+            return
+        }
+        let player = AVPlayer(url: URL(fileURLWithPath: path))
+        let playerLayer = AVPlayerLayer(player: player)
+        playerLayer.frame = self.view.bounds
+        playerLayer.videoGravity = .resizeAspectFill
+        self.videoLayer.layer.addSublayer(playerLayer)
+        
+        player.play()
+        
+        videoLayer.bringSubviewToFront(image)
+        videoLayer.bringSubviewToFront(label)
+        videoLayer.bringSubviewToFront(scheduleButton)
+        videoLayer.bringSubviewToFront(mapButton)
+    }
+    
 }
 class tapLocationRecognizer
 {

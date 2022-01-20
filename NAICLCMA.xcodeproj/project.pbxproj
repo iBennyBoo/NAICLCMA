@@ -20,6 +20,7 @@
 		59336AE3278C788D00C1B1E3 /* NAICLCMAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59336AE2278C788D00C1B1E3 /* NAICLCMAUITests.swift */; };
 		59336AE5278C788D00C1B1E3 /* NAICLCMAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59336AE4278C788D00C1B1E3 /* NAICLCMAUITestsLaunchTests.swift */; };
 		594B8982279063E0006DBA36 /* RoomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B8981279063E0006DBA36 /* RoomClass.swift */; };
+		598F441627999C8000B5A22F /* animation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 598F4415279999F000B5A22F /* animation.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		59336AE2278C788D00C1B1E3 /* NAICLCMAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAICLCMAUITests.swift; sourceTree = "<group>"; };
 		59336AE4278C788D00C1B1E3 /* NAICLCMAUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NAICLCMAUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		594B8981279063E0006DBA36 /* RoomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomClass.swift; sourceTree = "<group>"; };
+		598F4415279999F000B5A22F /* animation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = animation.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				59336ACA278C788C00C1B1E3 /* Assets.xcassets */,
 				59336AC4278C788A00C1B1E3 /* Main.storyboard */,
 				59336ACC278C788C00C1B1E3 /* LaunchScreen.storyboard */,
+				598F4415279999F000B5A22F /* animation.mp4 */,
 				59336ACF278C788C00C1B1E3 /* Info.plist */,
 				59336AC7278C788A00C1B1E3 /* NAICLCMA.xcdatamodeld */,
 			);
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				598F441627999C8000B5A22F /* animation.mp4 in Resources */,
 				59336ACE278C788C00C1B1E3 /* LaunchScreen.storyboard in Resources */,
 				59336ACB278C788C00C1B1E3 /* Assets.xcassets in Resources */,
 				59336AC6278C788A00C1B1E3 /* Main.storyboard in Resources */,
