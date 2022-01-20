@@ -189,7 +189,13 @@
                         <viewLayoutGuide key="safeArea" id="j6o-8Q-Lub"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Schedule" id="G1C-Ob-oSC"/>
+                    <navigationItem key="navigationItem" title="Schedule" id="G1C-Ob-oSC">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1Ys-vh-Y4I">
+                            <connections>
+                                <action selector="addButton:" destination="u6a-Ab-tdd" id="q8P-MS-8FT"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="pickerView" destination="jc3-y8-4HE" id="mGL-iw-emD"/>
                         <outlet property="tableView" destination="lhQ-7R-603" id="Lf2-DX-M4k"/>
