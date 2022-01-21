@@ -11,7 +11,6 @@ class ViewController: UIViewController, CAAnimationDelegate {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        playVideo()
         
         //let x = CAGradientLayer()
         //x.frame = self.view.bounds
@@ -21,6 +20,12 @@ class ViewController: UIViewController, CAAnimationDelegate {
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
         label.layer.borderWidth = 1
+            playVideo()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        playVideo()
     }
 
     func playVideo(){
@@ -40,6 +45,8 @@ class ViewController: UIViewController, CAAnimationDelegate {
         videoLayer.bringSubviewToFront(scheduleButton)
         videoLayer.bringSubviewToFront(mapButton)
     }
+    
+    
     
 }
 class tapLocationRecognizer
