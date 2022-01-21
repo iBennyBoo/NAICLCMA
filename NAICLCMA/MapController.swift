@@ -18,10 +18,14 @@ class MapController: UIViewController {
             x = 1
             switchButton.setTitle("Switch to First Floor", for: .normal)
             map.image = UIImage(named: "Improved Second Floor")
+            
+            switchButton.titleLabel?.font = UIFont(name: "Chalkduster", size: 22)
         } else if (x == 1){
             x = 0
             switchButton.setTitle("Switch to Second Floor", for: .normal)
             map.image = UIImage(named: "Improved First Floor")
+            
+            switchButton.titleLabel?.font = UIFont(name: "Chalkduster", size: 22)
         }
     }
     

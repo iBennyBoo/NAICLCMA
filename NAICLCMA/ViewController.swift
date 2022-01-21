@@ -7,6 +7,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var videoLayer: UIView!
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var white: UIImageView!
     
    
     override func viewDidLoad() {

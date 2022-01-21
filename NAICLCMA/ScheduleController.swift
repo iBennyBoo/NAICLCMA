@@ -5,6 +5,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var button: UIButton!
     
     var selected: String!
     var has: [String] = []
@@ -14,7 +15,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         super.viewDidLoad()
         let x = CAGradientLayer()
         x.frame = self.view.bounds
-        x.colors = [UIColor.systemOrange.cgColor, UIColor.cyan.cgColor, UIColor.red.cgColor]
+        x.colors = [UIColor.orange.cgColor, UIColor.systemBrown.cgColor, UIColor.black.cgColor]
         self.view.layer.insertSublayer(x, at: 0)
         
         tableView.delegate = self
@@ -24,6 +25,8 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         pickerView.dataSource = self
         pickerView.reloadAllComponents()
         
+        button.layer.borderWidth = 1
+        button.isHidden = true
     }
     
     @IBAction func addButton(_ sender: UIBarButtonItem) {
@@ -35,6 +38,10 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         } else{
             has.append(selected)
             tableView.reloadData()
+            if(has.count == 9){
+                button.isHidden = false
+            }
+            
         }
     }
     
@@ -61,6 +68,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        cell.layer.borderWidth = 1
         cell.textLabel?.text = "Room \(has[indexPath.row])"
         cell.detailTextLabel?.text = "Period \(indexPath.row + 1)"
         return cell
