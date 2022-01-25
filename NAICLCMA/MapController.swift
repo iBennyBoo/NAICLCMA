@@ -2,6 +2,7 @@ import UIKit
 import AVFoundation
 class MapController: UIViewController {
 
+    @IBOutlet var node: UIImageView!
     @IBOutlet weak var map: UIImageView!
     @IBOutlet weak var switchButton: UIButton!
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
@@ -25,7 +26,7 @@ class MapController: UIViewController {
         }catch{
             print("error!")
         }
-        
+        node.isHidden = true
         if(x == 0){
             x = 1
             switchButton.setTitle("Switch to First Floor", for: .normal)
@@ -42,10 +43,17 @@ class MapController: UIViewController {
     //Gets X & Y Coordinates\\
     @IBAction func onTap(_ sender: Any){
         print(view.bounds.maxX)
-        if view.bounds.contains(tapRecognizer.location(in: view))
+        
+        if view.bounds.contains(tapRecognizer.location(in: view)) && !switchButton.bounds.contains(tapRecognizer.location(in: view))
         {
             print("\(tapRecognizer.location(in: view))")
-            print("\(((tapRecognizer.location(in: view).x)/view.bounds.maxX)*100), \(((tapRecognizer.location(in: view).y)/view.bounds.maxY)*100)")
+            print("\(((tapRecognizer.location(in: map).x)/map.bounds.maxX)*100), \(((tapRecognizer.location(in: map).y)/map.bounds.maxY)*100)")
+            if node.isHidden
+            {
+                node.isHidden = false
+            }
+            node.center = tapRecognizer.location(in: view)
+            node.center.y -= 15
         }
     }
 }

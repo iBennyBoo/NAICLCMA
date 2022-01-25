@@ -112,6 +112,10 @@
                                     <action selector="switchButton:" destination="aGF-5P-6vx" eventType="touchUpInside" id="2Vp-WK-5CS"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vector" id="WzG-io-0i3">
+                                <rect key="frame" x="342" y="580" width="17" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fsq-lP-TM1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -132,6 +136,7 @@
                     <navigationItem key="navigationItem" title="Map" id="9gH-fj-Npo"/>
                     <connections>
                         <outlet property="map" destination="fnb-Ju-Q82" id="faA-jA-Hnn"/>
+                        <outlet property="node" destination="WzG-io-0i3" id="sD7-zR-WPL"/>
                         <outlet property="switchButton" destination="uaN-Vh-8R3" id="kGg-OL-jPI"/>
                         <outlet property="tapRecognizer" destination="wCM-Cz-r1G" id="eNo-12-Aw5"/>
                     </connections>
@@ -250,6 +255,7 @@
     <resources>
         <image name="Improved First Floor" width="360" height="537"/>
         <image name="optionTwo" width="288" height="288"/>
+        <image name="vector" width="445" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
