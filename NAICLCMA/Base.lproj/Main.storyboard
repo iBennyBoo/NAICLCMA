@@ -37,6 +37,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="mapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ylg-WG-CxW"/>
                                             <segue destination="aGF-5P-6vx" kind="show" id="kHx-cq-Qwa"/>
                                         </connections>
                                     </button>
@@ -54,6 +55,7 @@
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
+                                            <action selector="scheduleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IFR-Na-DRd"/>
                                             <segue destination="u6a-Ab-tdd" kind="show" id="0z2-Ea-1jT"/>
                                         </connections>
                                     </button>
@@ -82,7 +84,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="968.79999999999995" y="64.31784107946028"/>
+            <point key="canvasLocation" x="961" y="64"/>
         </scene>
         <!--Map-->
         <scene sceneID="IV8-ls-xq8">
@@ -198,6 +200,7 @@
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="button:" destination="u6a-Ab-tdd" eventType="touchUpInside" id="W3n-kn-Kbe"/>
                                     <segue destination="aGF-5P-6vx" kind="show" id="Be0-yE-nCf"/>
                                 </connections>
                             </button>
@@ -242,7 +245,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kHx-cq-Qwa"/>
+        <segue reference="Be0-yE-nCf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Improved First Floor" width="360" height="537"/>

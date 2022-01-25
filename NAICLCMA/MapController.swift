@@ -1,5 +1,5 @@
 import UIKit
-
+import AVFoundation
 class MapController: UIViewController {
 
     @IBOutlet weak var map: UIImageView!
@@ -7,30 +7,40 @@ class MapController: UIViewController {
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
     
     var x = 0
+    let flip = Bundle.main.path(forResource: "flip", ofType: "mp3")!
+    let click = Bundle.main.path(forResource: "click", ofType: "mp3")!
+    var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         switchButton.layer.borderWidth = 1
     }
     
+    //Switches Between Floors of Building\\
     @IBAction func switchButton(_ sender: UIButton) {
+        let url = URL(fileURLWithPath: flip)
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        }catch{
+            print("error!")
+        }
+        
         if(x == 0){
             x = 1
             switchButton.setTitle("Switch to First Floor", for: .normal)
-            map.image = UIImage(named: "Improved Second Floor")
-            
             switchButton.titleLabel?.font = UIFont(name: "Chalkduster", size: 22)
+            map.image = UIImage(named: "Improved Second Floor")
         } else if (x == 1){
             x = 0
             switchButton.setTitle("Switch to Second Floor", for: .normal)
-            map.image = UIImage(named: "Improved First Floor")
-            
             switchButton.titleLabel?.font = UIFont(name: "Chalkduster", size: 22)
+            map.image = UIImage(named: "Improved First Floor")
         }
     }
     
-    @IBAction func onTap(_ sender: Any)
-    {
+    //Gets X & Y Coordinates\\
+    @IBAction func onTap(_ sender: Any){
         print(view.bounds.maxX)
         if view.bounds.contains(tapRecognizer.location(in: view))
         {

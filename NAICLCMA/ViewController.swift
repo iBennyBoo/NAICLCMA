@@ -7,17 +7,13 @@ class ViewController: UIViewController, CAAnimationDelegate {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var videoLayer: UIView!
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var white: UIImageView!
     
+    var audioPlayer: AVAudioPlayer?
+    let click = Bundle.main.path(forResource: "click", ofType: "mp3")!
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //let x = CAGradientLayer()
-        //x.frame = self.view.bounds
-        //x.colors = [UIColor.black.cgColor, UIColor.systemOrange.cgColor]
-        //self.view.layer.insertSublayer(x, at: 0)
-        
+       
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
         label.layer.borderWidth = 1
@@ -25,10 +21,31 @@ class ViewController: UIViewController, CAAnimationDelegate {
         
     }
     
+    @IBAction func mapButton(_ sender: UIButton) {
+        let url = URL(fileURLWithPath: click)
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        }catch{
+            print("error!")
+        }
+    }
+    
+    @IBAction func scheduleButton(_ sender: UIButton) {
+        let url = URL(fileURLWithPath: click)
+        do{
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+            audioPlayer?.play()
+        }catch{
+            print("error!")
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         playVideo()
     }
 
+    //Background Video\\
     func playVideo(){
         guard let path = Bundle.main.path(forResource: "moon", ofType: "mp4") else{
             return
@@ -50,8 +67,8 @@ class ViewController: UIViewController, CAAnimationDelegate {
     
     
 }
-class tapLocationRecognizer
-{
+
+class tapLocationRecognizer{
     var x, y, z: Int
     init (X: Int, Y: Int)
     {
