@@ -42,7 +42,7 @@
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="optionTwo" translatesAutoresizingMaskIntoConstraints="NO" id="CdJ-7p-sgG">
-                                        <rect key="frame" x="25" y="0.0" width="324" height="335"/>
+                                        <rect key="frame" x="25" y="0.0" width="324" height="288"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnv-Ep-xbd">
@@ -245,7 +245,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Be0-yE-nCf"/>
+        <segue reference="kHx-cq-Qwa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Improved First Floor" width="360" height="537"/>
