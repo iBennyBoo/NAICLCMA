@@ -25,7 +25,7 @@
 		594B8982279063E0006DBA36 /* RoomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B8981279063E0006DBA36 /* RoomClass.swift */; };
 		5980EE3A27A02C05001D0FED /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5980EE3927A02C05001D0FED /* click.mp3 */; };
 		5980EE3C27A031D3001D0FED /* Ding-small-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */; };
-		598F441627999C8000B5A22F /* animation.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 598F4415279999F000B5A22F /* animation.mp4 */; };
+		598F441627999C8000B5A22F /* moon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 598F4415279999F000B5A22F /* moon.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,7 @@
 		594B8981279063E0006DBA36 /* RoomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomClass.swift; sourceTree = "<group>"; };
 		5980EE3927A02C05001D0FED /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ding-small-bell.mp3"; sourceTree = "<group>"; };
-		598F4415279999F000B5A22F /* animation.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = animation.mp4; sourceTree = "<group>"; };
+		598F4415279999F000B5A22F /* moon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moon.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +128,7 @@
 				59336ACA278C788C00C1B1E3 /* Assets.xcassets */,
 				59336AC4278C788A00C1B1E3 /* Main.storyboard */,
 				59336ACC278C788C00C1B1E3 /* LaunchScreen.storyboard */,
-				598F4415279999F000B5A22F /* animation.mp4 */,
-				593FF5EA279F2D58005D941F /* moon.mp4 */,
+				598F4415279999F000B5A22F /* moon.mp4 */,
 				5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */,
 				593FF5EE279F2E2A005D941F /* bells.wav */,
 				593FF5F0279F3177005D941F /* flip.mp3 */,
@@ -262,7 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5980EE3A27A02C05001D0FED /* click.mp3 in Resources */,
-				598F441627999C8000B5A22F /* animation.mp4 in Resources */,
+				598F441627999C8000B5A22F /* moon.mp4 in Resources */,
 				593FF5F1279F3177005D941F /* flip.mp3 in Resources */,
 				59336ACE278C788C00C1B1E3 /* LaunchScreen.storyboard in Resources */,
 				59336ACB278C788C00C1B1E3 /* Assets.xcassets in Resources */,
