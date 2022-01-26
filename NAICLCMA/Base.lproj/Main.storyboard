@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NAICLCMA" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Map App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIb-eA-nGv">
-                                        <rect key="frame" x="20" y="335" width="336" height="90"/>
+                                        <rect key="frame" x="20" y="335" width="336" height="85"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.57647058819999997" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="32"/>
@@ -28,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P59-Gp-1IG">
-                                        <rect key="frame" x="127" y="449" width="120" height="60"/>
+                                        <rect key="frame" x="127" y="441" width="120" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.974299464" green="0.61693311569999998" blue="0.1414865713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
@@ -42,11 +42,11 @@
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="optionTwo" translatesAutoresizingMaskIntoConstraints="NO" id="CdJ-7p-sgG">
-                                        <rect key="frame" x="25" y="0.0" width="324" height="335"/>
+                                        <rect key="frame" x="52" y="63" width="273" height="254"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnv-Ep-xbd">
-                                        <rect key="frame" x="127" y="531" width="120" height="60"/>
+                                        <rect key="frame" x="128" y="509" width="120" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.57647058819999997" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
@@ -59,6 +59,11 @@
                                             <segue destination="u6a-Ab-tdd" kind="show" id="0z2-Ea-1jT"/>
                                         </connections>
                                     </button>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="av0-fN-dj9">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                    </imageView>
                                 </subviews>
                             </view>
                         </subviews>
@@ -71,8 +76,8 @@
                             <constraint firstItem="IeV-ll-Nnu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="csh-jp-WFM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Nmc-R8-Dra">
-                        <barButtonItem key="backBarButtonItem" title="Menu" id="avN-Ij-fZd"/>
+                    <navigationItem key="navigationItem" title="Home" id="Nmc-R8-Dra">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="avN-Ij-fZd"/>
                     </navigationItem>
                     <connections>
                         <outlet property="image" destination="CdJ-7p-sgG" id="Qnb-M7-Vfb"/>
@@ -80,13 +85,14 @@
                         <outlet property="mapButton" destination="P59-Gp-1IG" id="Vqf-3r-jhy"/>
                         <outlet property="scheduleButton" destination="wnv-Ep-xbd" id="IED-GX-ZTf"/>
                         <outlet property="videoLayer" destination="IeV-ll-Nnu" id="hxM-IZ-JNH"/>
+                        <outlet property="white" destination="av0-fN-dj9" id="g6R-5E-BSf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="961" y="64"/>
+            <point key="canvasLocation" x="960.79999999999995" y="63.418290854572717"/>
         </scene>
-        <!--Map-->
+        <!--1st Floor-->
         <scene sceneID="IV8-ls-xq8">
             <objects>
                 <viewController id="aGF-5P-6vx" customClass="MapController" customModule="NAICLCMA" customModuleProvider="target" sceneMemberID="viewController">
@@ -104,8 +110,8 @@
                                     <constraint firstAttribute="height" constant="54" id="8Ae-7I-wPo"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Switch to Second Floor">
-                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Switch Floors">
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="32"/>
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -115,6 +121,11 @@
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vector" id="WzG-io-0i3">
                                 <rect key="frame" x="342" y="580" width="17" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M8P-GS-3Vq">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fsq-lP-TM1"/>
@@ -133,7 +144,7 @@
                             <outletCollection property="gestureRecognizers" destination="wCM-Cz-r1G" appends="YES" id="J72-Mn-JVa"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" title="Map" id="9gH-fj-Npo"/>
+                    <navigationItem key="navigationItem" title="1st Floor" id="9gH-fj-Npo"/>
                     <connections>
                         <outlet property="map" destination="fnb-Ju-Q82" id="faA-jA-Hnn"/>
                         <outlet property="node" destination="WzG-io-0i3" id="sD7-zR-WPL"/>
@@ -209,6 +220,11 @@
                                     <segue destination="aGF-5P-6vx" kind="show" id="Be0-yE-nCf"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GFZ-sq-mMn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j6o-8Q-Lub"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -238,6 +254,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="U3w-rr-e9o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <color key="barTintColor" systemColor="systemOrangeColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -250,7 +275,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Be0-yE-nCf"/>
+        <segue reference="kHx-cq-Qwa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Improved First Floor" width="360" height="537"/>
