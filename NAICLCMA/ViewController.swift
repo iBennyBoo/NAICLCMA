@@ -7,6 +7,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var videoLayer: UIView!
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var white: UIImageView!
     
     var audioPlayer: AVAudioPlayer?
     let click = Bundle.main.path(forResource: "click", ofType: "mp3")!
@@ -14,6 +15,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
         label.layer.borderWidth = 1
@@ -62,6 +64,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
         videoLayer.bringSubviewToFront(label)
         videoLayer.bringSubviewToFront(scheduleButton)
         videoLayer.bringSubviewToFront(mapButton)
+        videoLayer.bringSubviewToFront(white)
     }
     
     
