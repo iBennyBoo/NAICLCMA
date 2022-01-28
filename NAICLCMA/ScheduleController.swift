@@ -99,16 +99,49 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return rooms.count
+        if component == 0
+        {
+            return rooms.count
+        }
+        else
+        {
+            return 9
+        }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return rooms[row]
+        if component == 0
+        {
+            return rooms[row]
+        }
+        else
+        {
+            return "\(row + 1)"
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        selected = rooms[row]
-        print(selected)
+        if component == 0
+        {
+            selected = rooms[row]
+        }
+        else
+        {
+            selected = "\(row)"
+        }
+        print(selected ?? "Null")
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        if component == 0
+        {
+            return 200
+        }
+        else
+        {
+            return 40
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
