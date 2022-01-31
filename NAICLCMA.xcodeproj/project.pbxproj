@@ -23,6 +23,8 @@
 		593FF5EF279F2E2A005D941F /* bells.wav in Resources */ = {isa = PBXBuildFile; fileRef = 593FF5EE279F2E2A005D941F /* bells.wav */; };
 		593FF5F1279F3177005D941F /* flip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 593FF5F0279F3177005D941F /* flip.mp3 */; };
 		594B8982279063E0006DBA36 /* RoomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B8981279063E0006DBA36 /* RoomClass.swift */; };
+		5976E5F727A827DE001E8363 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5976E5F627A827DE001E8363 /* CustomCell.swift */; };
+		597B745C27A42FF30026C793 /* schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597B745B27A42FF30026C793 /* schedule.swift */; };
 		5980EE3A27A02C05001D0FED /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5980EE3927A02C05001D0FED /* click.mp3 */; };
 		5980EE3C27A031D3001D0FED /* Ding-small-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		593FF5EE279F2E2A005D941F /* bells.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bells.wav; sourceTree = "<group>"; };
 		593FF5F0279F3177005D941F /* flip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flip.mp3; sourceTree = "<group>"; };
 		594B8981279063E0006DBA36 /* RoomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomClass.swift; sourceTree = "<group>"; };
+		5976E5F627A827DE001E8363 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		597B745B27A42FF30026C793 /* schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = schedule.swift; sourceTree = "<group>"; };
 		5980EE3927A02C05001D0FED /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ding-small-bell.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,9 +134,11 @@
 				59336AC2278C788A00C1B1E3 /* ViewController.swift */,
 				593028A4278DB93500FE5DA9 /* MapController.swift */,
 				593028A6278DBE1E00FE5DA9 /* ScheduleController.swift */,
+				597B745B27A42FF30026C793 /* schedule.swift */,
 				594B8981279063E0006DBA36 /* RoomClass.swift */,
 				59336ACA278C788C00C1B1E3 /* Assets.xcassets */,
 				59336AC4278C788A00C1B1E3 /* Main.storyboard */,
+				5976E5F627A827DE001E8363 /* CustomCell.swift */,
 				59336ACC278C788C00C1B1E3 /* LaunchScreen.storyboard */,
 				5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */,
 				593FF5EE279F2E2A005D941F /* bells.wav */,
@@ -302,8 +308,10 @@
 				59336AC9278C788A00C1B1E3 /* NAICLCMA.xcdatamodeld in Sources */,
 				594B8982279063E0006DBA36 /* RoomClass.swift in Sources */,
 				593028A7278DBE1E00FE5DA9 /* ScheduleController.swift in Sources */,
+				5976E5F727A827DE001E8363 /* CustomCell.swift in Sources */,
 				59336ABF278C788A00C1B1E3 /* AppDelegate.swift in Sources */,
 				593028A5278DB93500FE5DA9 /* MapController.swift in Sources */,
+				597B745C27A42FF30026C793 /* schedule.swift in Sources */,
 				59336AC1278C788A00C1B1E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
