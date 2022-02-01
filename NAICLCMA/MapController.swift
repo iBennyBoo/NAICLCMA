@@ -2,7 +2,15 @@ import UIKit
 import AVFoundation
 class MapController: UIViewController {
 
-    @IBOutlet var node: UIImageView!
+    @IBOutlet weak var node1: UIImageView!
+    @IBOutlet weak var node2: UIImageView!
+    @IBOutlet weak var node3: UIImageView!
+    @IBOutlet weak var node4: UIImageView!
+    @IBOutlet weak var node5: UIImageView!
+    @IBOutlet weak var node6: UIImageView!
+    @IBOutlet weak var node7: UIImageView!
+    @IBOutlet weak var node8: UIImageView!
+    @IBOutlet weak var node9: UIImageView!
     @IBOutlet weak var map: UIImageView!
     @IBOutlet weak var switchButton: UIButton!
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
@@ -27,7 +35,7 @@ class MapController: UIViewController {
         }catch{
             print("error!")
         }
-        node.isHidden = true
+        node1.isHidden = true
         if(x == 0){
             x = 1
             navigationItem.title = "2nd Floor"
@@ -47,12 +55,12 @@ class MapController: UIViewController {
         {
             print("\(tapRecognizer.location(in: view))")
             print("\(((tapRecognizer.location(in: map).x)/map.bounds.maxX)*100), \(((tapRecognizer.location(in: map).y)/map.bounds.maxY)*100)")
-            if node.isHidden
+            if node1.isHidden
             {
-                node.isHidden = false
+                node1.isHidden = false
             }
-            node.center = tapRecognizer.location(in: view)
-            node.center.y -= 15
+            node1.center = tapRecognizer.location(in: view)
+            node1.center.y -= 30
         }
     }
 }

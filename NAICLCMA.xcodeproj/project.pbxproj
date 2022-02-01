@@ -47,7 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		590B3DDF27A2D1B7003D6B4E /* moon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = moon.mp4; path = ../../../../Downloads/moon.mp4; sourceTree = "<group>"; };
+		590B3DDF27A2D1B7003D6B4E /* moon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moon.mp4; sourceTree = "<group>"; };
 		593028A4278DB93500FE5DA9 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		593028A6278DBE1E00FE5DA9 /* ScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
 		59336ABB278C788A00C1B1E3 /* NAICLCMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NAICLCMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
