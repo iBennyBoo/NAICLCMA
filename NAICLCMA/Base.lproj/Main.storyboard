@@ -148,7 +148,6 @@
                     <navigationItem key="navigationItem" title="1st Floor" id="9gH-fj-Npo"/>
                     <connections>
                         <outlet property="map" destination="fnb-Ju-Q82" id="faA-jA-Hnn"/>
-                        <outlet property="node" destination="WzG-io-0i3" id="sD7-zR-WPL"/>
                         <outlet property="switchButton" destination="uaN-Vh-8R3" id="kGg-OL-jPI"/>
                         <outlet property="tapRecognizer" destination="wCM-Cz-r1G" id="eNo-12-Aw5"/>
                     </connections>
