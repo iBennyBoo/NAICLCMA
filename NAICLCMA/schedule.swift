@@ -4,20 +4,24 @@ import AVFoundation
     //var room: String
 //}
 
-class schedule: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource
+class schedule: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource
 {
     
+   
+    
+    
     @IBOutlet weak var pickerView: UIPickerView!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var button: UIButton!
     
     
     var audioPlayer: AVAudioPlayer?
     var selectClass: String = "106"
     var selectPeriod: Int = 1
-    var has: [String] = []
-    var periods: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    var rooms: [String] = ["106", "108", "109", "120", "122", "123", "124", "127", "128", "129", "130", "131", "132", "133", "134", "150", "151", "152", "153", "154", "155", "156", "158", "159", "160", "162", "163", "164", "165", "166", "167", "168", "169", "171", "172", "173", "200", "201", "201A", "202", "203", "204", "205", "205A", "206", "207", "208", "209", "209A", "210", "211", "212", "213", "214", "215", "216", "217", "218", "220", "221", "222", "223", "224", "225", "226", "230", "231", "232", "234", "235", "250", "251", "252", "253", "254", "255", "256", "259", "260", "261", "263", "264", "265", "266", "267", "268", "269", "AUD", "Athletic Director", "Band Room", "CAFE", "Care Room", "Choir Room", "Dean's Office", "FH", "Front Office", "GYM", "Guidance Office", "Internional Studies Office", "Library", "Nurse's Office", "Principal/Vice Office", "SRO Office", "Social Worker", "Student Services", "Tiger Conference Room", "WR"]
+    var has: [String: Int] = [:]
+    let images: [UIImage] = [UIImage(named: "Vector 1")!, UIImage(named: "Vector 2")!, UIImage(named: "Vector3")!, UIImage(named: "Vector 4")!, UIImage(named: "Vector 5")!,UIImage(named: "Vector 6")!, UIImage(named: "Vector 7")!, UIImage(named: "Vector 8")!, UIImage(named: "Vector 9")!]
+    let periods: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+    let rooms: [String] = ["106", "108", "109", "120", "122", "123", "124", "127", "128", "129", "130", "131", "132", "133", "134", "150", "151", "152", "153", "154", "155", "156", "158", "159", "160", "162", "163", "164", "165", "166", "167", "168", "169", "171", "172", "173", "200", "201", "201A", "202", "203", "204", "205", "205A", "206", "207", "208", "209", "209A", "210", "211", "212", "213", "214", "215", "216", "217", "218", "220", "221", "222", "223", "224", "225", "226", "230", "231", "232", "234", "235", "250", "251", "252", "253", "254", "255", "256", "259", "260", "261", "263", "264", "265", "266", "267", "268", "269", "AUD", "Athletic Director", "Band Room", "CAFE", "Care Room", "Choir Room", "Dean's Office", "FH", "Front Office", "GYM", "Guidance Office", "Internional Studies Office", "Library", "Nurse's Office", "Principal/Vice Office", "SRO Office", "Social Worker", "Student Services", "Tiger Conference Room", "WR"]
     
     let ding = Bundle.main.path(forResource: "Ding-small-bell", ofType: "mp3")!
     let bells = Bundle.main.path(forResource: "bells", ofType: "wav")!
@@ -30,8 +34,8 @@ class schedule: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         x.colors = [UIColor.orange.cgColor, UIColor.systemBrown.cgColor, UIColor.black.cgColor]
         self.view.layer.insertSublayer(x, at: 0)
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -42,7 +46,7 @@ class schedule: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         
         if let items = UserDefaults.standard.data(forKey: "rooms2"){
             let decoder = JSONDecoder()
-            if let decoded = try? decoder.decode([String].self, from: items){
+            if let decoded = try? decoder.decode([String: Int].self, from: items){
                 has = decoded
             }
         }
@@ -51,6 +55,22 @@ class schedule: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             button.isHidden = false
         }
         
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 343, height: 140)
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomCell
+        cell.configure(first: selectClass, picture: images[selectPeriod - 1], second: selectPeriod)
+        cell.layer.borderWidth = 1
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return has.count
     }
     
     @IBAction func button(_ sender: UIButton) {
@@ -77,12 +97,12 @@ class schedule: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
             }catch{
                 print("error!")
             }
-            has.append(selectClass)
+            has[selectClass] = selectPeriod
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(has){
                 UserDefaults.standard.set(encoded, forKey: "rooms2")
             }
-            tableView.reloadData()
+            collectionView.reloadData()
             if(has.count == 9){
                 let url = URL(fileURLWithPath: bells)
                 do{
@@ -127,27 +147,5 @@ class schedule: UIViewController, UITableViewDataSource, UITableViewDelegate, UI
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return has.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
-        cell.layer.borderWidth = 1
-        cell.textLabel?.text = "Room \(has[indexPath.row])"
-        cell.detailTextLabel?.text = "Period \(indexPath.row + selectPeriod)"
-        return cell
-}
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
-        if(editingStyle == .delete){
-            has.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            if(has.count <= 9){
-                button.isHidden = true
-            }
-        }
-        tableView.reloadData()
-    }
     
 }
