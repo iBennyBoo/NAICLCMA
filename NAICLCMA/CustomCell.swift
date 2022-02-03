@@ -2,9 +2,11 @@ import Foundation
 import UIKit
 public class CustomCell: UICollectionViewCell{
     
-    @IBOutlet weak var imageOutlet: UIImageView!
-    @IBOutlet weak var labelOutlet: UILabel!
-    @IBOutlet weak var labelOutletTwo: UILabel!
+    @IBOutlet var imageOutlet: UIImageView!
+    @IBOutlet var labelOutlet: UILabel!
+    @IBOutlet var labelOutletTwo: UILabel!
+    
+    
     
     func configure(first: String, picture: UIImage, second: Int){
         imageOutlet.layer.borderWidth = 0.5

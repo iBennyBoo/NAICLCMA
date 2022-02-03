@@ -4,7 +4,7 @@ import AVFoundation
     //var room: String
 //}
 
-class schedule: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource
+class schedule: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource, UICollectionViewDelegateFlowLayout
 {
     
    
@@ -44,7 +44,7 @@ class schedule: UIViewController, UICollectionViewDataSource, UICollectionViewDe
         button.layer.borderWidth = 1
         button.isHidden = true
         
-        if let items = UserDefaults.standard.data(forKey: "rooms2"){
+        if let items = UserDefaults.standard.data(forKey: "rooms"){
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([String: Int].self, from: items){
                 has = decoded
@@ -58,7 +58,7 @@ class schedule: UIViewController, UICollectionViewDataSource, UICollectionViewDe
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 343, height: 140)
+        return CGSize(width: 340, height: 105)
         
     }
     
@@ -82,6 +82,19 @@ class schedule: UIViewController, UICollectionViewDataSource, UICollectionViewDe
             print("error!")
         }
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "Selected \(1)", message: "Are You Sure You Want To Purchase This Item?", preferredStyle: .alert)
+        let no = UIAlertAction(title: "Negative", style: .default, handler: nil)
+        let yes = UIAlertAction(title: "Affirmative", style: .default, handler: { [self] action in
+                print("Worked")
+            })
+    
+        alert.addAction(no)
+        alert.addAction(yes)
+        present(alert, animated: true, completion: nil)
+        let grab = has.index(has.startIndex, offsetBy: 1)
+        print(grab)
+    }
     
     @IBAction func addButton(_ sender: UIBarButtonItem) {
         if(has.count == 9){
@@ -100,7 +113,7 @@ class schedule: UIViewController, UICollectionViewDataSource, UICollectionViewDe
             has[selectClass] = selectPeriod
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(has){
-                UserDefaults.standard.set(encoded, forKey: "rooms2")
+                UserDefaults.standard.set(encoded, forKey: "rooms")
             }
             collectionView.reloadData()
             if(has.count == 9){
