@@ -118,14 +118,46 @@
                                     <action selector="switchButton:" destination="aGF-5P-6vx" eventType="touchUpInside" id="2Vp-WK-5CS"/>
                                 </connections>
                             </button>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vector" id="WzG-io-0i3">
-                                <rect key="frame" x="342" y="580" width="17" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M8P-GS-3Vq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 1" id="WzG-io-0i3">
+                                <rect key="frame" x="305" y="524" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 2" id="BFy-HK-W9v">
+                                <rect key="frame" x="305" y="524" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 3" id="lRA-ZU-aEn">
+                                <rect key="frame" x="305" y="524" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 4" id="P8v-OU-tBl">
+                                <rect key="frame" x="305" y="524" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 5" id="dOw-ao-wXM">
+                                <rect key="frame" x="305" y="524" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 6" id="FUZ-Op-6ow">
+                                <rect key="frame" x="305" y="524" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 7" id="IWv-hh-ls9">
+                                <rect key="frame" x="305" y="524" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 8" id="Wo1-bh-BFU">
+                                <rect key="frame" x="305" y="524" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 9" id="hII-oG-fsg">
+                                <rect key="frame" x="305" y="524" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fsq-lP-TM1"/>
@@ -147,6 +179,15 @@
                     <navigationItem key="navigationItem" title="1st Floor" id="9gH-fj-Npo"/>
                     <connections>
                         <outlet property="map" destination="fnb-Ju-Q82" id="faA-jA-Hnn"/>
+                        <outlet property="node1" destination="WzG-io-0i3" id="wPr-UU-Kwh"/>
+                        <outlet property="node2" destination="BFy-HK-W9v" id="HTY-rH-Z70"/>
+                        <outlet property="node3" destination="lRA-ZU-aEn" id="VW0-VQ-lCA"/>
+                        <outlet property="node4" destination="P8v-OU-tBl" id="8OW-yL-eq1"/>
+                        <outlet property="node5" destination="dOw-ao-wXM" id="Pwf-TT-gAn"/>
+                        <outlet property="node6" destination="FUZ-Op-6ow" id="bpV-4c-me7"/>
+                        <outlet property="node7" destination="IWv-hh-ls9" id="Ds1-az-T08"/>
+                        <outlet property="node8" destination="Wo1-bh-BFU" id="utx-Xx-pw5"/>
+                        <outlet property="node9" destination="hII-oG-fsg" id="ZdN-uM-dhN"/>
                         <outlet property="switchButton" destination="uaN-Vh-8R3" id="kGg-OL-jPI"/>
                         <outlet property="tapRecognizer" destination="wCM-Cz-r1G" id="eNo-12-Aw5"/>
                     </connections>
@@ -278,8 +319,16 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Improved First Floor" width="360" height="537"/>
+        <image name="Vector 1" width="720" height="540"/>
+        <image name="Vector 2" width="720" height="540"/>
+        <image name="Vector 3" width="720" height="540"/>
+        <image name="Vector 4" width="720" height="540"/>
+        <image name="Vector 5" width="720" height="540"/>
+        <image name="Vector 6" width="720" height="540"/>
+        <image name="Vector 7" width="720" height="540"/>
+        <image name="Vector 8" width="720" height="540"/>
+        <image name="Vector 9" width="720" height="540"/>
         <image name="optionTwo" width="288" height="288"/>
-        <image name="vector" width="445" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
