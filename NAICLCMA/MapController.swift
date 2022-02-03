@@ -34,7 +34,7 @@ class MapController: UIViewController {
             audioPlayer?.play()
         }catch{
             print("error!")
-        }
+        }//fix
         node1.isHidden = true
         if(x == 0){
             x = 1
