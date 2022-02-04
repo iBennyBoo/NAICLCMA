@@ -39,7 +39,7 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="mapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ylg-WG-CxW"/>
-                                            <segue destination="aGF-5P-6vx" kind="show" id="kHx-cq-Qwa"/>
+                                            <segue destination="aGF-5P-6vx" kind="show" id="ML4-1w-T92"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnv-Ep-xbd">
@@ -67,6 +67,7 @@
                                         <rect key="frame" x="43" y="111" width="289" height="288"/>
                                     </imageView>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="wnv-Ep-xbd" firstAttribute="leading" secondItem="P59-Gp-1IG" secondAttribute="leading" id="0i4-Y1-R2e"/>
                                     <constraint firstItem="wnv-Ep-xbd" firstAttribute="top" secondItem="P59-Gp-1IG" secondAttribute="bottom" constant="8" symbolic="YES" id="7Z4-bc-GqP"/>
@@ -83,6 +84,9 @@
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="centerX" secondItem="CdJ-7p-sgG" secondAttribute="centerX" id="eWZ-MP-JvV"/>
                                     <constraint firstItem="CdJ-7p-sgG" firstAttribute="top" secondItem="av0-fN-dj9" secondAttribute="bottom" constant="57" id="p8b-yk-zEC"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="PZ4-Fc-XCB" appends="YES" id="zg1-93-Um2"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -107,6 +111,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <gestureRecognizer id="PZ4-Fc-XCB"/>
             </objects>
             <point key="canvasLocation" x="960.79999999999995" y="63.418290854572717"/>
         </scene>
@@ -229,7 +234,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1621.5999999999999" y="64.31784107946028"/>
+            <point key="canvasLocation" x="1622" y="65"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="W3c-sl-qRa">
@@ -360,7 +365,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="kHx-cq-Qwa"/>
+        <segue reference="ML4-1w-T92"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Improved First Floor" width="360" height="537"/>
