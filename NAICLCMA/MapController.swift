@@ -13,6 +13,7 @@ class MapController: UIViewController {
     @IBOutlet weak var node9: UIImageView!
     @IBOutlet weak var map: UIImageView!
     @IBOutlet weak var switchButton: UIButton!
+    @IBOutlet weak var simpLable: UILabel!
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
     
     var x = 0
@@ -59,8 +60,9 @@ class MapController: UIViewController {
             {
                 node1.isHidden = false
             }
+            simpLable.text = "\(((tapRecognizer.location(in: map).x)/map.bounds.maxX)*100), \(((tapRecognizer.location(in: map).y)/map.bounds.maxY)*100)"
             node1.center = tapRecognizer.location(in: view)
-            node1.center.y -= 30
+            node1.center.y -= tapRecognizer.location(in: view).y/map.bounds.maxY + 20
         }
     }
 }

@@ -15,6 +15,9 @@ public class RoomClass{
         // Pain, 0 - ∞
         []
     ]
+     
+     
+    
     init(level: Bool, name: String, room: String, classes: [String])
     {
         self.name = name

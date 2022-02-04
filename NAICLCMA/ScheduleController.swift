@@ -124,7 +124,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         {
             selectClass = periods[row]
         }
-        print(selected ?? "Null")
+        print(selected)
     }
     
 //    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
