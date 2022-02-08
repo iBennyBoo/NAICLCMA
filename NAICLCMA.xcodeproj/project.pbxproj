@@ -22,7 +22,8 @@
 		593FF5EF279F2E2A005D941F /* bells.wav in Resources */ = {isa = PBXBuildFile; fileRef = 593FF5EE279F2E2A005D941F /* bells.wav */; };
 		593FF5F1279F3177005D941F /* flip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 593FF5F0279F3177005D941F /* flip.mp3 */; };
 		594B8982279063E0006DBA36 /* RoomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B8981279063E0006DBA36 /* RoomClass.swift */; };
-		59639FF027AD62760012754A /* final_61eef539fd65600138129733_408888.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 59639FEE27AD62760012754A /* final_61eef539fd65600138129733_408888.mp4 */; };
+		595AE13827B15EA600681B2B /* LunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595AE13727B15EA600681B2B /* LunchController.swift */; };
+		59639FF027AD62760012754A /* moon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 59639FEE27AD62760012754A /* moon.mp4 */; };
 		5980EE3A27A02C05001D0FED /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5980EE3927A02C05001D0FED /* click.mp3 */; };
 		5980EE3C27A031D3001D0FED /* Ding-small-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */; };
 /* End PBXBuildFile section */
@@ -64,7 +65,8 @@
 		593FF5EE279F2E2A005D941F /* bells.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bells.wav; sourceTree = "<group>"; };
 		593FF5F0279F3177005D941F /* flip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flip.mp3; sourceTree = "<group>"; };
 		594B8981279063E0006DBA36 /* RoomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomClass.swift; sourceTree = "<group>"; };
-		59639FEF27AD62760012754A /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/final_61eef539fd65600138129733_408888.mp4; sourceTree = "<group>"; };
+		595AE13727B15EA600681B2B /* LunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchController.swift; sourceTree = "<group>"; };
+		59639FEF27AD62760012754A /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/moon.mp4; sourceTree = "<group>"; };
 		5980EE3927A02C05001D0FED /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ding-small-bell.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 				59336AC2278C788A00C1B1E3 /* ViewController.swift */,
 				593028A4278DB93500FE5DA9 /* MapController.swift */,
 				593028A6278DBE1E00FE5DA9 /* ScheduleController.swift */,
+				595AE13727B15EA600681B2B /* LunchController.swift */,
 				594B8981279063E0006DBA36 /* RoomClass.swift */,
 				59336ACA278C788C00C1B1E3 /* Assets.xcassets */,
 				59336AC4278C788A00C1B1E3 /* Main.storyboard */,
@@ -138,7 +141,7 @@
 				593FF5EE279F2E2A005D941F /* bells.wav */,
 				593FF5F0279F3177005D941F /* flip.mp3 */,
 				5980EE3927A02C05001D0FED /* click.mp3 */,
-				59639FEE27AD62760012754A /* final_61eef539fd65600138129733_408888.mp4 */,
+				59639FEE27AD62760012754A /* moon.mp4 */,
 				59336ACF278C788C00C1B1E3 /* Info.plist */,
 				59336AC7278C788A00C1B1E3 /* NAICLCMA.xcdatamodeld */,
 			);
@@ -270,7 +273,7 @@
 				593FF5F1279F3177005D941F /* flip.mp3 in Resources */,
 				59336ACE278C788C00C1B1E3 /* LaunchScreen.storyboard in Resources */,
 				59336ACB278C788C00C1B1E3 /* Assets.xcassets in Resources */,
-				59639FF027AD62760012754A /* final_61eef539fd65600138129733_408888.mp4 in Resources */,
+				59639FF027AD62760012754A /* moon.mp4 in Resources */,
 				5980EE3C27A031D3001D0FED /* Ding-small-bell.mp3 in Resources */,
 				59336AC6278C788A00C1B1E3 /* Main.storyboard in Resources */,
 				593FF5EF279F2E2A005D941F /* bells.wav in Resources */,
@@ -304,6 +307,7 @@
 				593028A7278DBE1E00FE5DA9 /* ScheduleController.swift in Sources */,
 				59336ABF278C788A00C1B1E3 /* AppDelegate.swift in Sources */,
 				593028A5278DB93500FE5DA9 /* MapController.swift in Sources */,
+				595AE13827B15EA600681B2B /* LunchController.swift in Sources */,
 				59336AC1278C788A00C1B1E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,12 +361,12 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
-		59639FEE27AD62760012754A /* final_61eef539fd65600138129733_408888.mp4 */ = {
+		59639FEE27AD62760012754A /* moon.mp4 */ = {
 			isa = PBXVariantGroup;
 			children = (
 				59639FEF27AD62760012754A /* en */,
 			);
-			name = final_61eef539fd65600138129733_408888.mp4;
+			name = moon.mp4;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
