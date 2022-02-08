@@ -14,7 +14,6 @@ class ViewController: UIViewController, CAAnimationDelegate {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.becomeFirstResponder()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
@@ -22,22 +21,6 @@ class ViewController: UIViewController, CAAnimationDelegate {
             playVideo()
         
     }
-    
-    override var canBecomeFirstResponder: Bool {
-        get {
-            return true
-        }
-    }
-    
-    //Plays audio if user shakes phone
-//    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
-//        if motion == .motionShake {
-//            if let url = URL(string: "tel://\(8157016947)") {
-//                 UIApplication.shared.openURL(url)
-//             }
-//
-//        }
-//    }
     
     @IBAction func mapButton(_ sender: UIButton) {
         let url = URL(fileURLWithPath: click)

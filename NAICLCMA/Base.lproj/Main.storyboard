@@ -26,11 +26,11 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P59-Gp-1IG">
-                                        <rect key="frame" x="112.5" y="476" width="150" height="47"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P59-Gp-1IG">
+                                        <rect key="frame" x="112" y="488" width="150" height="47"/>
                                         <color key="backgroundColor" red="0.974299464" green="0.61693311569999998" blue="0.1414865713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="gQ5-nu-BRY"/>
+                                            <constraint firstAttribute="width" constant="150" id="d5W-LG-VX4"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Map">
@@ -39,20 +39,22 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="mapButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ylg-WG-CxW"/>
-                                            <segue destination="aGF-5P-6vx" kind="show" id="ML4-1w-T92"/>
+                                            <segue destination="aGF-5P-6vx" kind="show" id="3n0-GL-WtK"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnv-Ep-xbd">
-                                        <rect key="frame" x="112.5" y="531" width="150" height="38"/>
+                                        <rect key="frame" x="113" y="543" width="150" height="38"/>
                                         <color key="backgroundColor" red="0.97254901959999995" green="0.57647058819999997" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="eCc-sd-tqx"/>
+                                        </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Schedule">
                                             <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="19"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                         <connections>
-                                            <action selector="scheduleButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IFR-Na-DRd"/>
-                                            <segue destination="u6a-Ab-tdd" kind="show" id="YSA-Ci-mLC"/>
+                                            <segue destination="u6a-Ab-tdd" kind="show" id="Jyu-39-GcK"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="av0-fN-dj9">
@@ -69,24 +71,20 @@
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="wnv-Ep-xbd" firstAttribute="leading" secondItem="P59-Gp-1IG" secondAttribute="leading" id="0i4-Y1-R2e"/>
-                                    <constraint firstItem="wnv-Ep-xbd" firstAttribute="top" secondItem="P59-Gp-1IG" secondAttribute="bottom" constant="8" symbolic="YES" id="7Z4-bc-GqP"/>
+                                    <constraint firstItem="P59-Gp-1IG" firstAttribute="top" secondItem="xIb-eA-nGv" secondAttribute="bottom" constant="40.5" id="670-of-0ze"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="top" secondItem="CdJ-7p-sgG" secondAttribute="bottom" constant="8" symbolic="YES" id="7p3-Eb-R7y"/>
                                     <constraint firstAttribute="trailing" secondItem="av0-fN-dj9" secondAttribute="trailing" id="BES-L0-3OC"/>
-                                    <constraint firstItem="P59-Gp-1IG" firstAttribute="centerX" secondItem="IeV-ll-Nnu" secondAttribute="centerX" id="EI5-zz-Lx9"/>
                                     <constraint firstItem="av0-fN-dj9" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" id="Ntt-rA-q8s"/>
-                                    <constraint firstAttribute="bottom" secondItem="wnv-Ep-xbd" secondAttribute="bottom" constant="98" id="Snh-Ss-QDe"/>
+                                    <constraint firstAttribute="trailing" secondItem="wnv-Ep-xbd" secondAttribute="trailing" constant="112" id="SX5-re-XIE"/>
+                                    <constraint firstAttribute="bottom" secondItem="wnv-Ep-xbd" secondAttribute="bottom" constant="86" id="Snh-Ss-QDe"/>
                                     <constraint firstItem="av0-fN-dj9" firstAttribute="top" secondItem="IeV-ll-Nnu" secondAttribute="top" id="Vrl-NS-klR"/>
                                     <constraint firstItem="CdJ-7p-sgG" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" constant="43" id="a2J-7n-Gp1"/>
-                                    <constraint firstItem="xIb-eA-nGv" firstAttribute="centerX" secondItem="P59-Gp-1IG" secondAttribute="centerX" id="an6-od-mgf"/>
+                                    <constraint firstAttribute="trailing" secondItem="P59-Gp-1IG" secondAttribute="trailing" constant="113" id="bT8-ob-6y4"/>
                                     <constraint firstItem="CdJ-7p-sgG" firstAttribute="centerX" secondItem="av0-fN-dj9" secondAttribute="centerX" id="bYz-LP-bVd"/>
-                                    <constraint firstItem="wnv-Ep-xbd" firstAttribute="trailing" secondItem="P59-Gp-1IG" secondAttribute="trailing" id="cwL-Tx-tRg"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="centerX" secondItem="CdJ-7p-sgG" secondAttribute="centerX" id="eWZ-MP-JvV"/>
+                                    <constraint firstItem="wnv-Ep-xbd" firstAttribute="top" secondItem="P59-Gp-1IG" secondAttribute="bottom" constant="8" symbolic="YES" id="nxF-vW-mT8"/>
                                     <constraint firstItem="CdJ-7p-sgG" firstAttribute="top" secondItem="av0-fN-dj9" secondAttribute="bottom" constant="57" id="p8b-yk-zEC"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="PZ4-Fc-XCB" appends="YES" id="zg1-93-Um2"/>
-                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -105,13 +103,12 @@
                         <outlet property="image" destination="CdJ-7p-sgG" id="Qnb-M7-Vfb"/>
                         <outlet property="label" destination="xIb-eA-nGv" id="Nud-xb-2iX"/>
                         <outlet property="mapButton" destination="P59-Gp-1IG" id="Vqf-3r-jhy"/>
-                        <outlet property="scheduleButton" destination="wnv-Ep-xbd" id="IED-GX-ZTf"/>
+                        <outlet property="scheduleButton" destination="wnv-Ep-xbd" id="vqS-Er-jFC"/>
                         <outlet property="videoLayer" destination="IeV-ll-Nnu" id="hxM-IZ-JNH"/>
                         <outlet property="white" destination="av0-fN-dj9" id="g6R-5E-BSf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <gestureRecognizer id="PZ4-Fc-XCB"/>
             </objects>
             <point key="canvasLocation" x="960.79999999999995" y="63.418290854572717"/>
         </scene>
@@ -125,6 +122,11 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
                                 <rect key="frame" x="-28" y="58" width="417" height="555"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fnb-Ju-Q82" secondAttribute="height" multiplier="139:185" id="EFq-0S-vLX"/>
+                                    <constraint firstAttribute="height" constant="555" id="QmL-4f-Yef"/>
+                                    <constraint firstAttribute="width" constant="417" id="UCP-r7-TfI"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-Vh-8R3">
                                 <rect key="frame" x="0.0" y="613" width="375" height="54"/>
@@ -234,7 +236,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1622" y="65"/>
+            <point key="canvasLocation" x="1610" y="63"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="W3c-sl-qRa">
@@ -365,7 +367,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ML4-1w-T92"/>
+        <segue reference="3n0-GL-WtK"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Improved First Floor" width="360" height="537"/>

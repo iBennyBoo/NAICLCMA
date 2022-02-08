@@ -10,7 +10,6 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var button: UIButton!
-    
     var audioPlayer: AVAudioPlayer?
     var selected: String = "106"
     var selectClass: Int = 1
