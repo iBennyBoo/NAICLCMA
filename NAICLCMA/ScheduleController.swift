@@ -10,7 +10,6 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var button: UIButton!
-    
     var audioPlayer: AVAudioPlayer?
     var selected: String = "106"
     var selectClass: Int = 1
@@ -124,7 +123,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         {
             selectClass = periods[row]
         }
-        print(selected ?? "Null")
+        print(selected)
     }
     
 //    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
