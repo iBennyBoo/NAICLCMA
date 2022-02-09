@@ -77,7 +77,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
             }
             tableView.reloadData()
             if(has.count == 9){
-                let url = URL(fileURLWithPath: bells)
+                let url = URL(fileURLWithPath: ding)
                 do{
                     audioPlayer = try AVAudioPlayer(contentsOf: url)
                     audioPlayer?.play()
