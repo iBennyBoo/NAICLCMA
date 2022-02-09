@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59155F5427B3FB67000D992D /* InfoClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59155F5327B3FB67000D992D /* InfoClass.swift */; };
 		593028A5278DB93500FE5DA9 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593028A4278DB93500FE5DA9 /* MapController.swift */; };
 		593028A7278DBE1E00FE5DA9 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593028A6278DBE1E00FE5DA9 /* ScheduleController.swift */; };
 		59336ABF278C788A00C1B1E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59336ABE278C788A00C1B1E3 /* AppDelegate.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59155F5327B3FB67000D992D /* InfoClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoClass.swift; sourceTree = "<group>"; };
 		593028A4278DB93500FE5DA9 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		593028A6278DBE1E00FE5DA9 /* ScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
 		59336ABB278C788A00C1B1E3 /* NAICLCMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NAICLCMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 				593028A6278DBE1E00FE5DA9 /* ScheduleController.swift */,
 				595AE13727B15EA600681B2B /* LunchController.swift */,
 				594B8981279063E0006DBA36 /* RoomClass.swift */,
+				59155F5327B3FB67000D992D /* InfoClass.swift */,
 				59336ACA278C788C00C1B1E3 /* Assets.xcassets */,
 				59336AC4278C788A00C1B1E3 /* Main.storyboard */,
 				59336ACC278C788C00C1B1E3 /* LaunchScreen.storyboard */,
@@ -311,6 +314,7 @@
 				593028A7278DBE1E00FE5DA9 /* ScheduleController.swift in Sources */,
 				59336ABF278C788A00C1B1E3 /* AppDelegate.swift in Sources */,
 				593028A5278DB93500FE5DA9 /* MapController.swift in Sources */,
+				59155F5427B3FB67000D992D /* InfoClass.swift in Sources */,
 				595AE13827B15EA600681B2B /* LunchController.swift in Sources */,
 				59336AC1278C788A00C1B1E3 /* SceneDelegate.swift in Sources */,
 			);
