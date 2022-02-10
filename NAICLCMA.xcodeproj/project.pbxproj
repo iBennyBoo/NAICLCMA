@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59155F5427B3FB67000D992D /* InfoClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59155F5327B3FB67000D992D /* InfoClass.swift */; };
 		593028A5278DB93500FE5DA9 /* MapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593028A4278DB93500FE5DA9 /* MapController.swift */; };
 		593028A7278DBE1E00FE5DA9 /* ScheduleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593028A6278DBE1E00FE5DA9 /* ScheduleController.swift */; };
 		59336ABF278C788A00C1B1E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59336ABE278C788A00C1B1E3 /* AppDelegate.swift */; };
@@ -22,6 +23,8 @@
 		593FF5EF279F2E2A005D941F /* bells.wav in Resources */ = {isa = PBXBuildFile; fileRef = 593FF5EE279F2E2A005D941F /* bells.wav */; };
 		593FF5F1279F3177005D941F /* flip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 593FF5F0279F3177005D941F /* flip.mp3 */; };
 		594B8982279063E0006DBA36 /* RoomClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594B8981279063E0006DBA36 /* RoomClass.swift */; };
+		595AE13827B15EA600681B2B /* LunchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595AE13727B15EA600681B2B /* LunchController.swift */; };
+		59639FF027AD62760012754A /* moon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 59639FEE27AD62760012754A /* moon.mp4 */; };
 		5980EE3A27A02C05001D0FED /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5980EE3927A02C05001D0FED /* click.mp3 */; };
 		5980EE3C27A031D3001D0FED /* Ding-small-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */; };
 		59E5ED9127A9710400F73F08 /* moon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 59E5ED9027A9710400F73F08 /* moon.mp4 */; };
@@ -45,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59155F5327B3FB67000D992D /* InfoClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoClass.swift; sourceTree = "<group>"; };
 		593028A4278DB93500FE5DA9 /* MapController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapController.swift; sourceTree = "<group>"; };
 		593028A6278DBE1E00FE5DA9 /* ScheduleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleController.swift; sourceTree = "<group>"; };
 		59336ABB278C788A00C1B1E3 /* NAICLCMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NAICLCMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +68,8 @@
 		593FF5EE279F2E2A005D941F /* bells.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bells.wav; sourceTree = "<group>"; };
 		593FF5F0279F3177005D941F /* flip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flip.mp3; sourceTree = "<group>"; };
 		594B8981279063E0006DBA36 /* RoomClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomClass.swift; sourceTree = "<group>"; };
+		595AE13727B15EA600681B2B /* LunchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LunchController.swift; sourceTree = "<group>"; };
+		59639FEF27AD62760012754A /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/moon.mp4; sourceTree = "<group>"; };
 		5980EE3927A02C05001D0FED /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ding-small-bell.mp3"; sourceTree = "<group>"; };
 		59E5ED9027A9710400F73F08 /* moon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moon.mp4; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 		590B3DDE27A2CD96003D6B4E /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
+				59E5ED9027A9710400F73F08 /* moon.mp4 */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -130,7 +137,9 @@
 				59336AC2278C788A00C1B1E3 /* ViewController.swift */,
 				593028A4278DB93500FE5DA9 /* MapController.swift */,
 				593028A6278DBE1E00FE5DA9 /* ScheduleController.swift */,
+				595AE13727B15EA600681B2B /* LunchController.swift */,
 				594B8981279063E0006DBA36 /* RoomClass.swift */,
+				59155F5327B3FB67000D992D /* InfoClass.swift */,
 				59336ACA278C788C00C1B1E3 /* Assets.xcassets */,
 				59336AC4278C788A00C1B1E3 /* Main.storyboard */,
 				59336ACC278C788C00C1B1E3 /* LaunchScreen.storyboard */,
@@ -138,7 +147,7 @@
 				593FF5EE279F2E2A005D941F /* bells.wav */,
 				593FF5F0279F3177005D941F /* flip.mp3 */,
 				5980EE3927A02C05001D0FED /* click.mp3 */,
-				59E5ED9027A9710400F73F08 /* moon.mp4 */,
+				59639FEE27AD62760012754A /* moon.mp4 */,
 				59336ACF278C788C00C1B1E3 /* Info.plist */,
 				59336AC7278C788A00C1B1E3 /* NAICLCMA.xcdatamodeld */,
 			);
@@ -271,6 +280,7 @@
 				593FF5F1279F3177005D941F /* flip.mp3 in Resources */,
 				59336ACE278C788C00C1B1E3 /* LaunchScreen.storyboard in Resources */,
 				59336ACB278C788C00C1B1E3 /* Assets.xcassets in Resources */,
+				59639FF027AD62760012754A /* moon.mp4 in Resources */,
 				5980EE3C27A031D3001D0FED /* Ding-small-bell.mp3 in Resources */,
 				59336AC6278C788A00C1B1E3 /* Main.storyboard in Resources */,
 				593FF5EF279F2E2A005D941F /* bells.wav in Resources */,
@@ -304,6 +314,8 @@
 				593028A7278DBE1E00FE5DA9 /* ScheduleController.swift in Sources */,
 				59336ABF278C788A00C1B1E3 /* AppDelegate.swift in Sources */,
 				593028A5278DB93500FE5DA9 /* MapController.swift in Sources */,
+				59155F5427B3FB67000D992D /* InfoClass.swift in Sources */,
+				595AE13827B15EA600681B2B /* LunchController.swift in Sources */,
 				59336AC1278C788A00C1B1E3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +367,14 @@
 				59336ACD278C788C00C1B1E3 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		59639FEE27AD62760012754A /* moon.mp4 */ = {
+			isa = PBXVariantGroup;
+			children = (
+				59639FEF27AD62760012754A /* en */,
+			);
+			name = moon.mp4;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

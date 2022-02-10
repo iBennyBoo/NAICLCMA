@@ -4,6 +4,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
 
     @IBOutlet weak var mapButton: UIButton!
     @IBOutlet weak var scheduleButton: UIButton!
+    @IBOutlet weak var lunchButton: UIButton!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var videoLayer: UIView!
     @IBOutlet weak var image: UIImageView!
@@ -17,12 +18,14 @@ class ViewController: UIViewController, CAAnimationDelegate {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
+        lunchButton.layer.borderWidth = 1
         label.layer.borderWidth = 1
             playVideo()
         
     }
     
     @IBAction func mapButton(_ sender: UIButton) {
+        print("working")
         let url = URL(fileURLWithPath: click)
         do{
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -48,7 +51,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
 
     //Background Video\\
     func playVideo(){
-        guard let path = Bundle.main.path(forResource: "final_61eef539fd65600138129733_408888", ofType: "mp4") else{
+        guard let path = Bundle.main.path(forResource: "moon", ofType: "mp4") else{
             return
         }
         let player = AVPlayer(url: URL(fileURLWithPath: path))
@@ -64,9 +67,8 @@ class ViewController: UIViewController, CAAnimationDelegate {
         videoLayer.bringSubviewToFront(scheduleButton)
         videoLayer.bringSubviewToFront(mapButton)
         videoLayer.bringSubviewToFront(white)
+        videoLayer.bringSubviewToFront(lunchButton)
     }
-    
-    
     
 }
 
