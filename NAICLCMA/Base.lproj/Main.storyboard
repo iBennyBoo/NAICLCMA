@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H5t-T5-U2l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H5t-T5-U2l">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -136,7 +136,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
-                                <rect key="frame" x="-28" y="58" width="417" height="555"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="555"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-Vh-8R3">
                                 <rect key="frame" x="0.0" y="613" width="375" height="54"/>
@@ -194,14 +194,21 @@
                                 <rect key="frame" x="305" y="524" width="58" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZ9-ov-j5k">
+                                <rect key="frame" x="16" y="44" width="232" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fsq-lP-TM1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="fnb-Ju-Q82" firstAttribute="leading" secondItem="A6K-4B-umL" secondAttribute="leadingMargin" constant="-44" id="6n5-bp-LM0"/>
+                            <constraint firstItem="fnb-Ju-Q82" firstAttribute="leading" secondItem="A6K-4B-umL" secondAttribute="leadingMargin" constant="-16" id="6n5-bp-LM0"/>
                             <constraint firstItem="uaN-Vh-8R3" firstAttribute="leading" secondItem="Fsq-lP-TM1" secondAttribute="leading" id="KXv-gk-11t"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="fnb-Ju-Q82" secondAttribute="trailing" constant="-30" id="RJP-iI-1PO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fnb-Ju-Q82" secondAttribute="trailing" constant="-16" id="RJP-iI-1PO"/>
                             <constraint firstItem="uaN-Vh-8R3" firstAttribute="bottom" secondItem="Fsq-lP-TM1" secondAttribute="bottom" id="SPl-hF-iVv"/>
                             <constraint firstItem="uaN-Vh-8R3" firstAttribute="top" secondItem="fnb-Ju-Q82" secondAttribute="bottom" id="dJc-x0-0KQ"/>
                             <constraint firstItem="uaN-Vh-8R3" firstAttribute="centerX" secondItem="A6K-4B-umL" secondAttribute="centerX" id="iOS-dh-Qwm"/>
@@ -223,6 +230,7 @@
                         <outlet property="node7" destination="IWv-hh-ls9" id="Ds1-az-T08"/>
                         <outlet property="node8" destination="Wo1-bh-BFU" id="utx-Xx-pw5"/>
                         <outlet property="node9" destination="hII-oG-fsg" id="ZdN-uM-dhN"/>
+                        <outlet property="simpLable" destination="qZ9-ov-j5k" id="1iQ-Jo-ggF"/>
                         <outlet property="switchButton" destination="uaN-Vh-8R3" id="kGg-OL-jPI"/>
                         <outlet property="tapRecognizer" destination="wCM-Cz-r1G" id="eNo-12-Aw5"/>
                     </connections>
@@ -235,7 +243,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1622" y="65"/>
+            <point key="canvasLocation" x="1621.5999999999999" y="64.31784107946028"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="W3c-sl-qRa">

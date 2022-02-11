@@ -35,12 +35,16 @@ class MapController: UIViewController {
             audioPlayer?.play()
         }catch{
             print("error!")
-        }//fix
-        node1.isHidden = true
+        }
+        node2.isHidden = true
         if(x == 0){
             x = 1
             navigationItem.title = "2nd Floor"
             map.image = UIImage(named: "Improved Second Floor")
+            node1.isHidden = false
+            node1.center = CGPoint(x: (RoomClass.coords[true]!["224"]![0]/100 * map.bounds.maxX), y: (RoomClass.coords[true]!["224"]![1]/100 * view.bounds.maxY))
+            node3.isHidden = false
+            node3.center = CGPoint(x: (RoomClass.coords[true]!["225"]![0]/100 * map.bounds.maxX), y: (RoomClass.coords[true]!["225"]![1]/100 * view.bounds.maxY))
         } else if (x == 1){
             x = 0
             navigationItem.title = "1st Floor"
@@ -56,13 +60,13 @@ class MapController: UIViewController {
         {
             print("\(tapRecognizer.location(in: view))")
             print("\(((tapRecognizer.location(in: map).x)/map.bounds.maxX)*100), \(((tapRecognizer.location(in: map).y)/map.bounds.maxY)*100)")
-            if node1.isHidden
+            if node2.isHidden
             {
-                node1.isHidden = false
+                node2.isHidden = false
             }
             simpLable.text = "\(((tapRecognizer.location(in: map).x)/map.bounds.maxX)*100), \(((tapRecognizer.location(in: map).y)/map.bounds.maxY)*100)"
-            node1.center = tapRecognizer.location(in: view)
-            node1.center.y -= tapRecognizer.location(in: view).y/map.bounds.maxY + 20
+            node2.center = tapRecognizer.location(in: view)
+            node2.center.y -= tapRecognizer.location(in: view).y/map.bounds.maxY + 20
         }
     }
 }
