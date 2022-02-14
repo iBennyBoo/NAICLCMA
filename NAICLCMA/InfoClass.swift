@@ -16,6 +16,11 @@ public class InfoClass{
         self.ninth = ninth
     }
     
+    func asList() -> [String]
+    {
+        return [first, second, third, fourth, fifth, sixth, seventh, eighth, ninth]
+    }
+    
     func getFirst() -> String{
         return first
     }
