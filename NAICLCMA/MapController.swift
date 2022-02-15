@@ -13,7 +13,6 @@ class MapController: UIViewController {
     @IBOutlet weak var node9: UIImageView!
     @IBOutlet weak var map: UIImageView!
     @IBOutlet weak var switchButton: UIButton!
-    @IBOutlet weak var simpLable: UILabel!
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
     
     var x = 0
@@ -24,7 +23,7 @@ class MapController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         switchButton.layer.borderWidth = 1
-        
+        viewDidAppear(true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -34,37 +33,37 @@ class MapController: UIViewController {
         {
             if i != " "
             {
-                t += 1
                 switch t
                 {
-                case 1:
+                case 0:
                     node1.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
-                case 2:
+                case 1:
                     node2.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
-                case 3:
+                case 2:
                     node3.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
-                case 4:
+                case 3:
                     node4.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
-                case 5:
+                case 4:
                     node5.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
-                case 6:
+                case 5:
                     node6.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
-                case 7:
+                case 6:
                     node7.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
-                case 8:
+                case 7:
                     node8.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
-                case 9:
+                case 8:
                     node9.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
                 default: break
                 }
             }
+            t += 1
         }
         t = 0
         for i in ScheduleController.schedule.asList()
         {
             t += 1
             let b = codify(find: i)
-            if b.0 == "0"
+            if b.0 == "0" || b.0 == " "
             {
                 switch t
                 {
