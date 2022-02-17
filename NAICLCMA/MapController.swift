@@ -21,6 +21,7 @@ class MapController: UIViewController {
     var audioPlayer: AVAudioPlayer?
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         switchButton.layer.borderWidth = 1
         viewDidAppear(true)
