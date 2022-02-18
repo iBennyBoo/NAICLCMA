@@ -1,6 +1,6 @@
 import UIKit
 import AVFoundation
-class MapController: UIViewController {
+class MapController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var node1: UIImageView!
     @IBOutlet weak var node2: UIImageView!
@@ -12,8 +12,10 @@ class MapController: UIViewController {
     @IBOutlet weak var node8: UIImageView!
     @IBOutlet weak var node9: UIImageView!
     @IBOutlet weak var map: UIImageView!
+    
     @IBOutlet weak var switchButton: UIButton!
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     var x = 0
     let flip = Bundle.main.path(forResource: "flip", ofType: "mp3")!
@@ -24,6 +26,9 @@ class MapController: UIViewController {
         
         super.viewDidLoad()
         switchButton.layer.borderWidth = 1
+        scrollView.maximumZoomScale = 6
+        scrollView.minimumZoomScale = 1
+        scrollView.delegate = self
         viewDidAppear(true)
     }
     
@@ -152,6 +157,31 @@ class MapController: UIViewController {
             }
         }
         t = 0
+    }
+    
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return map
+    }
+    
+    func scrollViewDidZoom(_ scrollView: UIScrollView) {
+        if (scrollView.zoomScale > 1){
+        if let image = map.image {
+            let width = map.frame.width / image.size.width
+            let height = map.frame.height / image.size.height
+            
+            let ratio = width < height ? width : height
+            let newWidth = image.size.width * ratio
+            let newHeight = image.size.height * ratio
+            let conditionLeft = newWidth * scrollView.zoomScale > map.frame.width
+            let left = 0.5 * (conditionLeft ? newWidth - map.frame.width : (scrollView.frame.width - scrollView.contentSize.width))
+            let conditionTop = newHeight * scrollView.zoomScale > map.frame.height
+            let top = 0.5 * (conditionTop ? newHeight - map.frame.height : (scrollView.frame.height - scrollView.contentSize.height))
+            
+            scrollView.contentInset = UIEdgeInsets(top: top, left: left, bottom: top, right: left)
+            }
+        } else{
+            scrollView.contentInset = .zero
+        }
     }
     
     //Switches Between Floors of Building\\
