@@ -16,6 +16,19 @@ public class InfoClass{
         self.ninth = ninth
     }
     
+    init(StringArray: [String])
+    {
+        self.first = StringArray[0]
+        self.second = StringArray[1]
+        self.third = StringArray[2]
+        self.fourth = StringArray[3]
+        self.fifth = StringArray[4]
+        self.sixth = StringArray[5]
+        self.seventh = StringArray[6]
+        self.eighth = StringArray[7]
+        self.ninth = StringArray[8]
+    }
+    
     func asList() -> [String]
     {
         return [first, second, third, fourth, fifth, sixth, seventh, eighth, ninth]
