@@ -37,7 +37,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
         var t = 0
         for i in ScheduleController.schedule.asList()
         {
-            if i != " "
+            if i != "---" || i != " " || i != ""
             {
                 switch t
                 {
