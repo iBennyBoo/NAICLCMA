@@ -208,7 +208,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
         {
             t += 1
             let b = codify(find: i)
-            if b.0 == "0"
+            if b.0 == "0" || b.0 == "---"
             {
                 switch t
                 {
