@@ -33,7 +33,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let iLoathSwift = 0.09745127436 * view.bounds.maxY
+        let iLoathSwift = 0.1 * view.bounds.maxY
         var t = 0
         for i in ScheduleController.schedule.asList()
         {
@@ -42,7 +42,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
                 switch t
                 {
                 case 0:
-                    node1.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
+                    node1.center = CGPoint(x: ((RoomClass.coords[i]![0]/100) * map.bounds.maxX) /*+ whySwift*/, y: (((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift))
                 case 1:
                     node2.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
                 case 2:
@@ -69,7 +69,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
         {
             t += 1
             let b = codify(find: i)
-            if b.0 == "0" || b.0 == " "
+            if b.0 == "0" || b.0 == " " || b.0 == "---"
             {
                 switch t
                 {
