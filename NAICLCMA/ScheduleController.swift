@@ -10,7 +10,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var button: UIButton!
-    static var schedule = InfoClass(first: "0", second: "0", third: "0", fourth: "0", fifth: "0", sixth: "0", seventh: "0", eighth: "0", ninth: "0")
+    static var schedule = InfoClass(first: "---", second: "---", third: "---", fourth: "---", fifth: "---", sixth: "---", seventh: "---", eighth: "---", ninth: "---")
     var audioPlayer: AVAudioPlayer?
     var selected: String = "---"
     var selectClass: Int = 1
