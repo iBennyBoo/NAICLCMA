@@ -38,9 +38,8 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         pickerView.reloadAllComponents()
         
         button.layer.borderWidth = 1
-        button.isHidden = true
         
-        if let items = UserDefaults.standard.data(forKey: "rooms3"){
+        if let items = UserDefaults.standard.data(forKey: "rooms6"){
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([String].self, from: items){
                 has = decoded
@@ -77,10 +76,12 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
             {
                 pickerView.selectRow(pickerView.selectedRow(inComponent: 1) + 1, inComponent: 1, animated: true)
                 selectClass += 1
+            }else{
+                pickerView.selectRow(pickerView.selectedRow(inComponent: 1) - 8, inComponent: 1, animated: true)
             }
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(has){
-                UserDefaults.standard.set(encoded, forKey: "rooms3")
+                UserDefaults.standard.set(encoded, forKey: "rooms6")
             }
             tableView.reloadData()
             if(has.count == 9){
@@ -158,16 +159,11 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
 }
     
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
-//        if(editingStyle == .delete){
-//            has.remove(at: indexPath.row)
-//            tableView.deleteRows(at: [indexPath], with: .fade)
-//            self.count -= 1
-//            if(has.count <= 9){
-//                button.isHidden = true
-//            }
-//        }
-//        tableView.reloadData()
-//    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath){
+        if(editingStyle == .delete){
+            has[indexPath.row] = "---"
+        }
+        tableView.reloadData()
+    }
     
 }
