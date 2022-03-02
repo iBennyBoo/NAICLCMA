@@ -12,10 +12,15 @@ class MapController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var node8: UIImageView!
     @IBOutlet weak var node9: UIImageView!
     @IBOutlet weak var map: UIImageView!
+    @IBOutlet weak var schedule: UIImageView!
     
     @IBOutlet weak var switchButton: UIButton!
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    var date = Date()
+    var time = Timer()
+    var calendar = Calendar.current
     
     var x = 0
     let flip = Bundle.main.path(forResource: "flip", ofType: "mp3")!
@@ -33,6 +38,14 @@ class MapController: UIViewController, UIScrollViewDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        
+        time = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(update), userInfo: nil, repeats: true)
+        let day = calendar.component(.weekday, from: date)
+        if(day == 0){
+            schedule.image = UIImage(named: "latestart")
+        }else{
+            schedule.image = UIImage(named: "normal")
+        }
         let iLoathSwift = 0.1 * view.bounds.maxY
         var t = 0
         for i in ScheduleController.schedule.asList()
@@ -157,6 +170,10 @@ class MapController: UIViewController, UIScrollViewDelegate {
             }
         }
         t = 0
+    }
+    
+    @objc func update(){
+        date = Date()
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
