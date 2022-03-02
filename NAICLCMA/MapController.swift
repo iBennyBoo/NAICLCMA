@@ -16,6 +16,10 @@ class MapController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var switchButton: UIButton!
     @IBOutlet var tapRecognizer: UITapGestureRecognizer!
     @IBOutlet weak var scrollView: UIScrollView!
+        @IBOutlet weak var imageViewBottomConstraint: NSLayoutConstraint!
+        @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
+        @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
+        @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
     
     var x = 0
     let flip = Bundle.main.path(forResource: "flip", ofType: "mp3")!
@@ -42,7 +46,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
                 switch t
                 {
                 case 0:
-                    node1.center = CGPoint(x: ((RoomClass.coords[i]![0]/100) * map.bounds.maxX) /*+ whySwift*/, y: (((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift))
+                    node1.center = CGPoint(x: ((RoomClass.coords[i]![0]/100) * map.bounds.maxX) /*+ whySwift */, y: (((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift))
                 case 1:
                     node2.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + iLoathSwift)
                 case 2:
@@ -64,99 +68,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
             }
             t += 1
         }
-        t = 0
-        for i in ScheduleController.schedule.asList()
-        {
-            t += 1
-            let b = codify(find: i)
-            if b.0 == "0" || b.0 == " " || b.0 == "---"
-            {
-                switch t
-                {
-                case 1: node1.isHidden = true
-                case 2: node2.isHidden = true
-                case 3: node3.isHidden = true
-                case 4: node4.isHidden = true
-                case 5: node5.isHidden = true
-                case 6: node6.isHidden = true
-                case 7: node7.isHidden = true
-                case 8: node8.isHidden = true
-                case 9: node9.isHidden = true
-                default: break
-                }
-            }
-            else if b.1 == true
-            {
-                if x == 0
-                {
-                    switch t
-                    {
-                    case 1: node1.isHidden = true
-                    case 2: node2.isHidden = true
-                    case 3: node3.isHidden = true
-                    case 4: node4.isHidden = true
-                    case 5: node5.isHidden = true
-                    case 6: node6.isHidden = true
-                    case 7: node7.isHidden = true
-                    case 8: node8.isHidden = true
-                    case 9: node9.isHidden = true
-                    default: break
-                    }
-                }
-                else
-                {
-                    switch t
-                    {
-                    case 1: node1.isHidden = false
-                    case 2: node2.isHidden = false
-                    case 3: node3.isHidden = false
-                    case 4: node4.isHidden = false
-                    case 5: node5.isHidden = false
-                    case 6: node6.isHidden = false
-                    case 7: node7.isHidden = false
-                    case 8: node8.isHidden = false
-                    case 9: node9.isHidden = false
-                    default: break
-                    }
-                }
-            }
-            else
-            {
-                if x == 0
-                {
-                    switch t
-                    {
-                    case 1: node1.isHidden = false
-                    case 2: node2.isHidden = false
-                    case 3: node3.isHidden = false
-                    case 4: node4.isHidden = false
-                    case 5: node5.isHidden = false
-                    case 6: node6.isHidden = false
-                    case 7: node7.isHidden = false
-                    case 8: node8.isHidden = false
-                    case 9: node9.isHidden = false
-                    default: break
-                    }
-                }
-                else
-                {
-                    switch t
-                    {
-                    case 1: node1.isHidden = true
-                    case 2: node2.isHidden = true
-                    case 3: node3.isHidden = true
-                    case 4: node4.isHidden = true
-                    case 5: node5.isHidden = true
-                    case 6: node6.isHidden = true
-                    case 7: node7.isHidden = true
-                    case 8: node8.isHidden = true
-                    case 9: node9.isHidden = true
-                    default: break
-                    }
-                }
-            }
-        }
-        t = 0
+        deter()
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -203,6 +115,38 @@ class MapController: UIViewController, UIScrollViewDelegate {
             navigationItem.title = "1st Floor"
             map.image = UIImage(named: "Improved First Floor")
         }
+        deter()
+    }
+    
+    //Gets X & Y Coordinates\\
+    @IBAction func onTap(_ sender: Any){
+        print(view.bounds.maxX)
+        
+//        if view.bounds.contains(tapRecognizer.location(in: map)) && !switchButton.bounds.contains(tapRecognizer.location(in: view))
+//        {
+            print("\(tapRecognizer.location(in: view))")
+            print("\(((tapRecognizer.location(in: map).x - map.bounds.maxX/2)/map.bounds.maxX)*100), \(((tapRecognizer.location(in: map).y - map.bounds.maxY/2)/map.bounds.maxY)*100)")
+//            if node2.isHidden
+//            {
+//                node2.isHidden = false
+//            }
+//            node2.center = tapRecognizer.location(in: view)
+//            node2.center.y -= tapRecognizer.location(in: view).y/map.bounds.maxY + 20
+//        }
+    }
+    func codify(find: String) -> (String, Bool)
+    {
+        var buul = false
+        if find.first == "2" || find == "Band Room" || find == "Choir Room" || find == "Library" || find == "WR"
+        {
+            buul = true
+        }
+        else
+        { }
+        return (find, buul)
+    }
+    func deter()
+    {
         var t = 0
         for i in ScheduleController.schedule.asList()
         {
@@ -296,33 +240,8 @@ class MapController: UIViewController, UIScrollViewDelegate {
             }
         }
     }
-    
-    //Gets X & Y Coordinates\\
-    @IBAction func onTap(_ sender: Any){
-        print(view.bounds.maxX)
-        
-        if view.bounds.contains(tapRecognizer.location(in: map)) && !switchButton.bounds.contains(tapRecognizer.location(in: view))
-        {
-            print("\(tapRecognizer.location(in: view))")
-            print("\(((tapRecognizer.location(in: map).x)/map.bounds.maxX)*100), \(((tapRecognizer.location(in: map).y)/map.bounds.maxY)*100)")
-//            if node2.isHidden
-//            {
-//                node2.isHidden = false
-//            }
-//            node2.center = tapRecognizer.location(in: view)
-//            node2.center.y -= tapRecognizer.location(in: view).y/map.bounds.maxY + 20
-        }
-    }
-    func codify(find: String) -> (String, Bool)
+    func reform()
     {
-        var buul = false
-        if find.first == "2" || find == "Band Room" || find == "Choir Room" || find == "Library" || find == "WR"
-        {
-            buul = true
-        }
-        else
-        { }
-        return (find, buul)
+        
     }
-    
 }

@@ -151,56 +151,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SaT-m2-NPZ">
-                                <rect key="frame" x="0.0" y="60" width="375" height="587"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaT-m2-NPZ">
+                                <rect key="frame" x="0.0" y="52" width="375" height="561"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
+                                        <rect key="frame" x="7" y="0.0" width="360" height="561"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="top" secondItem="SaT-m2-NPZ" secondAttribute="top" id="Do3-dk-49N"/>
+                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="leading" secondItem="SaT-m2-NPZ" secondAttribute="leading" constant="7" id="Ggs-pL-iZS"/>
+                                    <constraint firstAttribute="bottom" secondItem="fnb-Ju-Q82" secondAttribute="bottom" id="aiL-YE-KRT"/>
+                                    <constraint firstAttribute="trailing" secondItem="fnb-Ju-Q82" secondAttribute="trailing" constant="8" id="uFV-z3-4GS"/>
+                                </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Chz-fW-urX"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="7sG-al-vnj"/>
                             </scrollView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
-                                <rect key="frame" x="0.0" y="73" width="375" height="540"/>
-                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M8P-GS-3Vq">
                                 <rect key="frame" x="0.0" y="-146" width="375" height="198"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="198" id="k0l-nI-bWY"/>
                                 </constraints>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 1" id="WzG-io-0i3">
-                                <rect key="frame" x="305" y="524" width="58" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 2" id="BFy-HK-W9v">
-                                <rect key="frame" x="305" y="524" width="58" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 3" id="lRA-ZU-aEn">
-                                <rect key="frame" x="305" y="524" width="58" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 4" id="P8v-OU-tBl">
-                                <rect key="frame" x="305" y="524" width="58" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 5" id="dOw-ao-wXM">
-                                <rect key="frame" x="305" y="524" width="58" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 6" id="FUZ-Op-6ow">
-                                <rect key="frame" x="305" y="524" width="58" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 7" id="IWv-hh-ls9">
-                                <rect key="frame" x="305" y="524" width="58" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 8" id="Wo1-bh-BFU">
-                                <rect key="frame" x="305" y="524" width="58" height="86"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 9" id="hII-oG-fsg">
-                                <rect key="frame" x="305" y="529" width="58" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-Vh-8R3">
                                 <rect key="frame" x="0.0" y="613" width="375" height="186"/>
@@ -217,25 +189,57 @@
                                     <action selector="switchButton:" destination="aGF-5P-6vx" eventType="touchUpInside" id="2Vp-WK-5CS"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 1" id="WzG-io-0i3">
+                                <rect key="frame" x="301" y="519" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 2" id="BFy-HK-W9v">
+                                <rect key="frame" x="301" y="519" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 3" id="lRA-ZU-aEn">
+                                <rect key="frame" x="301" y="519" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 4" id="P8v-OU-tBl">
+                                <rect key="frame" x="301" y="519" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 5" id="dOw-ao-wXM">
+                                <rect key="frame" x="301" y="519" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 6" id="FUZ-Op-6ow">
+                                <rect key="frame" x="301" y="519" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 7" id="IWv-hh-ls9">
+                                <rect key="frame" x="301" y="519" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 8" id="Wo1-bh-BFU">
+                                <rect key="frame" x="301" y="519" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 9" id="hII-oG-fsg">
+                                <rect key="frame" x="301" y="519" width="58" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fsq-lP-TM1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="M8P-GS-3Vq" firstAttribute="top" secondItem="A6K-4B-umL" secondAttribute="topMargin" constant="-190" id="2Wz-7T-qgW"/>
-                            <constraint firstItem="fnb-Ju-Q82" firstAttribute="top" secondItem="M8P-GS-3Vq" secondAttribute="bottom" constant="21" id="3c6-7z-qDj"/>
-                            <constraint firstItem="fnb-Ju-Q82" firstAttribute="leading" secondItem="uaN-Vh-8R3" secondAttribute="leading" id="3os-kd-S0S"/>
                             <constraint firstItem="SaT-m2-NPZ" firstAttribute="leading" secondItem="Fsq-lP-TM1" secondAttribute="leading" id="683-BV-7l2"/>
-                            <constraint firstItem="M8P-GS-3Vq" firstAttribute="leading" secondItem="fnb-Ju-Q82" secondAttribute="leading" id="M86-Ob-mfA"/>
-                            <constraint firstItem="SaT-m2-NPZ" firstAttribute="trailing" secondItem="fnb-Ju-Q82" secondAttribute="trailing" id="MGb-MO-l4m"/>
-                            <constraint firstItem="Fsq-lP-TM1" firstAttribute="bottom" secondItem="SaT-m2-NPZ" secondAttribute="bottom" constant="20" id="Mbd-6f-wRN"/>
+                            <constraint firstItem="M8P-GS-3Vq" firstAttribute="trailing" secondItem="SaT-m2-NPZ" secondAttribute="trailing" id="9Zr-3P-mtD"/>
+                            <constraint firstItem="Fsq-lP-TM1" firstAttribute="bottom" secondItem="SaT-m2-NPZ" secondAttribute="bottom" constant="54" id="Mbd-6f-wRN"/>
                             <constraint firstItem="M8P-GS-3Vq" firstAttribute="centerX" secondItem="A6K-4B-umL" secondAttribute="centerX" id="QBe-q6-Yvf"/>
+                            <constraint firstItem="M8P-GS-3Vq" firstAttribute="leading" secondItem="SaT-m2-NPZ" secondAttribute="leading" id="QLK-UA-tsj"/>
                             <constraint firstItem="uaN-Vh-8R3" firstAttribute="bottom" secondItem="Fsq-lP-TM1" secondAttribute="bottom" constant="132" id="SK4-vi-CYC"/>
-                            <constraint firstItem="SaT-m2-NPZ" firstAttribute="top" secondItem="M8P-GS-3Vq" secondAttribute="bottom" constant="8" id="WSU-0o-GOL"/>
-                            <constraint firstItem="M8P-GS-3Vq" firstAttribute="trailing" secondItem="fnb-Ju-Q82" secondAttribute="trailing" id="bF7-MF-46m"/>
-                            <constraint firstItem="uaN-Vh-8R3" firstAttribute="top" secondItem="fnb-Ju-Q82" secondAttribute="bottom" id="bhK-0Z-Tvd"/>
-                            <constraint firstItem="fnb-Ju-Q82" firstAttribute="trailing" secondItem="uaN-Vh-8R3" secondAttribute="trailing" id="nHN-En-X8M"/>
-                            <constraint firstItem="SaT-m2-NPZ" firstAttribute="leading" secondItem="fnb-Ju-Q82" secondAttribute="leading" id="yA6-QP-Wqn"/>
+                            <constraint firstItem="SaT-m2-NPZ" firstAttribute="leading" secondItem="uaN-Vh-8R3" secondAttribute="leading" id="SSj-Bn-OYQ"/>
+                            <constraint firstItem="SaT-m2-NPZ" firstAttribute="top" secondItem="M8P-GS-3Vq" secondAttribute="bottom" id="WSU-0o-GOL"/>
+                            <constraint firstItem="SaT-m2-NPZ" firstAttribute="trailing" secondItem="uaN-Vh-8R3" secondAttribute="trailing" id="zWT-1a-mqz"/>
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="wCM-Cz-r1G" appends="YES" id="J72-Mn-JVa"/>
@@ -243,6 +247,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="1st Floor" id="9gH-fj-Npo"/>
                     <connections>
+                        <outlet property="imageViewBottomConstraint" destination="aiL-YE-KRT" id="OwW-Me-aqZ"/>
+                        <outlet property="imageViewLeadingConstraint" destination="Ggs-pL-iZS" id="ciE-NF-dng"/>
+                        <outlet property="imageViewTopConstraint" destination="Do3-dk-49N" id="qCH-A3-x0q"/>
+                        <outlet property="imageViewTrailingConstraint" destination="uFV-z3-4GS" id="o2e-bH-xNE"/>
                         <outlet property="map" destination="fnb-Ju-Q82" id="faA-jA-Hnn"/>
                         <outlet property="node1" destination="WzG-io-0i3" id="wPr-UU-Kwh"/>
                         <outlet property="node2" destination="BFy-HK-W9v" id="HTY-rH-Z70"/>
@@ -253,7 +261,7 @@
                         <outlet property="node7" destination="IWv-hh-ls9" id="Ds1-az-T08"/>
                         <outlet property="node8" destination="Wo1-bh-BFU" id="utx-Xx-pw5"/>
                         <outlet property="node9" destination="hII-oG-fsg" id="ZdN-uM-dhN"/>
-                        <outlet property="scrollView" destination="SaT-m2-NPZ" id="Yea-dy-pqB"/>
+                        <outlet property="scrollView" destination="SaT-m2-NPZ" id="Neh-OF-wey"/>
                         <outlet property="switchButton" destination="uaN-Vh-8R3" id="kGg-OL-jPI"/>
                         <outlet property="tapRecognizer" destination="wCM-Cz-r1G" id="eNo-12-Aw5"/>
                     </connections>
@@ -631,7 +639,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="weo-6v-Jru"/>
+        <segue reference="Z83-ru-Ilm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Improved First Floor" width="360" height="537"/>
