@@ -78,6 +78,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
                 selectClass += 1
             }else{
                 pickerView.selectRow(pickerView.selectedRow(inComponent: 1) - 8, inComponent: 1, animated: true)
+                pickerView(pickerView, didSelectRow: selectClass - 9, inComponent: 1)
             }
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(has){
