@@ -21,7 +21,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
         lunchButton.layer.borderWidth = 1
         label.layer.borderWidth = 1
             playVideo()
-        if let items = UserDefaults.standard.data(forKey: "rooms3"){
+        if let items = UserDefaults.standard.data(forKey: "rooms6"){
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([String].self, from: items){
                 ScheduleController.schedule = InfoClass(StringArray: decoded)
