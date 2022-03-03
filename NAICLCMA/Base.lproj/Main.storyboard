@@ -151,27 +151,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7bb-A8-bhv">
+                                <rect key="frame" x="0.0" y="-161" width="375" height="213"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="ehF-cv-ukH"/>
+                                </constraints>
+                            </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaT-m2-NPZ">
                                 <rect key="frame" x="0.0" y="52" width="375" height="561"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
-                                        <rect key="frame" x="7" y="0.0" width="360" height="561"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
+                                        <rect key="frame" x="7" y="15" width="360" height="537"/>
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="top" secondItem="SaT-m2-NPZ" secondAttribute="top" id="Do3-dk-49N"/>
-                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="leading" secondItem="SaT-m2-NPZ" secondAttribute="leading" constant="7" id="Ggs-pL-iZS"/>
-                                    <constraint firstAttribute="bottom" secondItem="fnb-Ju-Q82" secondAttribute="bottom" id="aiL-YE-KRT"/>
-                                    <constraint firstAttribute="trailing" secondItem="fnb-Ju-Q82" secondAttribute="trailing" constant="8" id="uFV-z3-4GS"/>
+                                    <constraint firstAttribute="bottom" secondItem="fnb-Ju-Q82" secondAttribute="bottom" constant="9" id="8dx-vp-4Vt"/>
+                                    <constraint firstAttribute="trailing" secondItem="fnb-Ju-Q82" secondAttribute="trailing" constant="8" id="LpQ-we-rQd"/>
+                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="top" secondItem="SaT-m2-NPZ" secondAttribute="top" constant="15" id="i0m-Pk-QLr"/>
+                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="leading" secondItem="SaT-m2-NPZ" secondAttribute="leading" constant="7" id="qv0-YE-IJO"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Chz-fW-urX"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="7sG-al-vnj"/>
                             </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M8P-GS-3Vq">
-                                <rect key="frame" x="0.0" y="-146" width="375" height="198"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="198" id="k0l-nI-bWY"/>
+                                    <constraint firstAttribute="height" constant="52" id="k0l-nI-bWY"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uaN-Vh-8R3">
@@ -230,10 +237,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="M8P-GS-3Vq" firstAttribute="top" secondItem="A6K-4B-umL" secondAttribute="topMargin" constant="-190" id="2Wz-7T-qgW"/>
+                            <constraint firstItem="M8P-GS-3Vq" firstAttribute="top" secondItem="A6K-4B-umL" secondAttribute="topMargin" constant="-44" id="2Wz-7T-qgW"/>
                             <constraint firstItem="SaT-m2-NPZ" firstAttribute="leading" secondItem="Fsq-lP-TM1" secondAttribute="leading" id="683-BV-7l2"/>
                             <constraint firstItem="M8P-GS-3Vq" firstAttribute="trailing" secondItem="SaT-m2-NPZ" secondAttribute="trailing" id="9Zr-3P-mtD"/>
+                            <constraint firstItem="7bb-A8-bhv" firstAttribute="trailing" secondItem="M8P-GS-3Vq" secondAttribute="trailing" id="E5G-NV-zUK"/>
+                            <constraint firstItem="7bb-A8-bhv" firstAttribute="bottom" secondItem="M8P-GS-3Vq" secondAttribute="bottom" id="Fxv-EQ-OSa"/>
                             <constraint firstItem="Fsq-lP-TM1" firstAttribute="bottom" secondItem="SaT-m2-NPZ" secondAttribute="bottom" constant="54" id="Mbd-6f-wRN"/>
+                            <constraint firstItem="7bb-A8-bhv" firstAttribute="leading" secondItem="M8P-GS-3Vq" secondAttribute="leading" id="Ng8-fG-KQS"/>
                             <constraint firstItem="M8P-GS-3Vq" firstAttribute="centerX" secondItem="A6K-4B-umL" secondAttribute="centerX" id="QBe-q6-Yvf"/>
                             <constraint firstItem="M8P-GS-3Vq" firstAttribute="leading" secondItem="SaT-m2-NPZ" secondAttribute="leading" id="QLK-UA-tsj"/>
                             <constraint firstItem="uaN-Vh-8R3" firstAttribute="bottom" secondItem="Fsq-lP-TM1" secondAttribute="bottom" constant="132" id="SK4-vi-CYC"/>
@@ -247,10 +257,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="1st Floor" id="9gH-fj-Npo"/>
                     <connections>
-                        <outlet property="imageViewBottomConstraint" destination="aiL-YE-KRT" id="OwW-Me-aqZ"/>
-                        <outlet property="imageViewLeadingConstraint" destination="Ggs-pL-iZS" id="ciE-NF-dng"/>
-                        <outlet property="imageViewTopConstraint" destination="Do3-dk-49N" id="qCH-A3-x0q"/>
-                        <outlet property="imageViewTrailingConstraint" destination="uFV-z3-4GS" id="o2e-bH-xNE"/>
+                        <outlet property="bloodyView" destination="M8P-GS-3Vq" id="7TF-bW-gcl"/>
+                        <outlet property="imageViewBottomConstraint" destination="8dx-vp-4Vt" id="u9P-a3-rsh"/>
+                        <outlet property="imageViewLeadingConstraint" destination="qv0-YE-IJO" id="UoD-3b-1ep"/>
+                        <outlet property="imageViewTopConstraint" destination="i0m-Pk-QLr" id="360-dz-QjT"/>
+                        <outlet property="imageViewTrailingConstraint" destination="LpQ-we-rQd" id="tcx-se-GEV"/>
                         <outlet property="map" destination="fnb-Ju-Q82" id="faA-jA-Hnn"/>
                         <outlet property="node1" destination="WzG-io-0i3" id="wPr-UU-Kwh"/>
                         <outlet property="node2" destination="BFy-HK-W9v" id="HTY-rH-Z70"/>

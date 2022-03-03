@@ -38,13 +38,6 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         pickerView.reloadAllComponents()
         
         button.layer.borderWidth = 1
-        
-        if let items = UserDefaults.standard.data(forKey: "rooms6"){
-            let decoder = JSONDecoder()
-            if let decoded = try? decoder.decode([String].self, from: items){
-                has = decoded
-            }
-        }
         if has[0] != "0" || has[1] != "0" || has[2] != "0" || has[3] != "0" || has[4] != "0" || has[5] != "0" || has[6] != "0" || has[7] != "0" || has[8] != "0"
         {
             button.isHidden = false
