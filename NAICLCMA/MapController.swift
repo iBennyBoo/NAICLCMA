@@ -12,6 +12,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var node8: UIImageView!
     @IBOutlet weak var node9: UIImageView!
     @IBOutlet weak var map: UIImageView!
+    @IBOutlet weak var schedule: UIImageView!
     
     @IBOutlet weak var bloodyView: UIImageView!
     @IBOutlet weak var switchButton: UIButton!
@@ -21,6 +22,10 @@ class MapController: UIViewController, UIScrollViewDelegate {
         @IBOutlet weak var imageViewLeadingConstraint: NSLayoutConstraint!
         @IBOutlet weak var imageViewTopConstraint: NSLayoutConstraint!
         @IBOutlet weak var imageViewTrailingConstraint: NSLayoutConstraint!
+    
+    var date = Date()
+    var time = Timer()
+    var calendar = Calendar.current
     
     var x = 0
     let flip = Bundle.main.path(forResource: "flip", ofType: "mp3")!
