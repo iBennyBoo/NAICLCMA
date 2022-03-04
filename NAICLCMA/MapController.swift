@@ -31,7 +31,6 @@ class MapController: UIViewController, UIScrollViewDelegate {
     let flip = Bundle.main.path(forResource: "flip", ofType: "mp3")!
     let click = Bundle.main.path(forResource: "click", ofType: "mp3")!
     var audioPlayer: AVAudioPlayer?
-    var startingSize: CGSize = CGSize()
     
     override func viewDidLoad() {
         
@@ -41,7 +40,6 @@ class MapController: UIViewController, UIScrollViewDelegate {
         scrollView.minimumZoomScale = 1
         scrollView.delegate = self
         viewDidAppear(true)
-        startingSize = map.bounds.size
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -225,9 +223,8 @@ class MapController: UIViewController, UIScrollViewDelegate {
     }
     func reform()
     {
-        let mapCentX = map.frame.maxX
-        let mapCentY = map.frame.maxY
-        print("\(mapCentX), \(mapCentY)")
+        let mapCent = map.center
+        print("\(mapCent.x), \(mapCent.y)")
         var t = 0
         for i in ScheduleController.schedule.asList()
         {
@@ -236,23 +233,23 @@ class MapController: UIViewController, UIScrollViewDelegate {
                 switch t
                 {
                 case 0:
-                    node1.center = CGPoint(x: (RoomClass.coords[i]![0]/100 * startingSize.width) + map.center.x, y: (RoomClass.coords[i]![1]/100 * startingSize.height) + map.center.y)
+                    node1.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
                 case 1:
-                    node2.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + bloodyView.bounds.maxY)
+                    node2.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
                 case 2:
-                    node3.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + bloodyView.bounds.maxY)
+                    node3.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
                 case 3:
-                    node4.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + bloodyView.bounds.maxY)
+                    node4.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
                 case 4:
-                    node5.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + bloodyView.bounds.maxY)
+                    node5.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
                 case 5:
-                    node6.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + bloodyView.bounds.maxY)
+                    node6.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
                 case 6:
-                    node7.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + bloodyView.bounds.maxY)
+                    node7.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
                 case 7:
-                    node8.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + bloodyView.bounds.maxY)
+                    node8.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
                 case 8:
-                    node9.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + bloodyView.bounds.maxY)
+                    node9.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
                 default: break
                 }
             }

@@ -12,7 +12,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var button: UIButton!
     static var schedule = InfoClass(first: "---", second: "---", third: "---", fourth: "---", fifth: "---", sixth: "---", seventh: "---", eighth: "---", ninth: "---")
     var audioPlayer: AVAudioPlayer?
-    var selected: String = "---"
+    var selected: String = "106"
     var selectClass: Int = 1
     var has: [String] = ["---", "---", "---", "---", "---", "---", "---", "---", "---"]
     var periods: [Int] = [1, 2, 3, 4, 5, 6 ,7 ,8 ,9]
