@@ -14,6 +14,7 @@ class LunchController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.becomeFirstResponder()
         pickButton.layer.borderWidth = 1
         pickLabel.layer.borderWidth = 1
         border.layer.borderWidth = 1
@@ -23,6 +24,27 @@ class LunchController: UIViewController {
         x.frame = self.view.bounds
         x.colors = [UIColor.orange.cgColor, UIColor.systemBrown.cgColor, UIColor.black.cgColor]
         self.view.layer.insertSublayer(x, at: 0)
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        get {
+            return true
+        }
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            let alert = UIAlertController(title: "Haha Funny Lmao XD", message: "+1 Reddit Gold & Ratio'd", preferredStyle: .alert)
+            let no = UIAlertAction(title: "Thank you Kanye, Very Cool!", style: .default, handler: nil)
+            let image = UIImage(named: "fact")
+            let imageView = UIImageView(frame: CGRect(x: 40, y: -210, width: 200, height: 200))
+            imageView.image = image
+
+            alert.view.addSubview(imageView)
+            //no.setValue(image, forKey: "image")
+            alert.addAction(no)
+            present(alert, animated: true, completion: nil)
+        }
     }
     
     @IBAction func pickButton(_ sender: UIButton) {
