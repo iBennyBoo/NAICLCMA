@@ -26,6 +26,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
     let flip = Bundle.main.path(forResource: "flip", ofType: "mp3")!
     let click = Bundle.main.path(forResource: "click", ofType: "mp3")!
     var audioPlayer: AVAudioPlayer?
+    var startingSize: CGSize = CGSize()
     
     override func viewDidLoad() {
         
@@ -35,6 +36,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
         scrollView.minimumZoomScale = 1
         scrollView.delegate = self
         viewDidAppear(true)
+        startingSize = map.bounds.size
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -218,8 +220,8 @@ class MapController: UIViewController, UIScrollViewDelegate {
     }
     func reform()
     {
-        let mapCentX = map.frame.midX
-        let mapCentY = map.frame.midY
+        let mapCentX = map.frame.maxX
+        let mapCentY = map.frame.maxY
         print("\(mapCentX), \(mapCentY)")
         var t = 0
         for i in ScheduleController.schedule.asList()
@@ -229,7 +231,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
                 switch t
                 {
                 case 0:
-                    node1.center = scrollView.center
+                    node1.center = CGPoint(x: (RoomClass.coords[i]![0]/100 * startingSize.width) + map.center.x, y: (RoomClass.coords[i]![1]/100 * startingSize.height) + map.center.y)
                 case 1:
                     node2.center = CGPoint(x: (RoomClass.coords[i]![0]/100) * map.bounds.maxX, y: ((RoomClass.coords[i]![1]/100) * map.bounds.maxY) + bloodyView.bounds.maxY)
                 case 2:
