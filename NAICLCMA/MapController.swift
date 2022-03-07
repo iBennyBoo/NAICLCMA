@@ -101,8 +101,6 @@ class MapController: UIViewController, UIScrollViewDelegate {
     
     //Gets X & Y Coordinates\\
     @IBAction func onTap(_ sender: Any){
-        print(view.bounds.maxX)
-        
 //        if view.bounds.contains(tapRecognizer.location(in: map)) && !switchButton.bounds.contains(tapRecognizer.location(in: view))
 //        {
             print("\(tapRecognizer.location(in: view))")
@@ -224,7 +222,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
     func reform()
     {
         let mapCent = map.center
-        print("\(mapCent.x), \(mapCent.y)")
+        print(scrollView.zoomScale)
         var t = 0
         for i in ScheduleController.schedule.asList()
         {
@@ -233,23 +231,23 @@ class MapController: UIViewController, UIScrollViewDelegate {
                 switch t
                 {
                 case 0:
-                    node1.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
+                    node1.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.y - map.bounds.maxY/30)
                 case 1:
-                    node2.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
+                    node2.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.y - map.bounds.maxY/30)
                 case 2:
-                    node3.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
+                    node3.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.y - map.bounds.maxY/30)
                 case 3:
-                    node4.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
+                    node4.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.y - map.bounds.maxY/30)
                 case 4:
-                    node5.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
+                    node5.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.y - map.bounds.maxY/30)
                 case 5:
-                    node6.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
+                    node6.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.y - map.bounds.maxY/30)
                 case 6:
-                    node7.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
+                    node7.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.y - map.bounds.maxY/30)
                 case 7:
-                    node8.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
+                    node8.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.y - map.bounds.maxY/30)
                 case 8:
-                    node9.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
+                    node9.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/(1.05 - 0.06 * scrollView.zoomScale / 6)) + mapCent.y - map.bounds.maxY/30)
                 default: break
                 }
             }
