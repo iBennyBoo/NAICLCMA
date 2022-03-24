@@ -39,6 +39,12 @@ class MapController: UIViewController, UIScrollViewDelegate {
         scrollView.maximumZoomScale = 6
         scrollView.minimumZoomScale = 1
         scrollView.delegate = self
+        if let items = UserDefaults.standard.data(forKey: "rooms"){
+            let decoder = JSONDecoder()
+            if let decoded = try? decoder.decode([String].self, from: items){
+                ScheduleController.schedule = InfoClass(StringArray: decoded)
+            }
+        }
         viewDidAppear(true)
     }
     
@@ -223,7 +229,6 @@ class MapController: UIViewController, UIScrollViewDelegate {
     {
         let mapCent = map.center
         let cruncher = (1.05 - 0.06 * scrollView.zoomScale / 6)
-        
         print(scrollView.zoomScale)
         var t = 0
         for i in ScheduleController.schedule.asList()
