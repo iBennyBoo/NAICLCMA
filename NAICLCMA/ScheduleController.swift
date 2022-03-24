@@ -164,6 +164,10 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         if(editingStyle == .delete){
             has[indexPath.row] = "---"
         }
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(has){
+            UserDefaults.standard.set(encoded, forKey: "rooms")
+        }
         tableView.reloadData()
     }
     
