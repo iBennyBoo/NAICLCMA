@@ -352,16 +352,14 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jc3-y8-4HE">
                                 <rect key="frame" x="16" y="61" width="343" height="103"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Room #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB0-fL-0PK">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB0-fL-0PK">
                                 <rect key="frame" x="66" y="78" width="83" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Period #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sy-3D-ANR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period #:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sy-3D-ANR">
                                 <rect key="frame" x="228" y="78" width="91" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -371,19 +369,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="jc3-y8-4HE" secondAttribute="bottom" constant="15" id="0Ss-OB-gyf"/>
+                            <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="CB0-fL-0PK" secondAttribute="bottom" constant="80" id="0ef-yc-Y6M"/>
                             <constraint firstItem="zgH-ES-652" firstAttribute="top" secondItem="lhQ-7R-603" secondAttribute="bottom" constant="18" id="2xm-Pa-20r"/>
                             <constraint firstItem="j6o-8Q-Lub" firstAttribute="trailing" secondItem="zgH-ES-652" secondAttribute="trailing" constant="93" id="35w-bK-wx4"/>
                             <constraint firstItem="GFZ-sq-mMn" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" id="5wS-XF-S8K"/>
+                            <constraint firstItem="j6o-8Q-Lub" firstAttribute="trailing" secondItem="0sy-3D-ANR" secondAttribute="trailing" constant="56" id="AZf-A4-AsW"/>
+                            <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="0sy-3D-ANR" secondAttribute="bottom" constant="80" id="GLy-Bm-8Uy"/>
                             <constraint firstItem="GFZ-sq-mMn" firstAttribute="top" secondItem="UIN-8k-QYG" secondAttribute="top" id="NSC-yr-mx8"/>
+                            <constraint firstItem="CB0-fL-0PK" firstAttribute="top" secondItem="GFZ-sq-mMn" secondAttribute="bottom" constant="25" id="OmJ-X5-1bV"/>
                             <constraint firstItem="jc3-y8-4HE" firstAttribute="top" secondItem="j6o-8Q-Lub" secondAttribute="top" constant="17" id="PC2-gU-3si"/>
                             <constraint firstItem="GFZ-sq-mMn" firstAttribute="trailing" secondItem="j6o-8Q-Lub" secondAttribute="trailing" id="PRD-VT-tJV"/>
                             <constraint firstItem="lhQ-7R-603" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="16" id="UGy-uS-i49"/>
                             <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="GFZ-sq-mMn" secondAttribute="bottom" constant="126" id="XOh-I0-KLW"/>
                             <constraint firstItem="jc3-y8-4HE" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="16" id="eGK-Ve-HDH"/>
                             <constraint firstItem="j6o-8Q-Lub" firstAttribute="trailing" secondItem="lhQ-7R-603" secondAttribute="trailing" constant="16" id="ekm-2U-N3P"/>
+                            <constraint firstItem="CB0-fL-0PK" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="66" id="foe-Fg-Bh6"/>
                             <constraint firstItem="j6o-8Q-Lub" firstAttribute="bottom" secondItem="zgH-ES-652" secondAttribute="bottom" constant="27" id="hzW-8j-wch"/>
                             <constraint firstItem="zgH-ES-652" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="92" id="lDO-If-Jz0"/>
                             <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="j6o-8Q-Lub" secondAttribute="top" constant="135" id="oM5-cE-ivT"/>
+                            <constraint firstItem="0sy-3D-ANR" firstAttribute="top" secondItem="GFZ-sq-mMn" secondAttribute="bottom" constant="25" id="rb8-v2-cGs"/>
                             <constraint firstItem="j6o-8Q-Lub" firstAttribute="trailing" secondItem="jc3-y8-4HE" secondAttribute="trailing" constant="16" id="rpc-FJ-DRl"/>
                         </constraints>
                     </view>

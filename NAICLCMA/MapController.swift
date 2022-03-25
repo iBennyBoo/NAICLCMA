@@ -31,6 +31,8 @@ class MapController: UIViewController, UIScrollViewDelegate {
     let flip = Bundle.main.path(forResource: "flip", ofType: "mp3")!
     let click = Bundle.main.path(forResource: "click", ofType: "mp3")!
     var audioPlayer: AVAudioPlayer?
+    var skittle = ScheduleController.schedule
+    var currNode: UIImageView?
     
     override func viewDidLoad() {
         
@@ -45,6 +47,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
                 ScheduleController.schedule = InfoClass(StringArray: decoded)
             }
         }
+        skittle = ScheduleController.schedule
         viewDidAppear(true)
     }
     
@@ -103,6 +106,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
             map.image = UIImage(named: "Improved First Floor")
         }
         deter()
+        scrollView.zoomScale = 1
     }
     
     //Gets X & Y Coordinates\\
@@ -133,7 +137,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
     func deter()
     {
         var t = 0
-        for i in ScheduleController.schedule.asList()
+        for i in skittle.asList()
         {
             t += 1
             let b = codify(find: i)
@@ -228,10 +232,10 @@ class MapController: UIViewController, UIScrollViewDelegate {
     func reform()
     {
         let mapCent = map.center
+        print("reform fired")
         let cruncher = (1.05 - 0.06 * scrollView.zoomScale / 6)
-        print(scrollView.zoomScale)
         var t = 0
-        for i in ScheduleController.schedule.asList()
+        for i in skittle.asList()
         {
             if i != "---"
             {
@@ -239,25 +243,80 @@ class MapController: UIViewController, UIScrollViewDelegate {
                 {
                 case 0:
                     node1.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                    currNode = node1
                 case 1:
                     node2.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                    currNode = node2
                 case 2:
                     node3.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                    currNode = node3
                 case 3:
                     node4.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                    currNode = node4
                 case 4:
-                    node5.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                    node5.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                    currNode = node5
                 case 5:
                     node6.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                    currNode = node6
                 case 6:
                     node7.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                    currNode = node7
                 case 7:
                     node8.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                    currNode = node8
                 case 8:
                     node9.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                    currNode = node9
                 default: break
                 }
+                if i == skittle.first && currNode != node1
+                {
+                    print("First'd!")
+                    node1.center.x -= 6
+                }
+                else if i == skittle.second && currNode != node2
+                {
+                    print("Second'!")
+                    node2.center.x -= 6
+                }
+                else if i == skittle.third && currNode != node3
+                {
+                    print("Third'!")
+                    node3.center.x -= 6
+                }
+                else if i == skittle.fourth && currNode != node4
+                {
+                    print("Four'd!")
+                    node4.center.x -= 6
+                }
+                else if i == skittle.fifth && currNode != node5
+                {
+                    print("Fifth'd!")
+                    node5.center.x -= 6
+                }
+                else if i == skittle.sixth && currNode != node6
+                {
+                    print("Sixth'd!")
+                    node6.center.x -= 6
+                }
+                else if i == skittle.seventh && currNode != node7
+                {
+                    print("Seventh'd!")
+                    node7.center.x -= 6
+                }
+                else if i == skittle.eighth && currNode != node8
+                {
+                    print("Eighth'd!")
+                    node8.center.x -= 6
+                }
+                else if i == skittle.ninth && currNode != node9
+                {
+                    print("Nineth'd!")
+                    node9.center.x -= 6
+                }
             }
+            print("\(node1.center), \(node2.center), \(node3.center)")
             t += 1
         }
     }
