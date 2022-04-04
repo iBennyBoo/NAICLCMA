@@ -234,6 +234,8 @@ class MapController: UIViewController, UIScrollViewDelegate {
         let mapCent = map.center
         print("reform fired")
         let cruncher = (1.05 - 0.06 * scrollView.zoomScale / 6)
+        let zoomFactorLeft = 3.5 * (scrollView.zoomScale/1.5 + 0.75)
+        let zoomFactorRight = 1.75 * (scrollView.zoomScale/1.5 + 0.75)
         var t = 0
         for i in skittle.asList()
         {
@@ -273,47 +275,56 @@ class MapController: UIViewController, UIScrollViewDelegate {
                 if i == skittle.first && currNode != node1
                 {
                     print("First'd!")
-                    node1.center.x -= 6
+                    node1.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.second && currNode != node2
+                if i == skittle.second && currNode != node2
                 {
                     print("Second'!")
-                    node2.center.x -= 6
+                    node2.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.third && currNode != node3
+                if i == skittle.third && currNode != node3
                 {
                     print("Third'!")
-                    node3.center.x -= 6
+                    node3.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.fourth && currNode != node4
+                if i == skittle.fourth && currNode != node4
                 {
                     print("Four'd!")
-                    node4.center.x -= 6
+                    node4.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.fifth && currNode != node5
+                if i == skittle.fifth && currNode != node5
                 {
                     print("Fifth'd!")
-                    node5.center.x -= 6
+                    node5.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.sixth && currNode != node6
+                if i == skittle.sixth && currNode != node6
                 {
                     print("Sixth'd!")
-                    node6.center.x -= 6
+                    node6.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.seventh && currNode != node7
+                if i == skittle.seventh && currNode != node7
                 {
                     print("Seventh'd!")
-                    node7.center.x -= 6
+                    node7.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.eighth && currNode != node8
+                if i == skittle.eighth && currNode != node8
                 {
                     print("Eighth'd!")
-                    node8.center.x -= 6
+                    node8.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.ninth && currNode != node9
+                if i == skittle.ninth && currNode != node9
                 {
                     print("Nineth'd!")
-                    node9.center.x -= 6
+                    node9.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
             }
             print("\(node1.center), \(node2.center), \(node3.center)")
