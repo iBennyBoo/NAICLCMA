@@ -11,6 +11,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var node7: UIImageView!
     @IBOutlet weak var node8: UIImageView!
     @IBOutlet weak var node9: UIImageView!
+    var nodeArr = [UIImageView]()
     @IBOutlet weak var map: UIImageView!
     @IBOutlet weak var schedule: UIImageView!
     
@@ -35,8 +36,8 @@ class MapController: UIViewController, UIScrollViewDelegate {
     var currNode: UIImageView?
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
+        nodeArr = [node1, node2, node3, node4, node5, node6, node7, node8, node9]
         switchButton.layer.borderWidth = 1
         scrollView.maximumZoomScale = 6
         scrollView.minimumZoomScale = 1
@@ -139,94 +140,34 @@ class MapController: UIViewController, UIScrollViewDelegate {
         var t = 0
         for i in skittle.asList()
         {
-            t += 1
             let b = codify(find: i)
             if b.0 == "0" || b.0 == "---"
             {
-                switch t
-                {
-                case 1: node1.isHidden = true
-                case 2: node2.isHidden = true
-                case 3: node3.isHidden = true
-                case 4: node4.isHidden = true
-                case 5: node5.isHidden = true
-                case 6: node6.isHidden = true
-                case 7: node7.isHidden = true
-                case 8: node8.isHidden = true
-                case 9: node9.isHidden = true
-                default: break
-                }
+                nodeArr[t].isHidden = true
             }
             else if b.1 == true
             {
                 if x == 0
                 {
-                    switch t
-                    {
-                    case 1: node1.isHidden = true
-                    case 2: node2.isHidden = true
-                    case 3: node3.isHidden = true
-                    case 4: node4.isHidden = true
-                    case 5: node5.isHidden = true
-                    case 6: node6.isHidden = true
-                    case 7: node7.isHidden = true
-                    case 8: node8.isHidden = true
-                    case 9: node9.isHidden = true
-                    default: break
-                    }
+                    nodeArr[t].isHidden = true
                 }
                 else
                 {
-                    switch t
-                    {
-                    case 1: node1.isHidden = false
-                    case 2: node2.isHidden = false
-                    case 3: node3.isHidden = false
-                    case 4: node4.isHidden = false
-                    case 5: node5.isHidden = false
-                    case 6: node6.isHidden = false
-                    case 7: node7.isHidden = false
-                    case 8: node8.isHidden = false
-                    case 9: node9.isHidden = false
-                    default: break
-                    }
+                    nodeArr[t].isHidden = false
                 }
             }
             else
             {
                 if x == 0
                 {
-                    switch t
-                    {
-                    case 1: node1.isHidden = false
-                    case 2: node2.isHidden = false
-                    case 3: node3.isHidden = false
-                    case 4: node4.isHidden = false
-                    case 5: node5.isHidden = false
-                    case 6: node6.isHidden = false
-                    case 7: node7.isHidden = false
-                    case 8: node8.isHidden = false
-                    case 9: node9.isHidden = false
-                    default: break
-                    }
+                    nodeArr[t].isHidden = false
                 }
                 else
                 {
-                    switch t
-                    {
-                    case 1: node1.isHidden = true
-                    case 2: node2.isHidden = true
-                    case 3: node3.isHidden = true
-                    case 4: node4.isHidden = true
-                    case 5: node5.isHidden = true
-                    case 6: node6.isHidden = true
-                    case 7: node7.isHidden = true
-                    case 8: node8.isHidden = true
-                    case 9: node9.isHidden = true
-                    default: break
-                    }
+                    nodeArr[t].isHidden = true
                 }
             }
+            t += 1
         }
     }
     func reform()
@@ -234,89 +175,70 @@ class MapController: UIViewController, UIScrollViewDelegate {
         let mapCent = map.center
         print("reform fired")
         let cruncher = (1.05 - 0.06 * scrollView.zoomScale / 6)
+        let zoomFactorLeft = 3.5 * (scrollView.zoomScale/1.5 + 0.75)
+        let zoomFactorRight = 1.75 * (scrollView.zoomScale/1.5 + 0.75)
         var t = 0
         for i in skittle.asList()
         {
             if i != "---"
             {
-                switch t
-                {
-                case 0:
-                    node1.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
-                    currNode = node1
-                case 1:
-                    node2.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
-                    currNode = node2
-                case 2:
-                    node3.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
-                    currNode = node3
-                case 3:
-                    node4.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
-                    currNode = node4
-                case 4:
-                    node5.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
-                    currNode = node5
-                case 5:
-                    node6.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
-                    currNode = node6
-                case 6:
-                    node7.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
-                    currNode = node7
-                case 7:
-                    node8.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
-                    currNode = node8
-                case 8:
-                    node9.center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
-                    currNode = node9
-                default: break
-                }
+                nodeArr[t].center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                currNode = nodeArr[t]
                 if i == skittle.first && currNode != node1
                 {
                     print("First'd!")
-                    node1.center.x -= 6
+                    node1.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.second && currNode != node2
+                if i == skittle.second && currNode != node2
                 {
                     print("Second'!")
-                    node2.center.x -= 6
+                    node2.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.third && currNode != node3
+                if i == skittle.third && currNode != node3
                 {
                     print("Third'!")
-                    node3.center.x -= 6
+                    node3.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.fourth && currNode != node4
+                if i == skittle.fourth && currNode != node4
                 {
                     print("Four'd!")
-                    node4.center.x -= 6
+                    node4.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.fifth && currNode != node5
+                if i == skittle.fifth && currNode != node5
                 {
                     print("Fifth'd!")
-                    node5.center.x -= 6
+                    node5.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.sixth && currNode != node6
+                if i == skittle.sixth && currNode != node6
                 {
                     print("Sixth'd!")
-                    node6.center.x -= 6
+                    node6.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.seventh && currNode != node7
+                if i == skittle.seventh && currNode != node7
                 {
                     print("Seventh'd!")
-                    node7.center.x -= 6
+                    node7.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.eighth && currNode != node8
+                if i == skittle.eighth && currNode != node8
                 {
                     print("Eighth'd!")
-                    node8.center.x -= 6
+                    node8.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
-                else if i == skittle.ninth && currNode != node9
+                if i == skittle.ninth && currNode != node9
                 {
                     print("Nineth'd!")
-                    node9.center.x -= 6
+                    node9.center.x -= zoomFactorLeft
+                    currNode?.center.x += zoomFactorRight
                 }
             }
-            print("\(node1.center), \(node2.center), \(node3.center)")
             t += 1
         }
     }
