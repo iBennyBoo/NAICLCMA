@@ -9,6 +9,7 @@ class ViewController: UIViewController, CAAnimationDelegate {
     @IBOutlet weak var videoLayer: UIView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var white: UIImageView!
+    @IBOutlet weak var settings: UIBarButtonItem!
     
     var audioPlayer: AVAudioPlayer?
     let click = Bundle.main.path(forResource: "click", ofType: "mp3")!
@@ -95,4 +96,17 @@ class tapLocationRecognizer{
     {
         
     }
+    @IBAction func setNewSchool(_ sender: Any)
+    {
+        let err = UIAlertController(title: "Select School", message: "", preferredStyle: .alert)
+        err.addAction(<#T##action: UIAlertAction##UIAlertAction#>)
+        err.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
+    }
+}
+enum SchoolTypes
+{
+    case CrystalLakeCentral
+    case CrystalLakeSouth
+    case CylPrarieRidge
+    case CylCary
 }

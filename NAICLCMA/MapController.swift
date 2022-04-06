@@ -111,18 +111,10 @@ class MapController: UIViewController, UIScrollViewDelegate {
     }
     
     //Gets X & Y Coordinates\\
-    @IBAction func onTap(_ sender: Any){
-//        if view.bounds.contains(tapRecognizer.location(in: map)) && !switchButton.bounds.contains(tapRecognizer.location(in: view))
-//        {
+    @IBAction func onTap(_ sender: Any)
+    {
             print("\(tapRecognizer.location(in: view))")
             print("\(((tapRecognizer.location(in: map).x - map.bounds.maxX/2)/map.bounds.maxX)*100), \(((tapRecognizer.location(in: map).y - map.bounds.maxY/2)/map.bounds.maxY)*100)")
-//            if node2.isHidden
-//            {
-//                node2.isHidden = false
-//            }
-//            node2.center = tapRecognizer.location(in: view)
-//            node2.center.y -= tapRecognizer.location(in: view).y/map.bounds.maxY + 20
-//        }
     }
     func codify(find: String) -> (String, Bool)
     {
