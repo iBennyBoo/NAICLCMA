@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -91,24 +90,12 @@
                                             <segue destination="umV-y9-Csz" kind="show" id="oo8-wi-Kaf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yao-3n-2Nl">
-                                        <rect key="frame" x="307" y="62" width="60" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="zzj-bk-lMu"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" imagePadding="0.0">
-                                            <imageReference key="image" image="gearshape" catalog="system" symbolScale="large"/>
-                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="20" scale="large" weight="medium"/>
-                                        </buttonConfiguration>
-                                    </button>
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="748-Wj-Xzz" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" constant="105" id="3vH-Sz-rjx"/>
                                     <constraint firstItem="wnv-Ep-xbd" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" constant="128.5" id="Aq6-fs-lIn"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="top" secondItem="CdJ-7p-sgG" secondAttribute="bottom" constant="18" id="DRz-Yb-c7P"/>
-                                    <constraint firstItem="yao-3n-2Nl" firstAttribute="trailing" secondItem="IeV-ll-Nnu" secondAttribute="trailingMargin" id="EiY-g8-oqt"/>
                                     <constraint firstAttribute="trailing" secondItem="748-Wj-Xzz" secondAttribute="trailing" constant="105" id="GKb-VE-Rb2"/>
                                     <constraint firstAttribute="bottom" secondItem="748-Wj-Xzz" secondAttribute="bottom" constant="52" id="GmA-cD-Tk1"/>
                                     <constraint firstAttribute="trailing" secondItem="wnv-Ep-xbd" secondAttribute="trailing" constant="128.5" id="QwQ-cf-p81"/>
@@ -121,14 +108,12 @@
                                     <constraint firstItem="748-Wj-Xzz" firstAttribute="top" secondItem="wnv-Ep-xbd" secondAttribute="bottom" constant="8" symbolic="YES" id="gl3-mv-8g5"/>
                                     <constraint firstItem="748-Wj-Xzz" firstAttribute="top" secondItem="wnv-Ep-xbd" secondAttribute="bottom" constant="8" symbolic="YES" id="iHz-kS-FNK"/>
                                     <constraint firstItem="CdJ-7p-sgG" firstAttribute="top" secondItem="av0-fN-dj9" secondAttribute="bottom" constant="8" id="tPV-lu-ECf"/>
-                                    <constraint firstItem="yao-3n-2Nl" firstAttribute="top" secondItem="CdJ-7p-sgG" secondAttribute="top" id="tRV-IS-Eey"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="centerX" secondItem="av0-fN-dj9" secondAttribute="centerX" id="tfB-rH-qeT"/>
                                     <constraint firstItem="P59-Gp-1IG" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" constant="127.5" id="uNV-hR-Axe"/>
                                     <constraint firstItem="av0-fN-dj9" firstAttribute="top" secondItem="IeV-ll-Nnu" secondAttribute="top" constant="-156" id="ubR-rL-eXd"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" constant="20" id="unJ-da-SNV"/>
                                     <constraint firstItem="wnv-Ep-xbd" firstAttribute="top" secondItem="P59-Gp-1IG" secondAttribute="bottom" constant="8" symbolic="YES" id="vSo-2P-MB4"/>
                                     <constraint firstAttribute="bottom" secondItem="wnv-Ep-xbd" secondAttribute="bottom" constant="98" id="wZc-Je-ITa"/>
-                                    <constraint firstItem="yao-3n-2Nl" firstAttribute="leading" secondItem="CdJ-7p-sgG" secondAttribute="trailing" constant="-24.5" id="xz8-sY-cmU"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -218,8 +203,10 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="fnb-Ju-Q82" secondAttribute="bottom" constant="9" id="8dx-vp-4Vt"/>
+                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="width" secondItem="SaT-m2-NPZ" secondAttribute="width" multiplier="0.96" id="DA3-8Q-9rk"/>
                                     <constraint firstAttribute="trailing" secondItem="fnb-Ju-Q82" secondAttribute="trailing" constant="8" id="LpQ-we-rQd"/>
                                     <constraint firstItem="fnb-Ju-Q82" firstAttribute="top" secondItem="SaT-m2-NPZ" secondAttribute="top" constant="15" id="i0m-Pk-QLr"/>
+                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="height" secondItem="SaT-m2-NPZ" secondAttribute="height" multiplier="0.957219" id="oS2-yr-x1J"/>
                                     <constraint firstItem="fnb-Ju-Q82" firstAttribute="leading" secondItem="SaT-m2-NPZ" secondAttribute="leading" constant="7" id="qv0-YE-IJO"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Chz-fW-urX"/>
@@ -696,7 +683,6 @@
         <image name="Vector 7" width="577" height="433"/>
         <image name="Vector 8" width="577" height="433"/>
         <image name="Vector 9" width="577" height="433"/>
-        <image name="gearshape" catalog="system" width="128" height="121"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
