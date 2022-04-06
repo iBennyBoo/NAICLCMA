@@ -19,7 +19,6 @@ class ViewController: UIViewController, CAAnimationDelegate {
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
         lunchButton.layer.borderWidth = 1
-        label.layer.borderWidth = 1
             playVideo()
         if let items = UserDefaults.standard.data(forKey: "rooms6"){
             let decoder = JSONDecoder()
@@ -27,6 +26,19 @@ class ViewController: UIViewController, CAAnimationDelegate {
                 ScheduleController.schedule = InfoClass(StringArray: decoded)
             }
         }
+
+        label.attributedText = NSMutableAttributedString(string: "Student Map App",
+        attributes: stroke(font: UIFont(name: "American Typewriter", size: 40)!,
+        strokeWidth: 4, insideColor: .white, strokeColor: UIColor.orange))
+    }
+    
+    public func stroke(font: UIFont, strokeWidth: Float, insideColor: UIColor, strokeColor: UIColor) -> [NSAttributedString.Key: Any]{
+        return [
+            NSAttributedString.Key.strokeColor : strokeColor,
+            NSAttributedString.Key.foregroundColor : insideColor,
+            NSAttributedString.Key.strokeWidth : -strokeWidth,
+            NSAttributedString.Key.font : font
+            ]
     }
     
     @IBAction func mapButton(_ sender: UIButton) {
