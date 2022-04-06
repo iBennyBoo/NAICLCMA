@@ -108,17 +108,5 @@ class tapLocationRecognizer{
     {
         
     }
-    @IBAction func setNewSchool(_ sender: Any)
-    {
-        let err = UIAlertController(title: "Select School", message: "", preferredStyle: .alert)
-        err.addAction(<#T##action: UIAlertAction##UIAlertAction#>)
-        err.addAction(UIAlertAction(title: "Confirm", style: .default, handler: nil))
-    }
-}
-enum SchoolTypes
-{
-    case CrystalLakeCentral
-    case CrystalLakeSouth
-    case CylPrarieRidge
-    case CylCary
+   
 }
