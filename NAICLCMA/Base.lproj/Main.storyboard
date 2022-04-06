@@ -23,7 +23,6 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Map App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="xIb-eA-nGv">
                                         <rect key="frame" x="20" y="368" width="335" height="64"/>
-                                        <color key="backgroundColor" red="0.97254901959999995" green="0.57647058819999997" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="prJ-xX-Ca2"/>
                                         </constraints>
@@ -432,11 +431,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pDv-yh-5us">
-                                <rect key="frame" x="0.0" y="-120" width="375" height="171"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="171" id="afy-Mc-OIM"/>
-                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cky-gY-UX7">
                                 <rect key="frame" x="35" y="102" width="305" height="300"/>
@@ -588,11 +584,13 @@
                             <constraint firstItem="Iso-ly-wj9" firstAttribute="trailing" secondItem="BGY-JB-DhA" secondAttribute="trailing" id="2KR-qp-WZX"/>
                             <constraint firstItem="9yU-If-7Iw" firstAttribute="firstBaseline" secondItem="BGY-JB-DhA" secondAttribute="firstBaseline" id="2Kd-C6-euD"/>
                             <constraint firstItem="pDv-yh-5us" firstAttribute="leading" secondItem="BEB-rl-9ME" secondAttribute="leading" id="2Pa-dW-OjF"/>
+                            <constraint firstItem="pDv-yh-5us" firstAttribute="top" secondItem="i0D-hr-oD6" secondAttribute="top" id="357-s2-nIh"/>
                             <constraint firstItem="idV-CD-M5o" firstAttribute="leading" secondItem="qIg-Jm-ttM" secondAttribute="leading" id="3gw-YD-dyi"/>
                             <constraint firstItem="Aec-EP-EeW" firstAttribute="trailing" secondItem="MCW-it-smX" secondAttribute="trailing" id="4G2-br-RkC"/>
                             <constraint firstItem="dXI-2Y-cUH" firstAttribute="leading" secondItem="Aec-EP-EeW" secondAttribute="leading" id="55D-2c-sz3"/>
                             <constraint firstItem="cky-gY-UX7" firstAttribute="leading" secondItem="BEB-rl-9ME" secondAttribute="leading" constant="35" id="58t-Li-ah2"/>
                             <constraint firstItem="Iso-ly-wj9" firstAttribute="leading" secondItem="BEB-rl-9ME" secondAttribute="leading" constant="183" id="58y-Kg-iqg"/>
+                            <constraint firstItem="cky-gY-UX7" firstAttribute="top" secondItem="pDv-yh-5us" secondAttribute="bottom" constant="51" id="5sO-d2-scd"/>
                             <constraint firstItem="n6I-nP-ok2" firstAttribute="firstBaseline" secondItem="MCW-it-smX" secondAttribute="firstBaseline" id="6i6-bc-wq1"/>
                             <constraint firstItem="Bge-Kh-XNF" firstAttribute="firstBaseline" secondItem="jH0-CB-wF7" secondAttribute="firstBaseline" id="7f9-4e-FKL"/>
                             <constraint firstItem="pYQ-VZ-fsc" firstAttribute="leading" secondItem="BEB-rl-9ME" secondAttribute="leading" constant="127" id="7fh-DJ-LaE"/>
@@ -601,10 +599,12 @@
                             <constraint firstItem="jvs-rE-6rP" firstAttribute="baseline" secondItem="dXI-2Y-cUH" secondAttribute="baseline" id="992-6v-UpF"/>
                             <constraint firstItem="idV-CD-M5o" firstAttribute="leading" secondItem="BEB-rl-9ME" secondAttribute="leading" constant="45" id="9ht-7F-BE6"/>
                             <constraint firstItem="BGY-JB-DhA" firstAttribute="trailing" secondItem="dXI-2Y-cUH" secondAttribute="trailing" id="APh-2A-5tZ"/>
+                            <constraint firstItem="pDv-yh-5us" firstAttribute="top" secondItem="i0D-hr-oD6" secondAttribute="top" id="Aea-Oq-eP7"/>
                             <constraint firstItem="D5W-np-OHM" firstAttribute="leading" secondItem="BEB-rl-9ME" secondAttribute="leading" constant="73" id="BUB-9b-5GR"/>
                             <constraint firstItem="HFo-vs-Plz" firstAttribute="top" secondItem="jvs-rE-6rP" secondAttribute="bottom" id="DNd-dl-Bal"/>
                             <constraint firstItem="9yU-If-7Iw" firstAttribute="top" secondItem="qIg-Jm-ttM" secondAttribute="bottom" id="EBq-1I-Px7"/>
                             <constraint firstItem="BEB-rl-9ME" firstAttribute="trailing" secondItem="Iso-ly-wj9" secondAttribute="trailing" constant="44" id="EtE-4F-EPB"/>
+                            <constraint firstItem="pDv-yh-5us" firstAttribute="top" secondItem="i0D-hr-oD6" secondAttribute="top" id="FSp-zh-Jhn"/>
                             <constraint firstItem="MCW-it-smX" firstAttribute="leading" secondItem="jH0-CB-wF7" secondAttribute="leading" id="G2x-Hr-HmL"/>
                             <constraint firstItem="jvs-rE-6rP" firstAttribute="firstBaseline" secondItem="dXI-2Y-cUH" secondAttribute="firstBaseline" id="G8W-Gg-hI3"/>
                             <constraint firstItem="jvs-rE-6rP" firstAttribute="trailing" secondItem="HFo-vs-Plz" secondAttribute="trailing" id="GYd-Dy-T2a"/>
@@ -638,7 +638,6 @@
                             <constraint firstItem="cky-gY-UX7" firstAttribute="centerX" secondItem="i0D-hr-oD6" secondAttribute="centerX" id="pBv-t4-Hdt"/>
                             <constraint firstItem="HFo-vs-Plz" firstAttribute="firstBaseline" secondItem="Aec-EP-EeW" secondAttribute="firstBaseline" id="rAQ-GZ-dWL"/>
                             <constraint firstItem="jvs-rE-6rP" firstAttribute="leading" secondItem="HFo-vs-Plz" secondAttribute="leading" id="t37-Eb-vnE"/>
-                            <constraint firstItem="cky-gY-UX7" firstAttribute="top" secondItem="pDv-yh-5us" secondAttribute="bottom" constant="51" id="xKq-ec-lhd"/>
                             <constraint firstItem="qIg-Jm-ttM" firstAttribute="leading" secondItem="9yU-If-7Iw" secondAttribute="leading" id="yVC-Df-6Gl"/>
                             <constraint firstItem="BGY-JB-DhA" firstAttribute="leading" secondItem="dXI-2Y-cUH" secondAttribute="leading" id="zJz-BT-H78"/>
                         </constraints>
@@ -652,7 +651,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H7Z-DL-wo2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2944.8000000000002" y="64.31784107946028"/>
+            <point key="canvasLocation" x="2921" y="63"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TBI-2D-g9q">
