@@ -108,11 +108,5 @@ class tapLocationRecognizer{
     {
         
     }
-}
-enum SchoolTypes
-{
-    case CrystalLakeCentral
-    case CrystalLakeSouth
-    case CylPrarieRidge
-    case CylCary
+   
 }
