@@ -201,10 +201,8 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="fnb-Ju-Q82" secondAttribute="bottom" constant="9" id="8dx-vp-4Vt"/>
-                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="width" secondItem="SaT-m2-NPZ" secondAttribute="width" multiplier="0.96" id="DA3-8Q-9rk"/>
                                     <constraint firstAttribute="trailing" secondItem="fnb-Ju-Q82" secondAttribute="trailing" constant="8" id="LpQ-we-rQd"/>
                                     <constraint firstItem="fnb-Ju-Q82" firstAttribute="top" secondItem="SaT-m2-NPZ" secondAttribute="top" constant="15" id="i0m-Pk-QLr"/>
-                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="height" secondItem="SaT-m2-NPZ" secondAttribute="height" multiplier="0.957219" id="oS2-yr-x1J"/>
                                     <constraint firstItem="fnb-Ju-Q82" firstAttribute="leading" secondItem="SaT-m2-NPZ" secondAttribute="leading" constant="7" id="qv0-YE-IJO"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Chz-fW-urX"/>
@@ -671,7 +669,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="weo-6v-Jru"/>
+        <segue reference="Z83-ru-Ilm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CLC Tiger" width="288" height="288"/>

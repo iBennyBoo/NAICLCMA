@@ -174,7 +174,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
         {
             if i != "---"
             {
-                nodeArr[t].center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/20)
+                nodeArr[t].center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
                 currNode = nodeArr[t]
                 if i == skittle.first && currNode != node1
                 {
