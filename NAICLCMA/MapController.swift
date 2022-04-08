@@ -2,16 +2,16 @@ import UIKit
 import AVFoundation
 class MapController: UIViewController, UIScrollViewDelegate {
 
-    @IBOutlet weak var node1: UIImageView!
-    @IBOutlet weak var node2: UIImageView!
-    @IBOutlet weak var node3: UIImageView!
-    @IBOutlet weak var node4: UIImageView!
-    @IBOutlet weak var node5: UIImageView!
-    @IBOutlet weak var node6: UIImageView!
-    @IBOutlet weak var node7: UIImageView!
-    @IBOutlet weak var node8: UIImageView!
-    @IBOutlet weak var node9: UIImageView!
     var nodeArr = [UIImageView]()
+        @IBOutlet weak var node1: UIImageView!
+        @IBOutlet weak var node2: UIImageView!
+        @IBOutlet weak var node3: UIImageView!
+        @IBOutlet weak var node4: UIImageView!
+        @IBOutlet weak var node5: UIImageView!
+        @IBOutlet weak var node6: UIImageView!
+        @IBOutlet weak var node7: UIImageView!
+        @IBOutlet weak var node8: UIImageView!
+        @IBOutlet weak var node9: UIImageView!
     @IBOutlet weak var map: UIImageView!
     @IBOutlet weak var schedule: UIImageView!
     
