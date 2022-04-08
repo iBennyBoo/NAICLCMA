@@ -19,7 +19,6 @@ class ViewController: UIViewController, CAAnimationDelegate {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
-        lunchButton.layer.borderWidth = 1
             playVideo()
         if let items = UserDefaults.standard.data(forKey: "rooms6"){
             let decoder = JSONDecoder()
@@ -85,28 +84,26 @@ class ViewController: UIViewController, CAAnimationDelegate {
         videoLayer.bringSubviewToFront(scheduleButton)
         videoLayer.bringSubviewToFront(mapButton)
         videoLayer.bringSubviewToFront(white)
-        videoLayer.bringSubviewToFront(lunchButton)
     }
     
 }
 
-class tapLocationRecognizer{
-    var x, y, z: Int
-    init (X: Int, Y: Int)
-    {
-        x = X
-        y = Y
-        z = 0
-    }
-    init (X: Int, Y: Int, Z: Int)
-    {
-        x = X
-        y = Y
-        z = Z
-    }
-    func sendTap(tapGestureRecognizer: UITapGestureRecognizer)
-    {
-        
-    }
-   
-}
+//class tapLocationRecognizer{
+//    var x, y, z: Int
+//    init (X: Int, Y: Int)
+//    {
+//        x = X
+//        y = Y
+//        z = 0
+//    }
+//    init (X: Int, Y: Int, Z: Int)
+//    {
+//        x = X
+//        y = Y
+//        z = Z
+//    }
+//    func sendTap(tapGestureRecognizer: UITapGestureRecognizer)
+//    {
+//
+//    }
+//}
