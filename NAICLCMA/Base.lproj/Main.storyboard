@@ -273,7 +273,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="lhQ-7R-603">
                                 <rect key="frame" x="16" y="179" width="343" height="398.5"/>
-                                <color key="backgroundColor" red="0.97254901960784312" green="0.57647058823529407" blue="0.40784313725490196" alpha="0.47765880862608651" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.94489353899999995" green="0.6164162755" blue="0.2194497883" alpha="0.45753873448793581" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="398.5" id="8bf-lf-c7K"/>
                                 </constraints>
@@ -302,7 +302,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.97254901959999995" green="0.57647058819999997" blue="0.4087568610917176" alpha="0.65095395457987881" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.94488674399999995" green="0.60458141570000001" blue="0.21552938220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
@@ -416,7 +416,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Z83-ru-Ilm"/>
+        <segue reference="weo-6v-Jru"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CLC Tiger" width="288" height="288"/>
