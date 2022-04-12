@@ -13,7 +13,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
         @IBOutlet weak var node8: UIImageView!
         @IBOutlet weak var node9: UIImageView!
     @IBOutlet weak var map: UIImageView!
-    @IBOutlet weak var schedule: UIImageView!
+    @IBOutlet weak var condenser: UIBarButtonItem!
     
     @IBOutlet weak var bloodyView: UIImageView!
     @IBOutlet weak var switchButton: UIButton!
@@ -34,6 +34,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
     var audioPlayer: AVAudioPlayer?
     var skittle = ScheduleController.schedule
     var currNode: UIImageView?
+    var condesable = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,6 +56,12 @@ class MapController: UIViewController, UIScrollViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         reform()
         deter()
+    }
+    
+    @IBAction func onSwitch(_ sender: Any) {
+        condesable.toggle()
+        reform()
+        print(condesable)
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -167,71 +174,39 @@ class MapController: UIViewController, UIScrollViewDelegate {
         let mapCent = map.center
         print("reform fired")
         let cruncher = (1.05 - 0.06 * scrollView.zoomScale / 6)
-        let zoomFactorLeft = 3.5 * (scrollView.zoomScale/1.5 + 0.75)
-        let zoomFactorRight = 1.75 * (scrollView.zoomScale/1.5 + 0.75)
+        let sklittle = skittle.asList()
+        var zoomFactorLeft: Double
+        var zoomFactorRight: Double
+        if condesable
+        {
+            zoomFactorLeft = 3.5 * (scrollView.zoomScale/1.5 + 0.75)
+            zoomFactorRight = 1.75 * (scrollView.zoomScale/1.5 + 0.75)
+        }
+        else
+        {
+            zoomFactorLeft = 16.625
+            zoomFactorRight = 8.3125
+        }
+        var l = 0
         var t = 0
         for i in skittle.asList()
         {
             if i != "---"
             {
-                nodeArr[t].center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
-                currNode = nodeArr[t]
-                if i == skittle.first && currNode != node1
+                nodeArr[l].center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                currNode = nodeArr[l]
+                for _ in skittle.asList()
                 {
-                    print("First'd!")
-                    node1.center.x -= zoomFactorLeft
-                    currNode?.center.x += zoomFactorRight
-                }
-                if i == skittle.second && currNode != node2
-                {
-                    print("Second'!")
-                    node2.center.x -= zoomFactorLeft
-                    currNode?.center.x += zoomFactorRight
-                }
-                if i == skittle.third && currNode != node3
-                {
-                    print("Third'!")
-                    node3.center.x -= zoomFactorLeft
-                    currNode?.center.x += zoomFactorRight
-                }
-                if i == skittle.fourth && currNode != node4
-                {
-                    print("Four'd!")
-                    node4.center.x -= zoomFactorLeft
-                    currNode?.center.x += zoomFactorRight
-                }
-                if i == skittle.fifth && currNode != node5
-                {
-                    print("Fifth'd!")
-                    node5.center.x -= zoomFactorLeft
-                    currNode?.center.x += zoomFactorRight
-                }
-                if i == skittle.sixth && currNode != node6
-                {
-                    print("Sixth'd!")
-                    node6.center.x -= zoomFactorLeft
-                    currNode?.center.x += zoomFactorRight
-                }
-                if i == skittle.seventh && currNode != node7
-                {
-                    print("Seventh'd!")
-                    node7.center.x -= zoomFactorLeft
-                    currNode?.center.x += zoomFactorRight
-                }
-                if i == skittle.eighth && currNode != node8
-                {
-                    print("Eighth'd!")
-                    node8.center.x -= zoomFactorLeft
-                    currNode?.center.x += zoomFactorRight
-                }
-                if i == skittle.ninth && currNode != node9
-                {
-                    print("Nineth'd!")
-                    node9.center.x -= zoomFactorLeft
-                    currNode?.center.x += zoomFactorRight
+                    if i == sklittle[t] && currNode != nodeArr[t]
+                    {
+                        nodeArr[t].center.x -= zoomFactorLeft
+                        currNode?.center.x += zoomFactorRight
+                    }
+                    t += 1
                 }
             }
-            t += 1
+            t = 0
+            l += 1
         }
     }
 }
