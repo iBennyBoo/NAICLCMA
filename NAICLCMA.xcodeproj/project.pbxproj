@@ -26,7 +26,6 @@
 		59639FF027AD62760012754A /* moon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 59639FEE27AD62760012754A /* moon.mp4 */; };
 		5980EE3A27A02C05001D0FED /* click.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5980EE3927A02C05001D0FED /* click.mp3 */; };
 		5980EE3C27A031D3001D0FED /* Ding-small-bell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */; };
-		59E5ED9127A9710400F73F08 /* moon.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 59E5ED9027A9710400F73F08 /* moon.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +69,6 @@
 		59639FEF27AD62760012754A /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/moon.mp4; sourceTree = "<group>"; };
 		5980EE3927A02C05001D0FED /* click.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = click.mp3; sourceTree = "<group>"; };
 		5980EE3B27A031D3001D0FED /* Ding-small-bell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Ding-small-bell.mp3"; sourceTree = "<group>"; };
-		59E5ED9027A9710400F73F08 /* moon.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = moon.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +99,6 @@
 		590B3DDE27A2CD96003D6B4E /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				59E5ED9027A9710400F73F08 /* moon.mp4 */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -272,7 +269,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59E5ED9127A9710400F73F08 /* moon.mp4 in Resources */,
 				5980EE3A27A02C05001D0FED /* click.mp3 in Resources */,
 				593FF5F1279F3177005D941F /* flip.mp3 in Resources */,
 				59336ACE278C788C00C1B1E3 /* LaunchScreen.storyboard in Resources */,
