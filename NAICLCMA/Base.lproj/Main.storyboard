@@ -376,13 +376,13 @@
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Period: #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sy-3D-ANR">
-                                <rect key="frame" x="234" y="78" width="68" height="19"/>
+                                <rect key="frame" x="59" y="61" width="68" height="19"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room: #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB0-fL-0PK">
-                                <rect key="frame" x="78" y="78" width="63" height="19"/>
+                                <rect key="frame" x="220" y="61" width="63" height="19"/>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -394,23 +394,23 @@
                             <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="jc3-y8-4HE" secondAttribute="bottom" constant="15" id="0Ss-OB-gyf"/>
                             <constraint firstItem="j6o-8Q-Lub" firstAttribute="trailing" secondItem="zgH-ES-652" secondAttribute="trailing" constant="92" id="35w-bK-wx4"/>
                             <constraint firstItem="GFZ-sq-mMn" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" id="5wS-XF-S8K"/>
+                            <constraint firstItem="0sy-3D-ANR" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="59" id="MjM-E4-5ZB"/>
                             <constraint firstItem="GFZ-sq-mMn" firstAttribute="top" secondItem="UIN-8k-QYG" secondAttribute="top" id="NSC-yr-mx8"/>
                             <constraint firstItem="jc3-y8-4HE" firstAttribute="top" secondItem="j6o-8Q-Lub" secondAttribute="top" constant="17" id="PC2-gU-3si"/>
                             <constraint firstItem="GFZ-sq-mMn" firstAttribute="trailing" secondItem="j6o-8Q-Lub" secondAttribute="trailing" id="PRD-VT-tJV"/>
                             <constraint firstItem="lhQ-7R-603" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="16" id="UGy-uS-i49"/>
                             <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="GFZ-sq-mMn" secondAttribute="bottom" constant="126" id="XOh-I0-KLW"/>
-                            <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="CB0-fL-0PK" secondAttribute="bottom" constant="82" id="Y4h-OB-kjo"/>
-                            <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="0sy-3D-ANR" secondAttribute="bottom" constant="82" id="ZNQ-t2-eVg"/>
+                            <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="CB0-fL-0PK" secondAttribute="bottom" constant="99" id="Y4h-OB-kjo"/>
+                            <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="0sy-3D-ANR" secondAttribute="bottom" constant="99" id="ZNQ-t2-eVg"/>
+                            <constraint firstItem="j6o-8Q-Lub" firstAttribute="trailing" secondItem="CB0-fL-0PK" secondAttribute="trailing" constant="92" id="e7x-bU-DOA"/>
                             <constraint firstItem="jc3-y8-4HE" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="16" id="eGK-Ve-HDH"/>
                             <constraint firstItem="j6o-8Q-Lub" firstAttribute="trailing" secondItem="lhQ-7R-603" secondAttribute="trailing" constant="16" id="ekm-2U-N3P"/>
                             <constraint firstItem="j6o-8Q-Lub" firstAttribute="bottom" secondItem="zgH-ES-652" secondAttribute="bottom" constant="27" id="hzW-8j-wch"/>
-                            <constraint firstItem="CB0-fL-0PK" firstAttribute="top" secondItem="GFZ-sq-mMn" secondAttribute="bottom" constant="25" id="jd8-OU-ceb"/>
+                            <constraint firstItem="CB0-fL-0PK" firstAttribute="top" secondItem="GFZ-sq-mMn" secondAttribute="bottom" constant="8" id="jd8-OU-ceb"/>
                             <constraint firstItem="zgH-ES-652" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="92" id="lDO-If-Jz0"/>
-                            <constraint firstItem="0sy-3D-ANR" firstAttribute="top" secondItem="GFZ-sq-mMn" secondAttribute="bottom" constant="25" id="m5r-Lz-gKK"/>
+                            <constraint firstItem="0sy-3D-ANR" firstAttribute="top" secondItem="GFZ-sq-mMn" secondAttribute="bottom" constant="8" id="m5r-Lz-gKK"/>
                             <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="j6o-8Q-Lub" secondAttribute="top" constant="135" id="oM5-cE-ivT"/>
                             <constraint firstItem="j6o-8Q-Lub" firstAttribute="trailing" secondItem="jc3-y8-4HE" secondAttribute="trailing" constant="16" id="rpc-FJ-DRl"/>
-                            <constraint firstItem="j6o-8Q-Lub" firstAttribute="trailing" secondItem="0sy-3D-ANR" secondAttribute="trailing" constant="73" id="veB-kJ-9FD"/>
-                            <constraint firstItem="CB0-fL-0PK" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="78" id="xRS-FK-Yyj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule" id="G1C-Ob-oSC">
