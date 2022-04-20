@@ -163,8 +163,8 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         cell.layer.borderWidth = 1
-        cell.textLabel?.text = "\(has[indexPath.row])"
-        cell.detailTextLabel?.text = "\(indexPath.row + 1)"
+        cell.textLabel?.text = "\(indexPath.row + 1)"
+        cell.detailTextLabel?.text = "\(has[indexPath.row])"
         return cell
 }
     
