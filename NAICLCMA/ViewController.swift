@@ -1,6 +1,6 @@
 import UIKit
 import AVFoundation
-class ViewController: UIViewController, CAAnimationDelegate {
+class ViewController: UIViewController{
 
     
     //pls work
@@ -8,7 +8,6 @@ class ViewController: UIViewController, CAAnimationDelegate {
     @IBOutlet weak var mapButton: UIButton!
     @IBOutlet weak var scheduleButton: UIButton!
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var videoLayer: UIView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var white: UIImageView!
     
@@ -20,7 +19,6 @@ class ViewController: UIViewController, CAAnimationDelegate {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
-            playVideo()
         if let items = UserDefaults.standard.data(forKey: "rooms6"){
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([String].self, from: items){
@@ -63,48 +61,6 @@ class ViewController: UIViewController, CAAnimationDelegate {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        playVideo()
-    }
-
-    //Background Video\\
-    func playVideo(){
-        guard let path = Bundle.main.path(forResource: "moon", ofType: "mp4") else{
-            return
-        }
-        let player = AVPlayer(url: URL(fileURLWithPath: path))
-        let playerLayer = AVPlayerLayer(player: player)
-        playerLayer.frame = self.view.bounds
-        playerLayer.videoGravity = .resizeAspectFill
-        self.videoLayer.layer.addSublayer(playerLayer)
-        
-        player.play()
-        
-        videoLayer.bringSubviewToFront(image)
-        videoLayer.bringSubviewToFront(label)
-        videoLayer.bringSubviewToFront(scheduleButton)
-        videoLayer.bringSubviewToFront(mapButton)
-        videoLayer.bringSubviewToFront(white)
-    }
+    
     
 }
-
-//class tapLocationRecognizer{
-//    var x, y, z: Int
-//    init (X: Int, Y: Int)
-//    {
-//        x = X
-//        y = Y
-//        z = 0
-//    }
-//    init (X: Int, Y: Int, Z: Int)
-//    {
-//        x = X
-//        y = Y
-//        z = Z
-//    }
-//    func sendTap(tapGestureRecognizer: UITapGestureRecognizer)
-//    {
-//
-//    }
-//}

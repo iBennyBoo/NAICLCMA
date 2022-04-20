@@ -73,6 +73,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
+                                <color key="backgroundColor" red="0.86374098060000004" green="0.5800165086350203" blue="0.24839457471740833" alpha="0.81678711341706334" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="wnv-Ep-xbd" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" constant="80" id="Aq6-fs-lIn"/>
