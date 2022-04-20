@@ -80,13 +80,13 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
                 print("error!")
             }
             has[selectClass - 1] = selected
-            if pickerView.selectedRow(inComponent: 1) < 8
+            if pickerView.selectedRow(inComponent: 0) < 8
             {
-                pickerView.selectRow(pickerView.selectedRow(inComponent: 1) + 1, inComponent: 1, animated: true)
+                pickerView.selectRow(pickerView.selectedRow(inComponent: 0) + 1, inComponent: 0, animated: true)
                 selectClass += 1
             }else{
-                pickerView.selectRow(pickerView.selectedRow(inComponent: 1) - 8, inComponent: 1, animated: true)
-                pickerView(pickerView, didSelectRow: selectClass - 9, inComponent: 1)
+                pickerView.selectRow(pickerView.selectedRow(inComponent: 0) - 8, inComponent: 0, animated: true)
+                pickerView(pickerView, didSelectRow: selectClass - 9, inComponent: 0)
             }
             let encoder = JSONEncoder()
             if let encoded = try? encoder.encode(has){
@@ -113,11 +113,11 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0
         {
-            return rooms.count
+            return 9
         }
         else
         {
-            return 9
+            return rooms.count
         }
         
     }
@@ -125,22 +125,22 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0
         {
-            return rooms[row]
+            return "\(row + 1)"
         }
         else
         {
-            return "\(row + 1)"
+            return rooms[row]
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == 0
         {
-            selected = rooms[row]
+            selectClass = [1, 2, 3, 4, 5, 6, 7, 8, 9][row]
         }
         else
         {
-            selectClass = [1, 2, 3, 4, 5, 6, 7, 8, 9][row]
+            selected = rooms[row]
         }
         print(selected)
     }
