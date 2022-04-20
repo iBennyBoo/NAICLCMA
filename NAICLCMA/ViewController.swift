@@ -4,12 +4,10 @@ class ViewController: UIViewController, CAAnimationDelegate {
 
     @IBOutlet weak var mapButton: UIButton!
     @IBOutlet weak var scheduleButton: UIButton!
-    @IBOutlet weak var lunchButton: UIButton!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var videoLayer: UIView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var white: UIImageView!
-    @IBOutlet weak var settings: UIBarButtonItem!
     
     var audioPlayer: AVAudioPlayer?
     let click = Bundle.main.path(forResource: "click", ofType: "mp3")!

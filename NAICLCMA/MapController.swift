@@ -12,6 +12,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
         @IBOutlet weak var node7: UIImageView!
         @IBOutlet weak var node8: UIImageView!
         @IBOutlet weak var node9: UIImageView!
+        @IBOutlet weak var directNode: UIImageView!
     @IBOutlet weak var map: UIImageView!
     @IBOutlet weak var condenser: UIBarButtonItem!
     
@@ -28,7 +29,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
     var time = Timer()
     var calendar = Calendar.current
     
-    var x = 0
+    var x = false
     let flip = Bundle.main.path(forResource: "flip", ofType: "mp3")!
     let click = Bundle.main.path(forResource: "click", ofType: "mp3")!
     var audioPlayer: AVAudioPlayer?
@@ -104,12 +105,15 @@ class MapController: UIViewController, UIScrollViewDelegate {
             print("error!")
         }
         node2.isHidden = true
-        if(x == 0){
-            x = 1
+        if(x == false)
+        {
+            x.toggle()
             navigationItem.title = "2nd Floor"
             map.image = UIImage(named: "Improved Second Floor")
-        } else if (x == 1){
-            x = 0
+        }
+        else
+        {
+            x.toggle()
             navigationItem.title = "1st Floor"
             map.image = UIImage(named: "Improved First Floor")
         }
@@ -146,7 +150,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
             }
             else if b.1 == true
             {
-                if x == 0
+                if x == false
                 {
                     nodeArr[t].isHidden = true
                 }
@@ -157,7 +161,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
             }
             else
             {
-                if x == 0
+                if x == false
                 {
                     nodeArr[t].isHidden = false
                 }
@@ -168,12 +172,21 @@ class MapController: UIViewController, UIScrollViewDelegate {
             }
             t += 1
         }
+        let z = codify(find: ScheduleController.directive)
+        if ScheduleController.directive != "---" && z.1 == x
+        {
+            directNode.isHidden = false
+        }
+        else
+        {
+            directNode.isHidden = true
+        }
     }
     func reform()
     {
         let mapCent = map.center
         print("reform fired")
-        let cruncher = (1.05 - 0.06 * scrollView.zoomScale / 6)
+        let cruncher = (0.06 - 0.06 * scrollView.zoomScale / 6) + 1
         let sklittle = skittle.asList()
         var zoomFactorLeft: Double
         var zoomFactorRight: Double
@@ -189,13 +202,13 @@ class MapController: UIViewController, UIScrollViewDelegate {
         }
         var l = 0
         var t = 0
-        for i in skittle.asList()
+        for i in sklittle
         {
             if i != "---"
             {
                 nodeArr[l].center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
                 currNode = nodeArr[l]
-                for _ in skittle.asList()
+                for _ in sklittle
                 {
                     if i == sklittle[t] && currNode != nodeArr[t]
                     {
@@ -208,5 +221,6 @@ class MapController: UIViewController, UIScrollViewDelegate {
             t = 0
             l += 1
         }
+        directNode.center = CGPoint(x: (RoomClass.coords[ScheduleController.directive]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[ScheduleController.directive]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
     }
 }

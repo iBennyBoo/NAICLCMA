@@ -11,6 +11,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var button: UIButton!
     static var schedule = InfoClass(first: "---", second: "---", third: "---", fourth: "---", fifth: "---", sixth: "---", seventh: "---", eighth: "---", ninth: "---")
+    static var directive = "---"
     var audioPlayer: AVAudioPlayer?
     var selected: String = "106"
     var selectClass: Int = 1
@@ -45,10 +46,14 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
                 has = decoded
             }
         }
-        if has[0] != "0" || has[1] != "0" || has[2] != "0" || has[3] != "0" || has[4] != "0" || has[5] != "0" || has[6] != "0" || has[7] != "0" || has[8] != "0"
+        if has[0] != "---" || has[1] != "---" || has[2] != "---" || has[3] != "---" || has[4] != "---" || has[5] != "---" || has[6] != "---" || has[7] != "---" || has[8] != "---"
         {
             button.isHidden = false
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        ScheduleController.directive = "---"
     }
     
     @IBAction func button(_ sender: UIButton) {
@@ -132,7 +137,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         else
         {
-            selectClass = periods[row]
+            selectClass = [1, 2, 3, 4, 5, 6, 7, 8, 9][row]
         }
         print(selected)
     }
@@ -170,5 +175,9 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         tableView.reloadData()
     }
-    
+    @IBAction func directSearch(_ sender: Any)
+    {
+        ScheduleController.directive = selected
+        performSegue(withIdentifier: "SegToMap", sender: nil)
+    }
 }

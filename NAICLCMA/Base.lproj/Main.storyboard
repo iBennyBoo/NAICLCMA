@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H5t-T5-U2l">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H5t-T5-U2l">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -176,6 +176,10 @@
                                         <rect key="frame" x="158" y="237" width="58" height="86"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="vector" translatesAutoresizingMaskIntoConstraints="NO" id="ocg-6E-Ef3">
+                                        <rect key="frame" x="163" y="258" width="48" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="fnb-Ju-Q82" secondAttribute="bottom" constant="9" id="8dx-vp-4Vt"/>
@@ -234,7 +238,7 @@
                     <navigationItem key="navigationItem" title="1st Floor" id="9gH-fj-Npo">
                         <rightBarButtonItems>
                             <barButtonItem title="Condense:" style="done" id="n8U-GF-RyP">
-                                <switch key="customView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="Node Seperation" on="YES" title="Node Seperation" preferredStyle="sliding" id="egm-l5-x39">
+                                <switch key="customView" toolTip="Node Seperation" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="Node Seperation" preferredStyle="sliding" id="egm-l5-x39">
                                     <rect key="frame" x="308" y="6.5" width="51" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="onTintColor" systemColor="systemPurpleColor"/>
@@ -269,6 +273,7 @@
                     <connections>
                         <outlet property="bloodyView" destination="M8P-GS-3Vq" id="7TF-bW-gcl"/>
                         <outlet property="condenser" destination="n8U-GF-RyP" id="ysv-6b-es4"/>
+                        <outlet property="directNode" destination="ocg-6E-Ef3" id="g2n-pY-LlC"/>
                         <outlet property="imageViewBottomConstraint" destination="8dx-vp-4Vt" id="u9P-a3-rsh"/>
                         <outlet property="imageViewLeadingConstraint" destination="qv0-YE-IJO" id="UoD-3b-1ep"/>
                         <outlet property="imageViewTopConstraint" destination="i0m-Pk-QLr" id="360-dz-QjT"/>
@@ -352,7 +357,7 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="button:" destination="u6a-Ab-tdd" eventType="touchUpInside" id="W3n-kn-Kbe"/>
-                                    <segue destination="aGF-5P-6vx" kind="show" id="weo-6v-Jru"/>
+                                    <segue destination="aGF-5P-6vx" kind="show" identifier="SegToMap" id="weo-6v-Jru"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GFZ-sq-mMn">
@@ -406,11 +411,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule" id="G1C-Ob-oSC">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="1Ys-vh-Y4I">
-                            <connections>
-                                <action selector="addButton:" destination="u6a-Ab-tdd" id="q8P-MS-8FT"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="1Ys-vh-Y4I">
+                                <connections>
+                                    <action selector="addButton:" destination="u6a-Ab-tdd" id="q8P-MS-8FT"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="WT5-lg-Czk">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Hyq-zR-jIT">
+                                    <rect key="frame" x="267.5" y="5" width="50" height="34"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title=""/>
+                                    <connections>
+                                        <action selector="directSearch:" destination="u6a-Ab-tdd" eventType="touchUpInside" id="erp-Wu-EeI"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="button" destination="zgH-ES-652" id="d3L-7q-a9d"/>
@@ -465,6 +483,8 @@
         <image name="Vector 7" width="577" height="433"/>
         <image name="Vector 8" width="577" height="433"/>
         <image name="Vector 9" width="577" height="433"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="vector" width="445" height="720"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
