@@ -31,7 +31,7 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P59-Gp-1IG">
                                         <rect key="frame" x="80" y="475" width="215" height="48"/>
-                                        <color key="backgroundColor" red="0.974299464" green="0.61693311569999998" blue="0.1414865713" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.97544926399999998" green="0.61792677640000004" blue="0.1408887506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="8X5-fQ-hrU"/>
                                         </constraints>
@@ -50,7 +50,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" pointerInteraction="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wnv-Ep-xbd">
                                         <rect key="frame" x="80" y="531" width="216" height="65"/>
-                                        <color key="backgroundColor" red="0.97254901959999995" green="0.57647058819999997" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.97544926399999998" green="0.61792677640000004" blue="0.1408887506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="py0-v5-Kvb"/>
                                         </constraints>
@@ -112,7 +112,7 @@
                         <outlet property="label" destination="xIb-eA-nGv" id="Nud-xb-2iX"/>
                         <outlet property="mapButton" destination="P59-Gp-1IG" id="kgs-LI-Ak4"/>
                         <outlet property="scheduleButton" destination="wnv-Ep-xbd" id="x5C-Hj-tP4"/>
-                        <outlet property="videoLayer" destination="IeV-ll-Nnu" id="hxM-IZ-JNH"/>
+                        <outlet property="videoLayer" destination="IeV-ll-Nnu" id="iPX-GY-fe9"/>
                         <outlet property="white" destination="av0-fN-dj9" id="g6R-5E-BSf"/>
                     </connections>
                 </viewController>

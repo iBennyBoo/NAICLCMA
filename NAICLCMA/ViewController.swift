@@ -5,6 +5,7 @@ class ViewController: UIViewController{
     
     //pls work
     
+    @IBOutlet weak var videoLayer: UIView!
     @IBOutlet weak var mapButton: UIButton!
     @IBOutlet weak var scheduleButton: UIButton!
     @IBOutlet weak var label: UILabel!
