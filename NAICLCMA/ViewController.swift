@@ -29,7 +29,7 @@ class ViewController: UIViewController{
 
         label.attributedText = NSMutableAttributedString(string: "Student Map App",
         attributes: stroke(font: UIFont(name: "American Typewriter", size: 40)!,
-        strokeWidth: 4, insideColor: .white, strokeColor: UIColor.orange))
+        strokeWidth: 4.5, insideColor: .white, strokeColor: UIColor.black))
     }
     
     public func stroke(font: UIFont, strokeWidth: Float, insideColor: UIColor, strokeColor: UIColor) -> [NSAttributedString.Key: Any]{
