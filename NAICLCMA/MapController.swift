@@ -35,7 +35,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
     var audioPlayer: AVAudioPlayer?
     var skittle = ScheduleController.schedule
     var currNode: UIImageView?
-    var condesable = true
+    var condesable = false
     
     override func viewDidLoad() {
         super.viewDidLoad()

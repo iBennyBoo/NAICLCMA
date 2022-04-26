@@ -71,7 +71,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         ScheduleController.schedule = InfoClass.init(first: has[0], second: has[1], third: has[2], fourth: has[3], fifth: has[4], sixth: has[5], seventh: has[6], eighth: has[7], ninth: has[8])
     }
     
-    @IBAction func addButton(_ sender: UIBarButtonItem) {
+    @IBAction func addButton(_ sender: UIButton) {
         let url = URL(fileURLWithPath: ding)
             do{
                 audioPlayer = try AVAudioPlayer(contentsOf: url)
