@@ -10,7 +10,9 @@ class ViewController: UIViewController{
     @IBOutlet weak var scheduleButton: UIButton!
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var directSearch: UIButton!
     @IBOutlet weak var white: UIImageView!
+    
     
     var audioPlayer: AVAudioPlayer?
     let click = Bundle.main.path(forResource: "click", ofType: "mp3")!
@@ -18,8 +20,12 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        mapButton.layer.cornerRadius = 20
+        scheduleButton.layer.cornerRadius = 10
+        directSearch.layer.cornerRadius = 20
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
+        directSearch.layer.borderWidth = 1
         if let items = UserDefaults.standard.data(forKey: "rooms6"){
             let decoder = JSONDecoder()
             if let decoded = try? decoder.decode([String].self, from: items){
