@@ -113,11 +113,11 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if component == 0
         {
-            return 9
+            return 10
         }
         else
         {
-            return rooms.count
+            return rooms.count+1
         }
         
     }
@@ -125,22 +125,42 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if component == 0
         {
-            return "\(row + 1)"
+            if row == 0{
+                return "Period"
+            }
+            else{
+                return "\(row)"
+            }
         }
         else
         {
-            return rooms[row]
+            if row == 0{
+                return "Rooms"
+            }
+            else{
+                return rooms[row]
+            }
         }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if component == 0
         {
-            selectClass = [1, 2, 3, 4, 5, 6, 7, 8, 9][row]
+            if row == 0{
+                return
+            }
+            else{
+                selectClass = row
+            }
         }
         else
         {
-            selected = rooms[row]
+            if row == 0{
+                return
+            }
+            else{
+                selected = rooms[row]
+            }
         }
         print(selected)
     }
