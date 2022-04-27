@@ -175,7 +175,6 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
 //            return 40
 //        }
 //    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return has.count
     }
