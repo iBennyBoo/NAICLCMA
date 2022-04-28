@@ -452,8 +452,6 @@
                         <connections>
                             <outlet property="classLabel" destination="lhQ-7R-603" id="XPj-8u-s0n"/>
                             <outlet property="periodLabel" destination="lhQ-7R-603" id="E8W-lm-Kx8"/>
-                            <outlet property="periodLable" destination="uhZ-W4-N8f" id="0qc-I6-zdZ"/>
-                            <outlet property="timeLabel" destination="uhZ-W4-N8f" id="WCo-nq-a2F"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Schedule" id="G1C-Ob-oSC"/>
