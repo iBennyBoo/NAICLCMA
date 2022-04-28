@@ -20,9 +20,9 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        mapButton.layer.cornerRadius = 20
-        scheduleButton.layer.cornerRadius = 10
-        directSearch.layer.cornerRadius = 20
+        mapButton.layer.cornerRadius = 25
+        scheduleButton.layer.cornerRadius = 25
+        directSearch.layer.cornerRadius = 25
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
         directSearch.layer.borderWidth = 1
@@ -48,7 +48,7 @@ class ViewController: UIViewController{
     }
     
     @IBAction func mapButton(_ sender: UIButton) {
-        print("working")
+        print("Working...")
         let url = URL(fileURLWithPath: click)
         do{
             audioPlayer = try AVAudioPlayer(contentsOf: url)
@@ -59,6 +59,7 @@ class ViewController: UIViewController{
     }
     
     @IBAction func scheduleButton(_ sender: UIButton) {
+        print("Working...")
         let url = URL(fileURLWithPath: click)
         do{
             audioPlayer = try AVAudioPlayer(contentsOf: url)
