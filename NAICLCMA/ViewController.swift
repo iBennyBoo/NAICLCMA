@@ -1,6 +1,7 @@
 import UIKit
 import AVFoundation
-class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class ViewController: UIViewController{
+    
     
     
 
@@ -53,13 +54,6 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }))
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 0
-    }
     
     public func stroke(font: UIFont, strokeWidth: Float, insideColor: UIColor, strokeColor: UIColor) -> [NSAttributedString.Key: Any]{
         return [
