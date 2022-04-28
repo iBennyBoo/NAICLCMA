@@ -43,7 +43,7 @@
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imD-Yz-x8L">
                                         <rect key="frame" x="16" y="596" width="52" height="50"/>
-                                        <color key="backgroundColor" red="0.974299464" green="0.42094774540000002" blue="0.05767682289" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.94488364459999996" green="0.60459154839999996" blue="0.21552747489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="52" id="GLt-FR-pra"/>
                                         </constraints>
@@ -58,7 +58,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQJ-Qm-15I">
                                         <rect key="frame" x="307" y="596" width="52" height="50"/>
-                                        <color key="backgroundColor" red="0.974299464" green="0.42094774540000002" blue="0.05767682289" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.94488364459999996" green="0.60459154839999996" blue="0.21552747489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="">
                                             <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
@@ -70,7 +70,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfe-BS-pCT">
                                         <rect key="frame" x="76" y="596" width="223" height="50"/>
-                                        <color key="backgroundColor" red="0.974299464" green="0.42094774540000002" blue="0.05767682289" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.94488364459999996" green="0.60459154839999996" blue="0.21552747489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Schedule">
                                             <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="26"/>
@@ -81,7 +81,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.86374098060000004" green="0.5800165086350203" blue="0.24839457471740833" alpha="0.81678711341706334" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.90346252350580125" alpha="0.74467993729951365" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="imD-Yz-x8L" firstAttribute="top" secondItem="Gfe-BS-pCT" secondAttribute="top" id="0QX-fC-Fgv"/>
@@ -358,7 +358,7 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.94488674399999995" green="0.60458141570000001" blue="0.21552938220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.68627458809999997" green="0.68627452850000004" blue="0.68627452850000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </prototypes>
@@ -376,7 +376,7 @@
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkV-a0-hI3">
                                 <rect key="frame" x="307" y="595" width="52" height="52"/>
-                                <color key="backgroundColor" red="0.974299464" green="0.42094774540000002" blue="0.05767682289" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.94488364459999996" green="0.60459154839999996" blue="0.21552747489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="52" id="CKY-vd-bTs"/>
                                 </constraints>
@@ -390,7 +390,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgH-ES-652">
                                 <rect key="frame" x="16" y="595" width="283" height="52"/>
-                                <color key="backgroundColor" red="0.974299464" green="0.42094774541262148" blue="0.057676822890933316" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.94488364459999996" green="0.60459154839999996" blue="0.21552747489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="WFi-0Q-tma"/>
                                 </constraints>
@@ -470,7 +470,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zFw-8I-JNq"/>
+        <segue reference="wen-lb-dbs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CLC Tiger" width="288" height="288"/>
