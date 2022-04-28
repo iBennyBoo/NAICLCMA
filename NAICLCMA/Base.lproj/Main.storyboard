@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeV-ll-Nnu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="665"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Map App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="xIb-eA-nGv">
                                         <rect key="frame" x="20" y="368" width="335" height="64"/>
@@ -374,18 +374,6 @@
                                 <rect key="frame" x="16" y="61" width="343" height="103"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Period: #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sy-3D-ANR">
-                                <rect key="frame" x="45" y="152" width="84" height="19"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Room: #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB0-fL-0PK">
-                                <rect key="frame" x="265" y="152" width="65" height="19"/>
-                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="16"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OkV-a0-hI3">
                                 <rect key="frame" x="307" y="595" width="52" height="52"/>
                                 <color key="backgroundColor" red="0.974299464" green="0.42094774540000002" blue="0.05767682289" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -422,7 +410,6 @@
                             <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="jc3-y8-4HE" secondAttribute="bottom" constant="15" id="0Ss-OB-gyf"/>
                             <constraint firstItem="zgH-ES-652" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="16" id="3wE-6r-Mqz"/>
                             <constraint firstItem="GFZ-sq-mMn" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" id="5wS-XF-S8K"/>
-                            <constraint firstItem="0sy-3D-ANR" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="45" id="MjM-E4-5ZB"/>
                             <constraint firstItem="GFZ-sq-mMn" firstAttribute="top" secondItem="UIN-8k-QYG" secondAttribute="top" id="NSC-yr-mx8"/>
                             <constraint firstItem="jc3-y8-4HE" firstAttribute="top" secondItem="j6o-8Q-Lub" secondAttribute="top" constant="17" id="PC2-gU-3si"/>
                             <constraint firstItem="GFZ-sq-mMn" firstAttribute="trailing" secondItem="j6o-8Q-Lub" secondAttribute="trailing" id="PRD-VT-tJV"/>
@@ -430,17 +417,12 @@
                             <constraint firstItem="lhQ-7R-603" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="16" id="UGy-uS-i49"/>
                             <constraint firstItem="j6o-8Q-Lub" firstAttribute="bottom" secondItem="OkV-a0-hI3" secondAttribute="bottom" constant="20" id="VIz-EE-sbP"/>
                             <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="GFZ-sq-mMn" secondAttribute="bottom" constant="126" id="XOh-I0-KLW"/>
-                            <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="CB0-fL-0PK" secondAttribute="bottom" constant="8" id="Y4h-OB-kjo"/>
-                            <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="0sy-3D-ANR" secondAttribute="bottom" constant="8" id="ZNQ-t2-eVg"/>
                             <constraint firstAttribute="bottom" secondItem="zgH-ES-652" secondAttribute="bottom" constant="20" symbolic="YES" id="akB-o3-Gha"/>
-                            <constraint firstItem="j6o-8Q-Lub" firstAttribute="trailing" secondItem="CB0-fL-0PK" secondAttribute="trailing" constant="45" id="e7x-bU-DOA"/>
                             <constraint firstItem="OkV-a0-hI3" firstAttribute="top" secondItem="zgH-ES-652" secondAttribute="top" id="eD8-vp-f6q"/>
                             <constraint firstItem="jc3-y8-4HE" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="16" id="eGK-Ve-HDH"/>
                             <constraint firstItem="j6o-8Q-Lub" firstAttribute="trailing" secondItem="lhQ-7R-603" secondAttribute="trailing" constant="16" id="ekm-2U-N3P"/>
                             <constraint firstItem="OkV-a0-hI3" firstAttribute="leading" secondItem="zgH-ES-652" secondAttribute="trailing" constant="8" symbolic="YES" id="fSV-Ao-m3x"/>
-                            <constraint firstItem="CB0-fL-0PK" firstAttribute="top" secondItem="GFZ-sq-mMn" secondAttribute="bottom" constant="99" id="jd8-OU-ceb"/>
                             <constraint firstItem="OkV-a0-hI3" firstAttribute="bottom" secondItem="zgH-ES-652" secondAttribute="bottom" id="k2X-vi-Kxz"/>
-                            <constraint firstItem="0sy-3D-ANR" firstAttribute="top" secondItem="GFZ-sq-mMn" secondAttribute="bottom" constant="99" id="m5r-Lz-gKK"/>
                             <constraint firstItem="zgH-ES-652" firstAttribute="leading" secondItem="j6o-8Q-Lub" secondAttribute="leading" constant="16" id="nlN-C3-gH5"/>
                             <constraint firstItem="lhQ-7R-603" firstAttribute="top" secondItem="j6o-8Q-Lub" secondAttribute="top" constant="135" id="oM5-cE-ivT"/>
                             <constraint firstItem="zgH-ES-652" firstAttribute="top" secondItem="lhQ-7R-603" secondAttribute="bottom" constant="17.5" id="plB-1c-b4W"/>
@@ -488,7 +470,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zFw-8I-JNq"/>
+        <segue reference="wen-lb-dbs"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CLC Tiger" width="288" height="288"/>
