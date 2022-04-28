@@ -70,42 +70,42 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         ScheduleController.schedule = InfoClass.init(first: has[0], second: has[1], third: has[2], fourth: has[3], fifth: has[4], sixth: has[5], seventh: has[6], eighth: has[7], ninth: has[8])
     }
     
-    @IBAction func addButton(_ sender: UIButton) {
-        let url = URL(fileURLWithPath: ding)
-            do{
-                audioPlayer = try AVAudioPlayer(contentsOf: url)
-                audioPlayer?.play()
-            }catch{
-                print("error!")
-            }
-            if pickerView.selectedRow(inComponent: 0) == 0 || pickerView.selectedRow(inComponent: 1) == 0{
-                return
-            }
-            if pickerView.selectedRow(inComponent: 0) < 9
-            {
-                has[selectClass-1] = selected
-                pickerView.selectRow(pickerView.selectedRow(inComponent: 0) + 1, inComponent: 0, animated: true)
-                selectClass += 1
-            }else{
-                pickerView.selectRow(pickerView.selectedRow(inComponent: 0) - 8, inComponent: 0, animated: true)
-                pickerView(pickerView, didSelectRow: selectClass - 9, inComponent: 0)
-            }
-            let encoder = JSONEncoder()
-            if let encoded = try? encoder.encode(has){
-                UserDefaults.standard.set(encoded, forKey: "rooms")
-            }
-            tableView.reloadData()
-            if(has.count == 9){
-                let url = URL(fileURLWithPath: ding)
+    @IBAction func addButton(_ sender: UIButton)
+    {
+        if pickerView.selectedRow(inComponent: 0) != 0 && pickerView.selectedRow(inComponent: 1) != 0
+        {
+            let url = URL(fileURLWithPath: ding)
                 do{
                     audioPlayer = try AVAudioPlayer(contentsOf: url)
                     audioPlayer?.play()
                 }catch{
                     print("error!")
                 }
-                button.isHidden = false
-            }
-            
+                has[selectClass - 1] = selected
+                if pickerView.selectedRow(inComponent: 0) < 9
+                {
+                    pickerView.selectRow(pickerView.selectedRow(inComponent: 0) + 1, inComponent: 0, animated: true)
+                    selectClass += 1
+                }else{
+                    pickerView.selectRow(pickerView.selectedRow(inComponent: 0) - 8, inComponent: 0, animated: true)
+                    selectClass = 1
+                }
+                let encoder = JSONEncoder()
+                if let encoded = try? encoder.encode(has){
+                    UserDefaults.standard.set(encoded, forKey: "rooms")
+                }
+                tableView.reloadData()
+                if(has.count == 9){
+                    let url = URL(fileURLWithPath: ding)
+                    do{
+                        audioPlayer = try AVAudioPlayer(contentsOf: url)
+                        audioPlayer?.play()
+                    }catch{
+                        print("error!")
+                    }
+                    button.isHidden = false
+                }
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -119,7 +119,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         else
         {
-            return rooms.count+1
+            return rooms.count + 1
         }
         
     }
@@ -140,7 +140,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
                 return "Rooms"
             }
             else{
-                return rooms[row]
+                return rooms[row - 1]
             }
         }
     }
@@ -162,7 +162,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
                 return
             }
             else{
-                selected = rooms[row]
+                selected = rooms[row - 1]
             }
         }
         print(selected)
