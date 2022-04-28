@@ -52,6 +52,9 @@
                                             <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
                                             <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="directSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hKo-Fp-Zlr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQJ-Qm-15I">
                                         <rect key="frame" x="307" y="596" width="52" height="50"/>
