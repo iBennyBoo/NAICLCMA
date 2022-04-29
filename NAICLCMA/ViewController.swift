@@ -53,8 +53,6 @@ class ViewController: UIViewController{
             
         }))
     }
-    
-    
     public func stroke(font: UIFont, strokeWidth: Float, insideColor: UIColor, strokeColor: UIColor) -> [NSAttributedString.Key: Any]{
         return [
             NSAttributedString.Key.strokeColor : strokeColor,

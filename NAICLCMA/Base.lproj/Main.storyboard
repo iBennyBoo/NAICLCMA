@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IeV-ll-Nnu">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="665"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Map App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="xIb-eA-nGv">
                                         <rect key="frame" x="20" y="368" width="335" height="64"/>
@@ -85,7 +85,6 @@
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="imD-Yz-x8L" firstAttribute="top" secondItem="Gfe-BS-pCT" secondAttribute="top" id="0QX-fC-Fgv"/>
-                                    <constraint firstAttribute="bottom" secondItem="mQJ-Qm-15I" secondAttribute="bottom" constant="19" id="6GM-Au-eKl"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="top" secondItem="CdJ-7p-sgG" secondAttribute="bottom" constant="18" id="DRz-Yb-c7P"/>
                                     <constraint firstItem="imD-Yz-x8L" firstAttribute="bottom" secondItem="Gfe-BS-pCT" secondAttribute="bottom" id="IRZ-04-cBb"/>
                                     <constraint firstItem="mQJ-Qm-15I" firstAttribute="leading" secondItem="Gfe-BS-pCT" secondAttribute="trailing" constant="8" symbolic="YES" id="N29-G1-82X"/>
@@ -94,6 +93,7 @@
                                     <constraint firstItem="av0-fN-dj9" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" id="UlX-r9-qhL"/>
                                     <constraint firstItem="CdJ-7p-sgG" firstAttribute="top" secondItem="av0-fN-dj9" secondAttribute="bottom" constant="8" id="WmF-5i-Cnp"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="centerX" secondItem="CdJ-7p-sgG" secondAttribute="centerX" id="aI2-Yv-onZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="imD-Yz-x8L" secondAttribute="bottom" constant="21" id="aia-lg-9Un"/>
                                     <constraint firstAttribute="trailing" secondItem="av0-fN-dj9" secondAttribute="trailing" id="enl-nq-Cz4"/>
                                     <constraint firstAttribute="trailing" secondItem="mQJ-Qm-15I" secondAttribute="trailing" constant="16" id="iro-Su-aDt"/>
                                     <constraint firstItem="Gfe-BS-pCT" firstAttribute="leading" secondItem="imD-Yz-x8L" secondAttribute="trailing" constant="8" symbolic="YES" id="m0a-le-ywj"/>
@@ -105,7 +105,6 @@
                                     <constraint firstItem="av0-fN-dj9" firstAttribute="top" secondItem="IeV-ll-Nnu" secondAttribute="top" constant="-156" id="ubR-rL-eXd"/>
                                     <constraint firstItem="mQJ-Qm-15I" firstAttribute="top" secondItem="xIb-eA-nGv" secondAttribute="bottom" constant="164" id="uhH-ds-ofN"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" constant="20" id="unJ-da-SNV"/>
-                                    <constraint firstAttribute="bottom" secondItem="imD-Yz-x8L" secondAttribute="bottom" constant="19" id="vyW-1E-Ix3"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -153,8 +152,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SaT-m2-NPZ">
                                 <rect key="frame" x="0.0" y="52" width="375" height="561"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
-                                        <rect key="frame" x="7" y="15" width="360" height="537"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Improved First Floor" translatesAutoresizingMaskIntoConstraints="NO" id="fnb-Ju-Q82">
+                                        <rect key="frame" x="8" y="16" width="359" height="537"/>
                                     </imageView>
                                     <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vector 1" id="WzG-io-0i3">
                                         <rect key="frame" x="158" y="237" width="58" height="86"/>
@@ -198,10 +197,10 @@
                                     </imageView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="fnb-Ju-Q82" secondAttribute="bottom" constant="9" id="8dx-vp-4Vt"/>
+                                    <constraint firstAttribute="bottom" secondItem="fnb-Ju-Q82" secondAttribute="bottom" constant="8" id="8dx-vp-4Vt"/>
                                     <constraint firstAttribute="trailing" secondItem="fnb-Ju-Q82" secondAttribute="trailing" constant="8" id="LpQ-we-rQd"/>
-                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="top" secondItem="SaT-m2-NPZ" secondAttribute="top" constant="15" id="i0m-Pk-QLr"/>
-                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="leading" secondItem="SaT-m2-NPZ" secondAttribute="leading" constant="7" id="qv0-YE-IJO"/>
+                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="top" secondItem="SaT-m2-NPZ" secondAttribute="top" constant="16" id="i0m-Pk-QLr"/>
+                                    <constraint firstItem="fnb-Ju-Q82" firstAttribute="leading" secondItem="SaT-m2-NPZ" secondAttribute="leading" constant="8" id="qv0-YE-IJO"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="Chz-fW-urX"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="7sG-al-vnj"/>
@@ -470,7 +469,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wen-lb-dbs"/>
+        <segue reference="zFw-8I-JNq"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="CLC Tiger" width="288" height="288"/>
