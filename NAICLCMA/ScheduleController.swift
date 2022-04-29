@@ -19,7 +19,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     var selectClass: Int = 1
     var has: [String] = ["---", "---", "---", "---", "---", "---", "---", "---", "---"]
     var periods: [Int] = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    var rooms: [String] = ["Rooms", "106", "108", "109", "120", "122", "123", "124", "127", "128", "129", "130", "131", "132", "133", "134", "150", "151", "152", "153", "154", "155", "156", "158", "159", "160", "162", "163", "164", "165", "166", "167", "168", "169", "171", "172", "173", "200", "201", "201A", "202", "203", "204", "205", "205A", "206", "207", "208", "209", "209A", "210", "211", "212", "213", "214", "215", "216", "217", "218", "220", "221", "222", "223", "224", "225", "226", "230 // Band Room", "231", "232", "234 // Choir Room", "235", "250", "251", "252", "253", "254", "255", "256", "259", "260 // Computer Room", "261", "263", "264", "265", "266", "267", "268", "269 // Library", "Auditorium", "Athletic Director", "CAFE", "Dean's Office", "FH", "Front Office", "AUX GYM", "Nurse", "Principal", "SRO", "Social Worker", "Student Services", "Tiger Conference Room", "WR"]
+    var rooms: [String] = ["106", "108", "109", "120", "122", "123", "124", "127", "128", "129", "130", "131", "132", "133", "134", "150", "151", "152", "153", "154", "155", "156", "158", "159", "160", "162", "163", "164", "165", "166", "167", "168", "169", "171", "172", "173", "200", "201", "201A", "202", "203", "204", "205", "205A", "206", "207", "208", "209", "209A", "210", "211", "212", "213", "214", "215", "216", "217", "218", "220", "221", "222", "223", "224", "225", "226", "230 // Band Room", "231", "232", "234 // Choir Room", "235", "250", "251", "252", "253", "254", "255", "256", "259", "260 // Computer Room", "261", "263", "264", "265", "266", "267", "268", "269 // Library", "Auditorium", "Athletic Director", "CAFE", "Dean's Office", "FH", "Front Office", "AUX GYM", "Nurse", "Principal", "SRO", "Social Worker", "Student Services", "Tiger Conference Room", "WR"]
     
     let ding = Bundle.main.path(forResource: "Ding-small-bell", ofType: "mp3")!
     let bells = Bundle.main.path(forResource: "bells", ofType: "wav")!
@@ -184,11 +184,10 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         cell.layer.borderWidth = 1
-        cell.periodLabel?.text = "\(indexPath.row + 1)"
-        cell.classLabel?.text = "\(has[indexPath.row])"
-        cell.timeLabel?.text = "WORK"
+        cell.textLabel?.text = "\(indexPath.row + 1)"
+        cell.detailTextLabel?.text = "\(has[indexPath.row])"
         return cell
 }
     

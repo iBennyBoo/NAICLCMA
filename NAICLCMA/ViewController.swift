@@ -67,7 +67,6 @@ class ViewController: UIViewController{
         alert.popoverPresentationController?.sourceRect = directSearch.bounds
         alert.setValue(vc, forKey: "contentViewController")
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
-            
         }))
         alert.addAction(UIAlertAction(title: "Select", style: .default, handler: {
             (UIAlertAction) in
@@ -103,8 +102,6 @@ class ViewController: UIViewController{
         label.sizeToFit()
         return label
     }
-    
-    
     public func stroke(font: UIFont, strokeWidth: Float, insideColor: UIColor, strokeColor: UIColor) -> [NSAttributedString.Key: Any]{
         return [
             NSAttributedString.Key.strokeColor : strokeColor,
