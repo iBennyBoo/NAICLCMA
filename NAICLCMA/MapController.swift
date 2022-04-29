@@ -186,7 +186,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
     {
         let mapCent = map.center
         print("reform fired")
-        let cruncher = (0.06 - 0.06 * scrollView.zoomScale / 6) + 1
+        let cruncher = (0.12 - 0.06 * scrollView.zoomScale / 6) + 1
         let sklittle = skittle.asList()
         var zoomFactorLeft: Double
         var zoomFactorRight: Double
