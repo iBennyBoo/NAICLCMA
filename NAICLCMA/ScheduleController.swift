@@ -7,9 +7,8 @@ public struct Classes: Codable{
 class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource
 {
     
-    //Im Back Nerds
     
-    
+   
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var button: UIButton!
@@ -179,15 +178,17 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
 //            return 40
 //        }
 //    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return has.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! TableViewCell
         cell.layer.borderWidth = 1
-        cell.textLabel?.text = "\(indexPath.row + 1)"
-        cell.detailTextLabel?.text = "\(has[indexPath.row])"
+        cell.periodLabel?.text = "\(indexPath.row + 1)"
+        cell.classLabel?.text = "\(has[indexPath.row])"
+        cell.timeLabel?.text = "WORK"
         return cell
 }
     
