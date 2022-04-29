@@ -47,10 +47,8 @@ class ViewController: UIViewController{
         alert.popoverPresentationController?.sourceView = directSearch
         alert.popoverPresentationController?.sourceRect = scheduleButton.bounds
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (UIAlertAction) in
-            
         }))
         alert.addAction(UIAlertAction(title: "Select", style: .default, handler: { (UIAlertAction) in
-            
         }))
     }
     public func stroke(font: UIFont, strokeWidth: Float, insideColor: UIColor, strokeColor: UIColor) -> [NSAttributedString.Key: Any]{

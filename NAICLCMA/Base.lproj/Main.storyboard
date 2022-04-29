@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Map App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.75" translatesAutoresizingMaskIntoConstraints="NO" id="xIb-eA-nGv">
-                                        <rect key="frame" x="20" y="368" width="335" height="64"/>
+                                        <rect key="frame" x="20" y="371" width="335" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="prJ-xX-Ca2"/>
                                         </constraints>
@@ -31,7 +31,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CLC Tiger" translatesAutoresizingMaskIntoConstraints="NO" id="CdJ-7p-sgG">
-                                        <rect key="frame" x="43.5" y="62" width="288" height="288"/>
+                                        <rect key="frame" x="43.5" y="62" width="288" height="291"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="av0-fN-dj9">
                                         <rect key="frame" x="0.0" y="-156" width="375" height="210"/>
@@ -41,69 +41,72 @@
                                             <constraint firstAttribute="width" secondItem="av0-fN-dj9" secondAttribute="height" multiplier="75:7" constant="-1875" id="XO6-HW-7Dk"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imD-Yz-x8L">
-                                        <rect key="frame" x="16" y="596" width="52" height="50"/>
-                                        <color key="backgroundColor" red="0.94488364459999996" green="0.60459154839999996" blue="0.21552747489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="52" id="GLt-FR-pra"/>
-                                        </constraints>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="">
-                                            <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="directSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hKo-Fp-Zlr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQJ-Qm-15I">
-                                        <rect key="frame" x="307" y="596" width="52" height="50"/>
-                                        <color key="backgroundColor" red="0.94488364459999996" green="0.60459154839999996" blue="0.21552747489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="">
-                                            <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="aGF-5P-6vx" kind="show" id="zFw-8I-JNq"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfe-BS-pCT">
-                                        <rect key="frame" x="76" y="596" width="223" height="50"/>
-                                        <color key="backgroundColor" red="0.94488364459999996" green="0.60459154839999996" blue="0.21552747489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Schedule">
-                                            <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="26"/>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <segue destination="u6a-Ab-tdd" kind="show" id="YGl-Jm-iOx"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KNl-uX-JzU">
+                                        <rect key="frame" x="19" y="599" width="337" height="52"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imD-Yz-x8L">
+                                                <rect key="frame" x="0.0" y="0.0" width="52" height="52"/>
+                                                <color key="backgroundColor" red="0.94488364459999996" green="0.60459154839999996" blue="0.21552747489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="52" id="GLt-FR-pra"/>
+                                                    <constraint firstAttribute="height" constant="52" id="cKf-7V-DoM"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="">
+                                                    <imageReference key="image" image="magnifyingglass" catalog="system" symbolScale="large"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="directSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hKo-Fp-Zlr"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gfe-BS-pCT">
+                                                <rect key="frame" x="67" y="0.0" width="200" height="52"/>
+                                                <color key="backgroundColor" red="0.94488364459999996" green="0.60459154839999996" blue="0.21552747489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="qTL-v6-Y1A"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Schedule">
+                                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="26"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="u6a-Ab-tdd" kind="show" id="YGl-Jm-iOx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQJ-Qm-15I">
+                                                <rect key="frame" x="282" y="0.0" width="55" height="52"/>
+                                                <color key="backgroundColor" red="0.94488364459999996" green="0.60459154839999996" blue="0.21552747489999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="Dbj-Fe-yFp"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="">
+                                                    <imageReference key="image" image="map" catalog="system" symbolScale="large"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <segue destination="aGF-5P-6vx" kind="show" id="zFw-8I-JNq"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.90346252350580125" alpha="0.74467993729951365" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstItem="imD-Yz-x8L" firstAttribute="top" secondItem="Gfe-BS-pCT" secondAttribute="top" id="0QX-fC-Fgv"/>
+                                    <constraint firstAttribute="bottom" secondItem="KNl-uX-JzU" secondAttribute="bottom" constant="16" id="2j7-LQ-VqR"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="top" secondItem="CdJ-7p-sgG" secondAttribute="bottom" constant="18" id="DRz-Yb-c7P"/>
-                                    <constraint firstItem="imD-Yz-x8L" firstAttribute="bottom" secondItem="Gfe-BS-pCT" secondAttribute="bottom" id="IRZ-04-cBb"/>
-                                    <constraint firstItem="mQJ-Qm-15I" firstAttribute="leading" secondItem="Gfe-BS-pCT" secondAttribute="trailing" constant="8" symbolic="YES" id="N29-G1-82X"/>
-                                    <constraint firstItem="imD-Yz-x8L" firstAttribute="baseline" secondItem="mQJ-Qm-15I" secondAttribute="baseline" id="Q2r-hw-8O3"/>
-                                    <constraint firstItem="mQJ-Qm-15I" firstAttribute="baseline" secondItem="imD-Yz-x8L" secondAttribute="firstBaseline" id="Qmo-xT-BNj"/>
+                                    <constraint firstAttribute="trailing" secondItem="KNl-uX-JzU" secondAttribute="trailing" constant="19" id="Emk-81-CPv"/>
                                     <constraint firstItem="av0-fN-dj9" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" id="UlX-r9-qhL"/>
                                     <constraint firstItem="CdJ-7p-sgG" firstAttribute="top" secondItem="av0-fN-dj9" secondAttribute="bottom" constant="8" id="WmF-5i-Cnp"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="centerX" secondItem="CdJ-7p-sgG" secondAttribute="centerX" id="aI2-Yv-onZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="imD-Yz-x8L" secondAttribute="bottom" constant="21" id="aia-lg-9Un"/>
                                     <constraint firstAttribute="trailing" secondItem="av0-fN-dj9" secondAttribute="trailing" id="enl-nq-Cz4"/>
-                                    <constraint firstAttribute="trailing" secondItem="mQJ-Qm-15I" secondAttribute="trailing" constant="16" id="iro-Su-aDt"/>
-                                    <constraint firstItem="Gfe-BS-pCT" firstAttribute="leading" secondItem="imD-Yz-x8L" secondAttribute="trailing" constant="8" symbolic="YES" id="m0a-le-ywj"/>
-                                    <constraint firstItem="Gfe-BS-pCT" firstAttribute="centerX" secondItem="xIb-eA-nGv" secondAttribute="centerX" id="q6I-oU-vMz"/>
-                                    <constraint firstItem="imD-Yz-x8L" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" constant="16" id="rAV-RI-BHd"/>
-                                    <constraint firstItem="imD-Yz-x8L" firstAttribute="top" secondItem="IeV-ll-Nnu" secondAttribute="top" constant="596" id="rvG-eE-lCx"/>
+                                    <constraint firstItem="KNl-uX-JzU" firstAttribute="top" secondItem="xIb-eA-nGv" secondAttribute="bottom" constant="164" id="pEo-up-7cL"/>
                                     <constraint firstItem="CdJ-7p-sgG" firstAttribute="top" secondItem="av0-fN-dj9" secondAttribute="bottom" constant="8" id="tPV-lu-ECf"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="centerX" secondItem="av0-fN-dj9" secondAttribute="centerX" id="tfB-rH-qeT"/>
                                     <constraint firstItem="av0-fN-dj9" firstAttribute="top" secondItem="IeV-ll-Nnu" secondAttribute="top" constant="-156" id="ubR-rL-eXd"/>
-                                    <constraint firstItem="mQJ-Qm-15I" firstAttribute="top" secondItem="xIb-eA-nGv" secondAttribute="bottom" constant="164" id="uhH-ds-ofN"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="leading" secondItem="IeV-ll-Nnu" secondAttribute="leading" constant="20" id="unJ-da-SNV"/>
                                 </constraints>
                             </view>
