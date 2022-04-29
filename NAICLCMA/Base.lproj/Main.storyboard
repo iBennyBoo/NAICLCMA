@@ -38,7 +38,6 @@
                                         <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="210" id="NBP-Jy-0RJ"/>
-                                            <constraint firstAttribute="width" secondItem="av0-fN-dj9" secondAttribute="height" multiplier="75:7" constant="-1875" id="XO6-HW-7Dk"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KNl-uX-JzU">
@@ -103,6 +102,7 @@
                                     <constraint firstItem="CdJ-7p-sgG" firstAttribute="top" secondItem="av0-fN-dj9" secondAttribute="bottom" constant="8" id="WmF-5i-Cnp"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="centerX" secondItem="CdJ-7p-sgG" secondAttribute="centerX" id="aI2-Yv-onZ"/>
                                     <constraint firstAttribute="trailing" secondItem="av0-fN-dj9" secondAttribute="trailing" id="enl-nq-Cz4"/>
+                                    <constraint firstItem="KNl-uX-JzU" firstAttribute="width" secondItem="IeV-ll-Nnu" secondAttribute="width" multiplier="0.898667" id="g27-Qk-vb8"/>
                                     <constraint firstItem="KNl-uX-JzU" firstAttribute="top" secondItem="xIb-eA-nGv" secondAttribute="bottom" constant="164" id="pEo-up-7cL"/>
                                     <constraint firstItem="CdJ-7p-sgG" firstAttribute="top" secondItem="av0-fN-dj9" secondAttribute="bottom" constant="8" id="tPV-lu-ECf"/>
                                     <constraint firstItem="xIb-eA-nGv" firstAttribute="centerX" secondItem="av0-fN-dj9" secondAttribute="centerX" id="tfB-rH-qeT"/>
