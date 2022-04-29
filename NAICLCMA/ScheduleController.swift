@@ -184,11 +184,10 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath)
         cell.layer.borderWidth = 1
-        cell.periodLabel?.text = "\(indexPath.row + 1)"
-        cell.classLabel?.text = "\(has[indexPath.row])"
-        cell.timeLabel?.text = "WORK"
+        cell.textLabel?.text = "\(indexPath.row + 1)"
+        cell.detailTextLabel?.text = "\(has[indexPath.row])"
         return cell
 }
     
