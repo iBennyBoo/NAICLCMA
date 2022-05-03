@@ -29,9 +29,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        mapButton.layer.cornerRadius = 25
-        scheduleButton.layer.cornerRadius = 25
-        directSearch.layer.cornerRadius = 25
+        mapButton.layer.cornerRadius = 26
+        scheduleButton.layer.cornerRadius = 26
+        directSearch.layer.cornerRadius = 26
         mapButton.layer.borderWidth = 1
         scheduleButton.layer.borderWidth = 1
         directSearch.layer.borderWidth = 1

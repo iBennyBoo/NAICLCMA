@@ -186,7 +186,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
     {
         let mapCent = map.center
         print("reform fired")
-        let cruncher = (0.12 - 0.06 * scrollView.zoomScale / 6) + 1
+//        let cruncher = (0.12 - 0.06 * scrollView.zoomScale / 6) + 1
         let sklittle = skittle.asList()
         var zoomFactorLeft: Double
         var zoomFactorRight: Double
@@ -206,7 +206,7 @@ class MapController: UIViewController, UIScrollViewDelegate {
         {
             if i != "---"
             {
-                nodeArr[l].center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+                nodeArr[l].center = CGPoint(x: (RoomClass.coords[i]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[i]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
                 currNode = nodeArr[l]
                 for _ in sklittle
                 {
@@ -221,6 +221,6 @@ class MapController: UIViewController, UIScrollViewDelegate {
             t = 0
             l += 1
         }
-        directNode.center = CGPoint(x: (RoomClass.coords[ScheduleController.directive]![0]/50 * mapCent.x/cruncher) + mapCent.x, y: (RoomClass.coords[ScheduleController.directive]![1]/50 * mapCent.y/cruncher) + mapCent.y - map.bounds.maxY/30)
+        directNode.center = CGPoint(x: (RoomClass.coords[ScheduleController.directive]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[ScheduleController.directive]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
     }
 }
