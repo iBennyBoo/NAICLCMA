@@ -13,7 +13,6 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var pickerView: UIPickerView!
     @IBOutlet weak var button: UIButton!
     static var schedule = InfoClass(first: "---", second: "---", third: "---", fourth: "---", fifth: "---", sixth: "---", seventh: "---", eighth: "---", ninth: "---")
-    static var directive = "---"
     var audioPlayer: AVAudioPlayer?
     var selected: String = "106"
     var selectClass: Int = 1
@@ -55,7 +54,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        ScheduleController.directive = "---"
+        ViewController.directive = "---"
     }
     
     @IBAction func button(_ sender: UIButton) {
@@ -203,7 +202,7 @@ class ScheduleController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     @IBAction func directSearch(_ sender: Any)
     {
-        ScheduleController.directive = selected
+        ViewController.directive = selected
         performSegue(withIdentifier: "SegToMap", sender: nil)
     }
 }

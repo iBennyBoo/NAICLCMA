@@ -172,8 +172,8 @@ class MapController: UIViewController, UIScrollViewDelegate {
             }
             t += 1
         }
-        let z = codify(find: ScheduleController.directive)
-        if ScheduleController.directive != "---" && z.1 == x
+        let z = codify(find: ViewController.directive)
+        if ViewController.directive != "---" && z.1 == x
         {
             directNode.isHidden = false
         }
@@ -221,6 +221,6 @@ class MapController: UIViewController, UIScrollViewDelegate {
             t = 0
             l += 1
         }
-        directNode.center = CGPoint(x: (RoomClass.coords[ScheduleController.directive]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[ScheduleController.directive]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
+        directNode.center = CGPoint(x: (RoomClass.coords[ViewController.directive]![0]/50 * mapCent.x) + mapCent.x, y: (RoomClass.coords[ViewController.directive]![1]/50 * mapCent.y) + mapCent.y - map.bounds.maxY/30)
     }
 }
